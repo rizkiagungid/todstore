@@ -16,7 +16,7 @@
 .main-navbar .navbar{
     display: flex;
     height: 80px;
-    width: 1100px;
+    width: 900px;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
@@ -41,6 +41,10 @@
     margin-left: 35px;
     cursor: pointer;
     font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+.main-navbar .navbar .list-menu .menu:hover{
+    color: #F8BB31;
 }
 
 .main-navbar .navbar .list-icon{
@@ -55,6 +59,10 @@
     padding: 1px;
     overflow: hidden;
     margin-left: 20px;
+    transition: 0.3s ease-in-out;
+}
+.main-navbar .navbar .list-icon .icon-nav i:hover{
+    color: #F8BB31;
 }
 
 /* carousel top */
@@ -63,38 +71,30 @@
     overflow: hidden;
 }
 
-/* btn prev and next carousel top */
-@media (min-width: 1370px) and (max-width: 1500px){
-    .carousel-top .carousel-control-prev{
-        left: 50px;
-    }
-    .carousel-top .carousel-control-next{
-        right: 50px;
-    }
+.carousel-top .wrapp-indicator{
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
 }
-@media (min-width: 1501px) and (max-width: 1600px){
-    .carousel-top .carousel-control-prev{
-        left: 100px;
-    }
-    .carousel-top .carousel-control-next{
-        right: 100px;
-    }
+
+.carousel-top .wrapp-indicator .indicator-top{
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
 }
-@media (min-width: 1601px) and (max-width: 1700px){
-    .carousel-top .carousel-control-prev{
-        left: 130px;
-    }
-    .carousel-top .carousel-control-next{
-        right: 130px;
-    }
+
+.carousel-top .wrapp-indicator .carousel-control-prev{
+    position: relative;
+    width: 3%;
 }
-@media (min-width: 1701px) and (max-width: 1800px){
-    .carousel-top .carousel-control-prev{
-        left: 150px;
-    }
-    .carousel-top .carousel-control-next{
-        right: 150px;
-    }
+
+.carousel-top .carousel-control-next{
+    position: relative;
+    width: 3%;
+    right: 0;
 }
 
 /* indicators */
@@ -123,18 +123,19 @@
 .carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel{
     display: flex;
     height: 100%;
-    width: 900px;
+    width: 750px;
     position: absolute;
     top: 0;
     z-index: 1;
     color: #fff;
+    justify-content: space-between;
 }
 
 /* deskripsi kiri carousel */
 .carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .deskripsi-kiri{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 45%;
     margin-top: 100px;
 }
 
@@ -240,6 +241,14 @@
     .wrapp-shop-categories .bg-black-top{
         height: 470px;
         margin-top: -230px;
+        transform: rotate(-15deg);
+    }
+}
+@media (min-width: 1801px) and (max-width: 1970px) {
+    /* bg black top */
+    .wrapp-shop-categories .bg-black-top{
+        height: 510px;
+        margin-top: -250px;
         transform: rotate(-15deg);
     }
 }
@@ -404,8 +413,8 @@
 }
 
 .wrapp-shop-categories .content-shop-categories .shop-categories .our-products .card-our-products .card-products .view-product:hover{
-    background-color: transparent;
-    color: #000;
+    background-color: #F8BB31;
+    color: #1E1E1E;
 }
 
 .wrapp-shop-categories .content-shop-categories .shop-categories .our-products .container-btn-show{
@@ -463,6 +472,13 @@
     left: 0;
     right: 0;
     margin-top: 300px;
+}
+@media (min-width: 1720px) and (max-width: 1920px){
+    /* two */
+    .wrapp-shop-categories .container-bg-black-bottom .bg-black-bottom-two{
+        height: 280px;
+        margin-top: 280px;
+    }
 }
 
 .wrapp-shop-categories .container-bg-black-bottom .container-content-about{
@@ -664,6 +680,10 @@
     font-weight: 400;
     align-items: center;
     margin-top: 5px;
+    transition: 0.3s ease-in-out;
+}
+.wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .latest-news .card-latest-news .card-news .read-more:hover{
+    color: #F8BB31;
 }
 
 .wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .latest-news .card-latest-news .card-news .read-more i{
@@ -689,6 +709,7 @@
 .main-footer .footer .search{
     display: flex;
     padding: 0 20px;
+    margin-bottom: 10px;
 }
 
 .main-footer .footer .search .kiri-search{
@@ -703,7 +724,7 @@
     font-size: 16px;
     color: #F8BB31;
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 
 .main-footer .footer .search .kiri-search .deskripsi-search{
@@ -716,31 +737,61 @@
 
 .main-footer .footer .search .kanan-search{
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
     width: 60%;
+    padding-left: 20px;
 }
 
-.main-footer .footer .search .kanan-search .input-search{
+.main-footer .footer .search .kanan-search .title-search{
+    display: flex;
+    font-weight: 700;
+    font-size: 16px;
+    color: #F8BB31;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+.main-footer .footer .search .kanan-search .column-input{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-footer .footer .search .kanan-search .column-input .input-search{
     background-color: transparent;
     outline: none;
-    width: 80%;
+    width: 70%;
     border: 1px solid #fff;
     border-radius: 10px;
-    padding: 3px 12px;
+    padding: 4px 12px;
     font-size: 12px;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
 
-.main-footer .footer .search .kanan-search i{
-    color: #fff;
-    cursor: pointer;
-    margin-left: 12px;
-    font-size: 16px;
-    padding: 2px;
-    margin-top: -4px;
+.main-footer .footer .search .kanan-search .column-input .btn-subscribe{
+    display: flex;
+    padding: 5px 0;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #F8BB31;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #1E1E1E;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+.main-footer .footer .search .kanan-search .column-input .btn-subscribe:hover{
+    background-color: #fff;
 }
 
 /* tod project */
@@ -776,6 +827,10 @@
     font-family: 'Montserrat', sans-serif;
     overflow: hidden;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.main-footer .footer .tod-project .menu-footer .deskripsi-menu:hover{
+    color: #F8BB31;
 }
 
 .main-footer .footer .tod-project .menu-footer .deskripsi-menu i{

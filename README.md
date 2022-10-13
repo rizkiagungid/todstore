@@ -1,2 +1,2 @@
-# TOD-Ecommerce
-Aplikasi Web Jual beli untuk Kategori Fashion.
+# CRUD-APP
+Simple php crud app for beginners

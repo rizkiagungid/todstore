@@ -20,6 +20,10 @@ if (isset($_POST['submit'])) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
         header("Location: index.php");
+
+        
+
+        
     } else {
         echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
     }

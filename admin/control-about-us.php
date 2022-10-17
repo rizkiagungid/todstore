@@ -9,8 +9,8 @@ include '../includes/db.php';
     </div>
     <br>
     
+    <a href="insert.php" role="button" class="btn btn-primary pull-right">INSERT DATA</a>
     <a href=".." role="button" class="btn btn-primary pull-leaft">Home</a>
-    <a href="../admin/control-about-us.php" role="button" class="btn btn-primary pull-leaft">SET ABOUT US</a>
     <br>
     
     <br>
@@ -18,11 +18,8 @@ include '../includes/db.php';
         <tr>
             <th>ID</th>
             <th>Username</th>
-            <th>Nama Lengkap</th>
             <th>Email</th>
             <th>level</th>
-            <th>Telepon</th>
-            <th>Alamat</th>
             <th>Foto</th>
             <th>Action</th>
         </tr>
@@ -35,22 +32,19 @@ $result = mysqli_query($conn,$query);
 if(mysqli_num_rows($result) > 0){
     
     while($row = mysqli_fetch_array($result)){
-                    
+        
         $id    = $row['id'];
         $username  = $row['username'];
         $email = $row['email'];
         $level = $row['level'];
-        $telepon = $row['telepon'];
-        $alamat = $row['alamat'];
-?>
 
+?>
+        
         <tr>
             <td><?=$id; ?></td>
             <td><?=$username; ?></td>
             <td><?=$email; ?></td>
             <td><?=$level; ?></td>
-            <td><?=$telepon; ?></td>
-            <td><?=$alamat; ?></td>
             <td>
                <img src= "../images/tzuyu.jpg" class="thumbnail" width="100px" height="75px">
             </td>

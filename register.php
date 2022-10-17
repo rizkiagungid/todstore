@@ -13,6 +13,9 @@ if (isset($_SESSION['username'])) {
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
+    $telepon = $_POST['telepon'];
+    $alamat = $_POST['alamat'];
+    $level = $_POST['level'];
     $password = md5($_POST['password']);
     $cpassword = md5($_POST['cpassword']);
  
@@ -20,13 +23,16 @@ if (isset($_POST['submit'])) {
         $sql = "SELECT * FROM users WHERE email='$email'";
         $result = mysqli_query($conn, $sql);
         if (!$result->num_rows > 0) {
-            $sql = "INSERT INTO users (username, email, password)
-                    VALUES ('$username', '$email', '$password')";
+            $sql = "INSERT INTO users (username, email, telepon, alamat, level,  password)
+                    VALUES ('$username', '$email','$telepon','$alamat','$level', '$password')";
             $result = mysqli_query($conn, $sql);
             if ($result) {
                 echo "<script>alert('Selamat, registrasi berhasil!')</script>";
                 $username = "";
                 $email = "";
+                $telepon = "";
+                $alamat = "";
+                $level = "";
                 $_POST['password'] = "";
                 $_POST['cpassword'] = "";
             } else {
@@ -66,11 +72,26 @@ if (isset($_POST['submit'])) {
                 <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
             </div>
             <div class="input-group">
+                <input type="telepon" placeholder="telepon" name="telepon" value="<?php echo $telepon; ?>" required>
+            </div>
+            <div class="input-group">
+                <input type="alamat" placeholder="alamat" name="alamat" value="<?php echo $alamat; ?>" required>
+            </div>
+            <div class="input-group">
                 <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
             </div>
             <div class="input-group">
                 <input type="password" placeholder="Confirm Password" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
             </div>
+            <!-- <div class="input-group">
+            <input type="level" placeholder="Diisi Member atau Admin" name="level" value="<?php echo $level; ?>" required>
+            </div> -->
+            <div>
+            <label>Pilih Status Pengguna</label> <br>
+            <input type="radio" name="level" value="admin"> admin <br>
+            <input type="radio" name="level" value="member"> member
+            </div>
+            <br>
             <div class="input-group">
                 <button name="submit" class="btn">Register</button>
             </div>

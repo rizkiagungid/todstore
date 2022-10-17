@@ -1,10 +1,20 @@
 <?php
 include 'includes/db.php';
 ?>
-
+<?php 
+ 
+ session_start();
+  
+ if (!isset($_SESSION['username'])) {
+     header("Location: index.php");
+ }
+  
+ ?>
 <div class="container">
     <div class="jumbotron text-center">
         <h2>HOME TOD PRODUK</h2>
+        <form action="" method="POST" class="login-email">
+            <?php echo "<h1>Selamat Datang, " . $_SESSION['username'] ."!". "</h1>"; ?>
     </div>
     <br>
     

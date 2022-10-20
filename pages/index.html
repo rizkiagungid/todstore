@@ -26,6 +26,7 @@
 
 <body>
     <script>
+        // untuk subscribe di input footer
         const serviceID = 'service_hmqukxt'
         const templateID = 'template_fwpgdpp'
         const publicKey = '9OBxoKBI85PFlIkj7'
@@ -47,11 +48,11 @@
 
             if (data.email.length === 0 && !data.email.trim()) {
                 err = 'Email harus di isi'
-            }else if(!document.getElementById('subscribe').value.match(mailformat)){
+            } else if (!document.getElementById('subscribe').value.match(mailformat)) {
                 err = 'Email harus di isi dengan benar'
             }
-            
-            if(err.length === 0){
+
+            if (err.length === 0) {
                 data.email = `email user : ${document.getElementById('subscribe').value}`
 
                 emailjs.send(serviceID, templateID, data, publicKey)
@@ -62,7 +63,7 @@
                         console.log(res)
                     })
                     .catch(err => console.log(err))
-            }else{
+            } else {
                 window.alert(err)
             }
         }
@@ -71,7 +72,7 @@
     <!-- navbar -->
     <div class="main-navbar">
         <div class="navbar">
-            <img src="./images/logo.png" alt="" class="logo">
+            <img src="../images/logo.png" alt="" class="logo">
 
             <ul class="list-menu">
                 <li class="menu">
@@ -106,7 +107,8 @@
     </div>
 
     <!-- carousel top -->
-    <div id="carouselExampleIndicators" class="carousel slide carousel-top" data-bs-ride="true">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-slide carousel-top" data-bs-ride="carousel"
+        style="background-image: url(../images/banner-top.jfif)">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -116,81 +118,45 @@
                 aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
+            <div class="wrapp-text-carousel-top">
+                <div class="text-carousel-top">
+                    <p class="title-deskripsi">
+                        CHOOSE YOUR CLOTHES WITH US.
+                    </p>
+                    <p class="deskripsi">
+                        We will help you to choose the product that without the doubt and suits you bestand we
+                        mean
+                        it.
+                    </p>
+                    <button class="shop-now">
+                        <p class="txt-btn">
+                            SHOP NOW
+                        </p>
+                    </button>
+                </div>
+            </div>
+
             <div class="carousel-item active">
-                <img src="./images/banner-top.jfif" class="d-block w-100" alt="...">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <div class="deskripsi-kiri">
-                            <p class="title-deskripsi">
-                                CHOOSE YOUR CLOTHES WITH US.
-                            </p>
-                            <p class="deskripsi">
-                                We will help you to choose the product that without the doubt and suits you bestand we
-                                mean
-                                it.
-                            </p>
-                            <button class="shop-now">
-                                <p class="txt-btn">
-                                    SHOP NOW
-                                </p>
-                            </button>
-                        </div>
-                        <div class="deskripsi-kanan">
-                            <img src="./images/baju1.png" alt="" class="img-baju1">
-                            <img src="./images/baju2.png" alt="" class="img-baju2">
-                        </div>
+                        <img src="../images/baju1.png" alt="" class="img-baju1">
+                        <img src="../images/baju2.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="./images/banner-top.jfif" class="d-block w-100" alt="...">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <div class="deskripsi-kiri">
-                            <p class="title-deskripsi">
-                                CHOOSE YOUR CLOTHES WITH US.
-                            </p>
-                            <p class="deskripsi">
-                                We will help you to choose the product that without the doubt and suits you bestand we
-                                mean
-                                it.
-                            </p>
-                            <button class="shop-now">
-                                <p class="txt-btn">
-                                    SHOP NOW
-                                </p>
-                            </button>
-                        </div>
-                        <div class="deskripsi-kanan">
-                            <img src="./images/baju1.png" alt="" class="img-baju1">
-                            <img src="./images/baju2.png" alt="" class="img-baju2">
-                        </div>
+                        <img src="../images/baju1.png" alt="" class="img-baju1">
+                        <img src="../images/baju2.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="./images/banner-top.jfif" class="d-block w-100" alt="...">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <div class="deskripsi-kiri">
-                            <p class="title-deskripsi">
-                                CHOOSE YOUR CLOTHES WITH US.
-                            </p>
-                            <p class="deskripsi">
-                                We will help you to choose the product that without the doubt and suits you bestand we
-                                mean
-                                it.
-                            </p>
-                            <button class="shop-now">
-                                <p class="txt-btn">
-                                    SHOP NOWWWW
-                                </p>
-                            </button>
-                        </div>
-                        <div class="deskripsi-kanan">
-                            <img src="./images/baju1.png" alt="" class="img-baju1">
-                            <img src="./images/baju2.png" alt="" class="img-baju2">
-                        </div>
+                        <img src="../images/baju1.png" alt="" class="img-baju1">
+                        <img src="../images/baju2.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
@@ -208,9 +174,7 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
         </div>
-
     </div>
 
     <!-- shop by categories -->
@@ -229,7 +193,7 @@
                 <!-- img men and women -->
                 <div class="image-men-women">
                     <div class="kiri-men">
-                        <img src="./images/men.jfif" alt="" class="bg-img-men-women">
+                        <img src="../images/men.jfif" alt="" class="bg-img-men-women">
                         <p class="title-img">
                             MEN
                         </p>
@@ -238,11 +202,11 @@
                         </p>
                     </div>
                     <div class="kanan-women">
-                        <img src="./images/women.jfif" alt="" class="bg-img-men-women">
-                        <p class="title-img">
+                        <img src="../images/women.jfif" alt="" class="bg-img-men-women">
+                        <p class="title-img txt-kanan-img">
                             WOMEN
                         </p>
-                        <p class="deskripsi-img">
+                        <p class="deskripsi-img txt-kanan-img">
                             5 Products
                         </p>
                     </div>
@@ -256,7 +220,41 @@
 
                     <div class="card-our-products">
                         <div class="card-products">
-                            <img src="./images/products.jfif" alt="" class="img-products">
+                            <img src="../images/products.jfif" alt="" class="img-products">
+
+                            <p class="gender">
+                                Men
+                            </p>
+                            <p class="name-products">
+                                Daster Yogs bisa dipake ke oyo. mantep kn. yoi dong kwkwadkowkdkaokdowkad
+                            </p>
+                            <p class="price">
+                                Rp 1,000,000
+                            </p>
+                            <button class="view-product">
+                                View Product
+                            </button>
+                        </div>
+                        <div class="card-products">
+                            <img src="../images/products.jfif" alt="" class="img-products">
+
+                            <p class="gender">
+                                Men
+                            </p>
+                            <p class="name-products">
+                                Daster Yogs Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quibusdam nam
+                                ad illum facere hic repudiandae debitis culpa unde, dolorum aperiam distinctio est
+                                vitae. Dolorem labore minus ipsum nam obcaecati?
+                            </p>
+                            <p class="price">
+                                Rp 1,000,000
+                            </p>
+                            <button class="view-product">
+                                View Product
+                            </button>
+                        </div>
+                        <div class="card-products">
+                            <img src="../images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -272,7 +270,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="./images/products.jfif" alt="" class="img-products">
+                            <img src="../images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -288,7 +286,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="./images/products.jfif" alt="" class="img-products">
+                            <img src="../images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -304,7 +302,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="./images/products.jfif" alt="" class="img-products">
+                            <img src="../images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -320,7 +318,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="./images/products.jfif" alt="" class="img-products">
+                            <img src="../images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -336,39 +334,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="./images/products.jfif" alt="" class="img-products">
-
-                            <p class="gender">
-                                Men
-                            </p>
-                            <p class="name-products">
-                                Daster Yogs
-                            </p>
-                            <p class="price">
-                                Rp 1,000,000
-                            </p>
-                            <button class="view-product">
-                                View Product
-                            </button>
-                        </div>
-                        <div class="card-products">
-                            <img src="./images/products.jfif" alt="" class="img-products">
-
-                            <p class="gender">
-                                Men
-                            </p>
-                            <p class="name-products">
-                                Daster Yogs
-                            </p>
-                            <p class="price">
-                                Rp 1,000,000
-                            </p>
-                            <button class="view-product">
-                                View Product
-                            </button>
-                        </div>
-                        <div class="card-products">
-                            <img src="./images/products.jfif" alt="" class="img-products">
+                            <img src="../images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -403,7 +369,7 @@
                 <div class="content-about">
                     <!-- about -->
                     <div class="banner-about">
-                        <img src="./images/about.jfif" alt="" class="img-about">
+                        <img src="../images/about.jfif" alt="" class="img-about">
                         <div class="kanan-about">
                             <p class="title-about">
                                 ABOUT RIDWAN
@@ -425,7 +391,7 @@
                         </p>
 
                         <!-- carousel people -->
-                        <div id="carousel-people" class="carousel slide carousel-people" data-bs-ride="true">
+                        <div id="carousel-people" class="carousel slide carousel-people" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carousel-people" data-bs-slide-to="0"
                                     class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -492,16 +458,16 @@
                     <!-- sponsor kondom -->
                     <div class="sponsor-kondom">
                         <li class="list-sponsor">
-                            <img src="./images/dickies logo.png" alt="" class="img-sponsor">
+                            <img src="../images/dickies logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="./images/Durex logo.png" alt="" class="img-sponsor">
+                            <img src="../images/Durex logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="./images/Camel_Logo_old logo.png" alt="" class="img-sponsor">
+                            <img src="../images/Camel_Logo_old logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="./images/Gucci logo.png" alt="" class="img-sponsor">
+                            <img src="../images/Gucci logo.png" alt="" class="img-sponsor">
                         </li>
                     </div>
 
@@ -516,27 +482,35 @@
 
                         <div class="card-latest-news">
                             <div class="card-news">
-                                <img src="./images/latest-news.jfif" alt="" class="img-news">
+                                <div class="con-img-news">
+                                    <img src="../images/latest-news.jfif" alt="" class="img-news">
+                                </div>
 
                                 <p class="title-news">
-                                    TIPS ANTI BEGAL
+                                    Dua sejoli tertangkap basah di oyo sedang bermesra mesraan. pukul
                                 </p>
                                 <button class="read-more">
                                     Read More <i class="fa-solid fa-arrow-right"></i>
                                 </button>
                             </div>
                             <div class="card-news">
-                                <img src="./images/latest-news.jfif" alt="" class="img-news">
+                                <div class="con-img-news">
+                                    <img src="../images/latest-news.jfif" alt="" class="img-news">
+                                </div>
 
                                 <p class="title-news">
-                                    TIPS ANTI BEGAL
+                                    TIPS ANTI BEGAL Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum eius
+                                    sunt, blanditiis dignissimos quos odit aperiam iste totam nihil voluptate quibusdam,
+                                    voluptatem ullam, nisi fugiat cumque nesciunt adipisci earum. Et?
                                 </p>
                                 <button class="read-more">
                                     Read More <i class="fa-solid fa-arrow-right"></i>
                                 </button>
                             </div>
                             <div class="card-news">
-                                <img src="./images/latest-news.jfif" alt="" class="img-news">
+                                <div class="con-img-news">
+                                    <img src="../images/latest-news.jfif" alt="" class="img-news">
+                                </div>
 
                                 <p class="title-news">
                                     TIPS ANTI BEGAL
@@ -621,10 +595,10 @@
                     <a href="#" class="deskripsi-menu">
                         <i class="fa-solid fa-location-dot"></i> Jalan YatemPiatu Sejahtera 01-00
                     </a>
-                    <a href="#" class="deskripsi-menu">
+                    <a href="tel:+6281383959452" class="deskripsi-menu">
                         <i class="fa-solid fa-phone-volume" style="transform: rotate(-50deg);"></i> (99) 100-500
                     </a>
-                    <a href="#" class="deskripsi-menu">
+                    <a href="mailto:yatempiatu@gmail.com" class="deskripsi-menu">
                         <i class="fa-solid fa-envelope"></i> yatempiatu@gmail.com
                     </a>
                 </li>
@@ -641,6 +615,28 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // name products di home
+        const nameProducts = document.getElementsByClassName('name-products')
+
+        if (nameProducts.length > 0) {
+            for (let i = 0; i < nameProducts.length; i++) {
+                const slice = nameProducts[i].innerText.length > 70 ? `${nameProducts[i].innerHTML.substr(0, 70)}...` : nameProducts[i].innerHTML
+                nameProducts[i].innerHTML = slice
+            }
+        }
+
+        // latest news di home
+        const titleNews = document.getElementsByClassName('title-news')
+
+        if (titleNews.length > 0) {
+            for (let i = 0; i < titleNews.length; i++) {
+                const slice = titleNews[i].innerText.length > 60 ? `${titleNews[i].innerHTML.substr(0, 90)}...` : titleNews[i].innerHTML
+                titleNews[i].innerHTML = slice
+            }
+        }
+    </script>
 
     <!-- emailjs cdn -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">

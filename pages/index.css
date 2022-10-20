@@ -8,9 +8,14 @@
 
 /* navbar */
 .main-navbar{
+    position: fixed;
+    z-index: 999999999999999999999999999999999999999;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     background-color: #fff;
+    box-shadow: 0 1px 10px -1px rgba(0,0,0,0.3);
 }
 
 .main-navbar .navbar{
@@ -65,10 +70,14 @@
     color: #F8BB31;
 }
 
+/* FROM HOMEEEEEEEEEEEEEEE */
 /* carousel top */
 .carousel-top{
     height: 500px;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px;
 }
 
 .carousel-top .wrapp-indicator{
@@ -110,50 +119,51 @@
     opacity: 1;
 }
 
-.carousel-top .carousel-inner .carousel-item{
+.carousel-top .carousel-inner{
     position: relative;
-    overflow: hidden;
 }
 
-.carousel-top .carousel-inner .carousel-item .container-deskripsi{
+/* wrapp-text-carousel-top */
+.carousel-top .carousel-inner .wrapp-text-carousel-top{
     display: flex;
-    justify-content: center;
-}
-
-.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel{
-    display: flex;
-    height: 100%;
-    width: 750px;
     position: absolute;
     top: 0;
-    z-index: 1;
-    color: #fff;
-    justify-content: space-between;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.3s ease-in;
 }
 
-/* deskripsi kiri carousel */
-.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .deskripsi-kiri{
+.carousel-top .carousel-inner .wrapp-text-carousel-top .text-carousel-top{
     display: flex;
     flex-direction: column;
-    width: 45%;
-    margin-top: 100px;
+    height: 460px;
+    width: 750px;
+    justify-content: center;
+    z-index: 99;
 }
 
-.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .deskripsi-kiri .title-deskripsi{
+.carousel-top .carousel-inner .wrapp-text-carousel-top .text-carousel-top .title-deskripsi{
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    color: #fff;
+    width: 45%;
 }
 
-.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .deskripsi-kiri .deskripsi{
+.carousel-top .carousel-inner .wrapp-text-carousel-top .text-carousel-top .deskripsi{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 14px;
     width: 300px;
     margin-top: 5px;
+    color: #fff;
+    width: 45%;
 }
 
-.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .deskripsi-kiri .shop-now{
+.carousel-top .carousel-inner .wrapp-text-carousel-top .text-carousel-top .shop-now{
     height: 40px;
     width: 150px;
     border: none;
@@ -166,34 +176,44 @@
     margin-top: 10px;
 }
 
-.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .deskripsi-kiri .shop-now:hover{
+.carousel-top .carousel-inner .wrapp-text-carousel-top .text-carousel-top .shop-now:hover{
     background-color: #fff;
     color: #222;
 }
 
-.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .deskripsi-kiri .shop-now .txt-btn{
+.carousel-top .carousel-inner .wrapp-text-carousel-top .text-carousel-top .shop-now .txt-btn{
     margin-top: 10px;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
-/* deskripsi kanan carousel */
-.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .deskripsi-kanan{
+.carousel-top .carousel-inner .carousel-item{
+    overflow: hidden;
+}
+
+.carousel-top .carousel-inner .carousel-item .container-deskripsi{
     display: flex;
-    width: 50%;
     justify-content: center;
+    height: 500px;
+}
+
+.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel{
+    display: flex;
+    height: 100%;
+    width: 750px;
+    justify-content: flex-end;
     padding-top: 80px;
 }
 
-.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .deskripsi-kanan .img-baju1{
+.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .img-baju1{
     height: 300px;
     width: 200px;
     object-fit: cover;
     object-position: center;
 }
 
-.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .deskripsi-kanan .img-baju2{
+.carousel-top .carousel-inner .carousel-item .container-deskripsi .deskripsi-carousel .img-baju2{
     height: 250px;
     width: 120px;
     object-fit: cover;
@@ -297,6 +317,10 @@
     bottom: 0;
     object-fit: cover;
     object-position: center;
+    transition: 0.3s ease-in-out;
+}
+.wrapp-shop-categories .content-shop-categories .shop-categories .image-men-women .bg-img-men-women:hover{
+    transform: scale(1.1);
 }
 
 .wrapp-shop-categories .content-shop-categories .shop-categories .image-men-women .title-img{
@@ -314,6 +338,10 @@
     font-size: 16px;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
+}
+
+.wrapp-shop-categories .content-shop-categories .shop-categories .image-men-women .txt-kanan-img{
+    text-align: end;
 }
 
 .wrapp-shop-categories .content-shop-categories .shop-categories .image-men-women .kiri-men{
@@ -363,6 +391,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .wrapp-shop-categories .content-shop-categories .shop-categories .our-products .card-our-products .card-products .img-products{
@@ -378,6 +407,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     margin-bottom: 5px;
+    overflow: hidden;
 }
 
 .wrapp-shop-categories .content-shop-categories .shop-categories .our-products .card-our-products .card-products .name-products{
@@ -386,6 +416,8 @@
     font-weight: 500;
     margin-bottom: 5px;
     text-align: center;
+    margin: 0 15px;
+    overflow: hidden;
 }
 
 .wrapp-shop-categories .content-shop-categories .shop-categories .our-products .card-our-products .card-products .price{
@@ -394,9 +426,12 @@
     font-weight: 700;
     color: #F8BB31;
     margin-bottom: 0;
+    overflow: hidden;
 }
 
 .wrapp-shop-categories .content-shop-categories .shop-categories .our-products .card-our-products .card-products .view-product{
+    position: absolute;
+    bottom: 10px;
     height: 35px;
     width: 110px;
     border: none;
@@ -622,6 +657,11 @@
 .wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .sponsor-kondom .list-sponsor .img-sponsor{
     width: 120px;
     cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+.wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .sponsor-kondom .list-sponsor .img-sponsor:hover{
+    opacity: 1;
 }
 
 /* latest news */
@@ -652,14 +692,24 @@
 .wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .latest-news .card-latest-news .card-news{
     display: flex;
     flex-direction: column;
+    position: relative;
     align-items: center;
     width: calc(100%/3);
+    padding-bottom: 45px;
 }
 
-.wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .latest-news .card-latest-news .card-news .img-news{
-    width: 101%;
+.wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .latest-news .card-latest-news .card-news .con-img-news{
+    overflow: hidden;
+}
+
+.wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .latest-news .card-latest-news .card-news .con-img-news .img-news{
+    width: 100%;
     object-fit: cover;
     object-position: center;
+    transition: 0.3s ease-in-out;
+}
+.wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .latest-news .card-latest-news .card-news .con-img-news .img-news:hover{
+    transform: scale(1.1);
 }
 
 .wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .latest-news .card-latest-news .card-news .title-news{
@@ -667,11 +717,14 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #F8BB31;
-    margin-top: 30px;
+    text-align: center;
+    margin: 30px 15px 0 15px;
 }
 
 .wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .latest-news .card-latest-news .card-news .read-more{
     display: flex;
+    position: absolute;
+    bottom: 10px;
     background-color: transparent;
     border: none;
     outline: none;
@@ -859,4 +912,492 @@
 
 .main-footer .footer .copy-right .reserved{
     margin-bottom: 0;
+}
+
+/* FROM ABOUUUUUTTTT */
+.wrapp-about{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+/* header */
+.wrapp-about .header{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    justify-content: center;
+}
+
+.wrapp-about .header .wrapp-txt-header .desk-header{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 900px;
+    justify-content: center;
+}
+
+.wrapp-about .header .wrapp-txt-header .desk-header .list-link-page{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.wrapp-about .header .wrapp-txt-header .desk-header .list-link-page .link-page{
+    text-decoration: none;
+    color: #000;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+.wrapp-about .header .wrapp-txt-header .desk-header .list-link-page .link-page:hover{
+    color: #F8BB31;
+}
+
+.wrapp-about .header .wrapp-txt-header .desk-header .txt-header{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+/* content */
+.wrapp-about .wrapp-content-about{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+/* we are tod */
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background: #EDEFEE;
+    width: 100%;
+}
+/* bg-black-top */
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .bg-black-top{
+    display: flex;
+    position: absolute;
+    background-color: #1E1E1E;
+    height: 430px;
+    left: 0;
+    right: 0;
+    margin-left: -130px;
+    margin-top: -200px;
+    margin-right: -100px;
+    transform: rotate(-12deg);
+}
+
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    z-index: 9;
+    padding-top: 60px;
+}
+
+/* deskripsi we are tod */
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .deskripsi-we-are-tod{
+    display: flex;
+}
+
+/* kiri deskripsi tod */
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .deskripsi-we-are-tod .kiri-deskripsi{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .deskripsi-we-are-tod .kiri-deskripsi .title{
+    font-size: 20px;
+    color: #F8BB31;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .deskripsi-we-are-tod .kiri-deskripsi .deskripsi{
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* kanan deskripsi tod */
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .deskripsi-we-are-tod .kanan-deskripsi{
+    display: flex;
+    position: relative;
+    width: 55%;
+    padding-left: 40px;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .deskripsi-we-are-tod .kanan-deskripsi .img-deskripsi{
+    position: absolute;
+    margin-right: 28px;
+    width: 350px;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .deskripsi-we-are-tod .kanan-deskripsi .back-image{
+    display: flex;
+    height: 195px;
+    width: 355px;
+    border-radius: 33px;
+    background-color: #D6D3CC;
+    margin-top: 30px;
+}
+
+/* pengiriman antar alam */
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .pengiriman-antar-alam{
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .pengiriman-antar-alam .col-antar-alam{
+    display: flex;
+    flex-direction: column;
+    width: calc(100%/3);
+    padding: 40px 20px 50px 20px;
+    position: relative;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .pengiriman-antar-alam .col-antar-alam .icon-pengiriman{
+    width: 60px;
+    position: absolute;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .pengiriman-antar-alam .col-antar-alam .title-antar-alam{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #F8BB31;
+    margin: 80px 0 0 0;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-we-are-tod .container-we-are-tod .pengiriman-antar-alam .col-antar-alam .deskripsi-antar-alam{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    margin: 5px 0;
+    color: #000;
+}
+
+/* shop by categories */
+.wrapp-about .wrapp-content-about .wrapp-shop-categories{
+    align-items: center;
+    background-color: #1E1E1E;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-shop-categories .container-shop-categories{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    padding: 40px 0 80px 0;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-shop-categories .container-shop-categories .title-shop-categories{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #F8BB31;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-shop-categories .container-shop-categories .deskripsi-shop-categories{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+/* img men and women */
+.wrapp-about .wrapp-content-about .wrapp-shop-categories .container-shop-categories .image-men-women{
+    display: flex;
+    height: 400px;
+    margin-top: 10px;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-shop-categories .container-shop-categories .image-men-women .bg-img-men-women{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s ease-in-out;
+}
+.wrapp-about .wrapp-content-about .wrapp-shop-categories .container-shop-categories .image-men-women .bg-img-men-women:hover{
+    transform: scale(1.1);
+}
+
+.wrapp-about .wrapp-content-about .wrapp-shop-categories .container-shop-categories .image-men-women .title-img{
+    z-index: 1;
+    color: #F8BB31;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-shop-categories .container-shop-categories .image-men-women .deskripsi-img{
+    z-index: 1;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-shop-categories .container-shop-categories .image-men-women .txt-kanan-img{
+    text-align: end;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-shop-categories .container-shop-categories .image-men-women .kiri-men{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 51%;
+    padding: 40px 30px 0 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-shop-categories .container-shop-categories .image-men-women .kanan-women{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 40px 30px 0 30px;
+    width: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* our team */
+.wrapp-about .wrapp-content-about .wrapp-our-team{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team{
+    display: flex;
+    width: 900px;
+    flex-direction: column;
+    padding-top: 30px;
+    z-index: 9;
+}
+
+/* background black */
+.wrapp-about .wrapp-content-about .wrapp-our-team .bg-black-bottom{
+    display: flex;
+    position: absolute;
+    background-color: #1E1E1E;
+    height: 270px;
+    left: 0;
+    right: 0;
+    margin-top: 140px;
+    margin-left: -130px;
+    margin-right: -130px;
+    transform: rotate(-4.5deg);
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .bg-black-bottom-two{
+    display: flex;
+    position: absolute;
+    background-color: #1E1E1E;
+    height: 370px;
+    left: 0;
+    right: 0;
+    margin-top: 300px;
+}
+/* @media (min-width: 1720px) and (max-width: 1920px){
+    .wrapp-about .wrapp-content-about .wrapp-our-team .bg-black-bottom-two{
+        height: 280px;
+        margin-top: 280px;
+    }
+} */
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .title-our-team{
+    width: 230px;
+    font-weight: 700;
+    color: #000;
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 3px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 5px solid #F8BB31;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .deskripsi-our-team{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 3px 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+}
+
+/* card our team */
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .card-our-team{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 265px);
+    grid-gap: 15px;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-top: 110px;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .card-our-team .card-person{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px 10px 10px;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+    align-items: center;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .card-our-team .card-person .img-person{
+    object-fit: cover;
+    border-radius: 50%;
+    height: 140px;
+    width: 110px;
+    margin-bottom: 15px;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .card-our-team .card-person .title-person{
+    font-weight: 500;
+    font-size: 10.5px;
+    margin: 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .card-our-team .card-person .name-person{
+    font-weight: 700;
+    font-size: 12px;
+    margin: 5px 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .card-our-team .card-person .nim-person{
+    font-weight: 600;
+    font-size: 11px;
+    margin: 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #F8BB31;
+}
+
+/* people say about us */
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .title-people-say{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin: 40px 0 40px 0;
+}
+
+/* carousel people */
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .carousel-people{
+    height: 160px;
+    overflow: hidden;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .carousel-people .carousel-indicators .active{
+    background-color: #F8BB32;
+}
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .carousel-people .carousel-indicators button{
+    height: 10px;
+    width: 10px;
+    border-radius: 500px;
+    border-top: 0;
+    border-bottom: 0;
+    opacity: 1;
+    background-color: #949494;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .carousel-people .carousel-control-prev i{
+    color: #000;
+    font-size: 26px;
+    overflow: hidden;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .carousel-people .carousel-control-next i{
+    color: #000;
+    font-size: 26px;
+    overflow: hidden;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .carousel-people .carousel-inner .carousel-item .deskripsi{
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    background-color: #E6E6E6;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .carousel-people .carousel-inner .carousel-item .deskripsi .comment-people{
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    width: 500px;
+    text-align: center;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .carousel-people .carousel-inner .carousel-item .deskripsi .name-people{
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #F8BB31;
+    margin-top: 5px;
+}
+
+/* sponsor kondom */
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .sponsor-kondom{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 150px);
+    justify-content: center;
+    grid-gap: 20px;
+    align-items: center;
+    list-style: none;
+    margin: 10px 0 30px 0;
+    padding: 0 60px;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .sponsor-kondom .list-sponsor{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .sponsor-kondom .list-sponsor .img-sponsor{
+    width: 120px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+.wrapp-about .wrapp-content-about .wrapp-our-team .container-our-team .sponsor-kondom .list-sponsor .img-sponsor:hover{
+    opacity: 1;
 }

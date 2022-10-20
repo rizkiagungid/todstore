@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- weight 400 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>ABOUT US</title>
+</head>
+
+<body>
+    <script>
+        // untuk subscribe di input footer
+        const serviceID = 'service_hmqukxt'
+        const templateID = 'template_fwpgdpp'
+        const publicKey = '9OBxoKBI85PFlIkj7'
+
+        let data = {
+            fullName: 'TOD E-Commerce',
+            email: '',
+            message: 'user telah subscribe di website kami (TOD-Ecommerce).'
+        }
+
+        function changeInput() {
+            return data.email = document.getElementById('subscribe').value
+        }
+
+        function submit() {
+            const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+            let err = ''
+
+            if (data.email.length === 0 && !data.email.trim()) {
+                err = 'Email harus di isi'
+            } else if (!document.getElementById('subscribe').value.match(mailformat)) {
+                err = 'Email harus di isi dengan benar'
+            }
+
+            if (err.length === 0) {
+                data.email = `email user : ${document.getElementById('subscribe').value}`
+
+                emailjs.send(serviceID, templateID, data, publicKey)
+                    .then((res) => {
+                        window.alert('Terima kasih sudah subscribe!')
+                        document.getElementById('subscribe').value = ''
+                        data.email = ''
+                        console.log(res)
+                    })
+                    .catch(err => console.log(err))
+            } else {
+                window.alert(err)
+            }
+        }
+    </script>
+
+    <!-- navbar -->
+    <div class="main-navbar">
+        <div class="navbar">
+            <img src="../images/logo.png" alt="" class="logo">
+
+            <ul class="list-menu">
+                <li class="menu">
+                    HOME
+                </li>
+                <li class="menu">
+                    SHOP
+                </li>
+                <li class="menu">
+                    PRODUCT
+                </li>
+                <li class="menu">
+                    BLOG
+                </li>
+                <li class="menu">
+                    PAGE
+                </li>
+            </ul>
+
+            <ul class="list-icon">
+                <li class="icon-nav">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </li>
+                <li class="icon-nav">
+                    <i class="fa-solid fa-heart"></i>
+                </li>
+                <li class="icon-nav">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrapp-about">
+        <!-- header -->
+        <div class="header" style="background-image: url(../images/header-about.png);">
+            <div class="wrapp-txt-header">
+                <div class="desk-header">
+                    <ul class="list-link-page">
+                        <a href="" class="link-page">Home/</a>
+                        <a href="" class="link-page">About Us</a>
+                    </ul>
+                    <p class="txt-header">
+                        ABOUT US
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="wrapp-content-about">
+            <!-- we are tod -->
+            <div class="wrapp-we-are-tod">
+                <!-- bg-black-top -->
+                <div class="bg-black-top"></div>
+
+                <div class="container-we-are-tod">
+                    <!-- deskripsi we are tod -->
+                    <div class="deskripsi-we-are-tod">
+                        <!-- kiri deskripsi tod -->
+                        <div class="kiri-deskripsi">
+                            <p class="title">
+                                WE ARE TOD
+                            </p>
+                            <div class="deskripsi">
+                                TOD Project’s Adalah sebuah digital clothing store karya
+                                anak bangsa yang berbasis di Cilebut - Citayem
+                                mempunyai Visi untuk turut berpartisipasi dalam
+                                kearifan lokal.
+                            </div>
+                        </div>
+                        <!-- kanan deskripsi tod -->
+                        <div class="kanan-deskripsi">
+                            <img src="../images/we.png" alt="" class="img-deskripsi">
+                            <div class="back-image"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- pengiriman antar alam -->
+                    <div class="pengiriman-antar-alam">
+                        <div class="col-antar-alam">
+                            <img src="../images/Vector.png" alt="" class="icon-pengiriman">
+
+                            <p class="title-antar-alam">
+                                PENGIRIMAN ANTAR ALAM
+                            </p>
+                            <p class="deskripsi-antar-alam">
+                                Mengirim paket anda hingga
+                                berbeda alam dalam waktu
+                                yang mustahil
+                            </p>
+                        </div>
+                        <div class="col-antar-alam" style="border-right: 2px solid #000; border-left: 2px solid #000;">
+                            <img src="../images/XMLID_8897_.png" alt="" class="icon-pengiriman">
+
+                            <p class="title-antar-alam">
+                                100% AUTHENTIC HIGH QUALITY
+                            </p>
+                            <p class="deskripsi-antar-alam">
+                                Baju yang kami jual sudah terjamin
+                                sekali kualitasnya asli cibaduyut
+                                pokona mah
+                            </p>
+                        </div>
+                        <div class="col-antar-alam">
+                            <img src="../images/Phone logo.png" alt="" class="icon-pengiriman">
+
+                            <p class="title-antar-alam">
+                                LAYANAN CS 24/7
+                            </p>
+                            <p class="deskripsi-antar-alam">
+                                CS kami siap melayani anda tanpa henti
+                                bahkanuntuk curhat sekalipun tentang
+                                asmara anda
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- shop by categories -->
+            <div class="wrapp-shop-categories">
+                <div class="container-shop-categories">
+                    <p class="title-shop-categories">
+                        SHOP BY CATEGORIES
+                    </p>
+                    <p class="deskripsi-shop-categories">
+                        Pick a category you need
+                    </p>
+
+                    <!-- img men and women -->
+                    <div class="image-men-women">
+                        <div class="kiri-men">
+                            <img src="../images/men.jfif" alt="" class="bg-img-men-women">
+                            <p class="title-img">
+                                MEN
+                            </p>
+                            <p class="deskripsi-img">
+                                10 Products
+                            </p>
+                        </div>
+                        <div class="kanan-women">
+                            <img src="../images/women.jfif" alt="" class="bg-img-men-women">
+                            <p class="title-img txt-kanan-img">
+                                WOMEN
+                            </p>
+                            <p class="deskripsi-img txt-kanan-img">
+                                5 Products
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- our team -->
+            <div class="wrapp-our-team">
+                <!-- background black -->
+                <div class="bg-black-bottom"></div>
+                <div class="bg-black-bottom-two"></div>
+
+                <div class="container-our-team">
+                    <p class="title-our-team">
+                        OUR TEAM
+                    </p>
+                    <p class="deskripsi-our-team">
+                        Si paling so professional
+                    </p>
+
+                    <!-- card our team -->
+                    <div class="card-our-team">
+                        <div class="card-person">
+                            <img src="../images/ridwan.png" alt="" class="img-person">
+
+                            <p class="title-person">
+                                FRONT-END ENGINEER
+                            </p>
+                            <P class="name-person">
+                                M RIDWAN APRIYADI
+                            </P>
+                            <p class="nim-person">
+                                15200060
+                            </p>
+                        </div>
+                        <div class="card-person">
+                            <img src="../images/rizky.png" alt="" class="img-person">
+
+                            <p class="title-person">
+                                BACK-END ENGINEER
+                            </p>
+                            <P class="name-person">
+                                RIZKI AGUNG SENTOSA
+                            </P>
+                            <p class="nim-person">
+                                15200048
+                            </p>
+                        </div>
+                        <div class="card-person">
+                            <img src="../images/marchel.png" alt="" class="img-person">
+
+                            <p class="title-person">
+                                UI/UX DESIGNER
+                            </p>
+                            <P class="name-person">
+                                MARSELINO RAJA P.T
+                            </P>
+                            <p class="nim-person">
+                                15200180
+                            </p>
+                        </div>
+                        <div class="card-person">
+                            <img src="../images/thio.png" alt="" class="img-person">
+
+                            <p class="title-person">
+                                TEST ENGINEER
+                            </p>
+                            <P class="name-person">
+                                M RIZKY THIO
+                            </P>
+                            <p class="nim-person">
+                                15200237
+                            </p>
+                        </div>
+                        <div class="card-person">
+                            <img src="../images/aoo.png" alt="" class="img-person">
+
+                            <p class="title-person">
+                                TEST ENGINEER
+                            </p>
+                            <P class="name-person">
+                                M ALDI RAMADHAN
+                            </P>
+                            <p class="nim-person">
+                                15200063
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- people say about us -->
+                    <p class="title-people-say">
+                        WHAT PEOPLE SAY ABOUT US
+                    </p>
+
+                    <!-- carousel people -->
+                    <div id="carousel-people-about" class="carousel slide carousel-people" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="deskripsi">
+                                    <p class="comment-people">
+                                        “ Wahhh barang disini legit sekali ya gaes yah kalian wajib
+                                        beut dah beli dimarih”
+                                    </p>
+                                    <p class="name-people">
+                                        -GUS SAMSUDIN
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item">
+                                <div class="deskripsi">
+                                    <p class="comment-people">
+                                        “ Wahhh barang disini legit sekali ya gaes yah kalian wajib
+                                        beut dah beli dimarih”
+                                    </p>
+                                    <p class="name-people">
+                                        -GUS SAMSUDIN
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="deskripsi">
+                                    <p class="comment-people">
+                                        “ Wahhh barang disini legit sekali ya gaes yah kalian wajib
+                                        beut dah beli dimarih”
+                                    </p>
+                                    <p class="name-people">
+                                        -GUS SAMSUDIN
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-people-about"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true" style="background-image: none;">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-people-about"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true" style="background-image: none;">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <!-- sponsor kondom -->
+                    <div class="sponsor-kondom">
+                        <li class="list-sponsor">
+                            <img src="../images/dickies logo.png" alt="" class="img-sponsor">
+                        </li>
+                        <li class="list-sponsor">
+                            <img src="../images/Durex logo.png" alt="" class="img-sponsor">
+                        </li>
+                        <li class="list-sponsor">
+                            <img src="../images/Camel_Logo_old logo.png" alt="" class="img-sponsor">
+                        </li>
+                        <li class="list-sponsor">
+                            <img src="../images/Gucci logo.png" alt="" class="img-sponsor">
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="main-footer">
+        <div class="footer">
+            <!-- search -->
+            <div class="search">
+                <div class="kiri-search">
+                    <p class="title-search">
+                        SEARCH
+                    </p>
+                    <p class="deskripsi-search">
+                        Cari apa hayooo ya disini aja yaaa nanti dapet servis short - time
+                    </p>
+                </div>
+                <div class="kanan-search">
+                    <p class="title-search">
+                        Subscribe to our website
+                    </p>
+                    <div class="column-input">
+                        <input type="email" class="input-search" id="subscribe" onchange="changeInput()">
+                        <button class="btn-subscribe" onclick="submit()">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- tod project -->
+            <div class="tod-project">
+                <li class="menu-footer">
+                    <p class="title-menu">
+                        TOD PROJECT
+                    </p>
+                    <p class="deskripsi-menu" style="cursor: text; color: #fff;">
+                        Ya sakumaha aing weh nu bikin
+                        tangkurank siaaa!!!
+                    </p>
+                </li>
+                <li class="menu-footer">
+                    <p class="title-menu">
+                        INFORMATION
+                    </p>
+                    <p class="deskripsi-menu">
+                        About TOD PROJECT
+                    </p>
+                    <p class="deskripsi-menu">
+                        Contact Us
+                    </p>
+                </li>
+                <li class="menu-footer">
+                    <p class="title-menu">
+                        QUICK LINKS
+                    </p>
+                    <p class="deskripsi-menu">
+                        Wishlist
+                    </p>
+                    <p class="deskripsi-menu">
+                        Checkout
+                    </p>
+                    <p class="deskripsi-menu">
+                        Cart
+                    </p>
+                </li>
+                <li class="menu-footer">
+                    <p class="title-menu">
+                        CONTACT US
+                    </p>
+                    <a href="#" class="deskripsi-menu">
+                        <i class="fa-solid fa-location-dot"></i> Jalan YatemPiatu Sejahtera 01-00
+                    </a>
+                    <a href="tel:+6281383959452" class="deskripsi-menu">
+                        <i class="fa-solid fa-phone-volume" style="transform: rotate(-50deg);"></i> (99) 100-500
+                    </a>
+                    <a href="mailto:yatempiatu@gmail.com" class="deskripsi-menu">
+                        <i class="fa-solid fa-envelope"></i> yatempiatu@gmail.com
+                    </a>
+                </li>
+            </div>
+
+            <!-- copy right -->
+            <div class="copy-right">
+                <p class="txt-copy-right">
+                    COPYRIGHT © 2022 TOD PROJECT
+                </p>
+                <p class="reserved">
+                    ALL RIGHT RESERVED
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- emailjs cdn -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

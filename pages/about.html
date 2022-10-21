@@ -44,6 +44,7 @@
 
         function submit() {
             const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+            const errorMessage = document.getElementById('error-message-subscribe')
 
             let err = ''
 
@@ -58,6 +59,7 @@
 
                 emailjs.send(serviceID, templateID, data, publicKey)
                     .then((res) => {
+                        errorMessage.innerHTML = ''
                         window.alert('Terima kasih sudah subscribe!')
                         document.getElementById('subscribe').value = ''
                         data.email = ''
@@ -65,7 +67,7 @@
                     })
                     .catch(err => console.log(err))
             } else {
-                window.alert(err)
+                errorMessage.innerHTML = err
             }
         }
     </script>
@@ -398,22 +400,24 @@
             <div class="search">
                 <div class="kiri-search">
                     <p class="title-search">
-                        SEARCH
+                        Subscribe to our website
                     </p>
                     <p class="deskripsi-search">
-                        Cari apa hayooo ya disini aja yaaa nanti dapet servis short - time
+                        Mau video/film bokep?, silahkan subscribe di web kami, Anda akan menerima pesan Email
                     </p>
                 </div>
                 <div class="kanan-search">
-                    <p class="title-search">
-                        Subscribe to our website
-                    </p>
                     <div class="column-input">
                         <input type="email" class="input-search" id="subscribe" onchange="changeInput()">
                         <button class="btn-subscribe" onclick="submit()">
                             Subscribe
                         </button>
                     </div>
+
+                    <!-- error message -->
+                    <p id="error-message-subscribe" class="error-message-subscribe">
+                        
+                    </p>
                 </div>
             </div>
 

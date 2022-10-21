@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="assets\index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
     <!-- google fonts -->
@@ -74,7 +74,7 @@
     <!-- navbar -->
     <div class="main-navbar">
         <div class="navbar">
-            <img src="../images/logo.png" alt="" class="logo">
+            <img src="images/logo.png" alt="" class="logo">
 
             <ul class="list-menu">
                 <li class="menu">
@@ -110,7 +110,7 @@
 
     <!-- carousel top -->
     <div id="carouselExampleIndicators" class="carousel slide carousel-slide carousel-top" data-bs-ride="carousel"
-        style="background-image: url(../images/banner-top.jfif)">
+        style="background-image: url(images/banner-top.jfif)">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -141,24 +141,24 @@
             <div class="carousel-item active">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <img src="../images/baju1.png" alt="" class="img-baju1">
-                        <img src="../images/baju2.png" alt="" class="img-baju2">
+                        <img src="images/baju1.png" alt="" class="img-baju1">
+                        <img src="images/baju2.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <img src="../images/baju1.png" alt="" class="img-baju1">
-                        <img src="../images/baju2.png" alt="" class="img-baju2">
+                        <img src="images/baju1.png" alt="" class="img-baju1">
+                        <img src="images/baju2.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <img src="../images/baju1.png" alt="" class="img-baju1">
-                        <img src="../images/baju2.png" alt="" class="img-baju2">
+                        <img src="images/baju1.png" alt="" class="img-baju1">
+                        <img src="images/baju2.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
@@ -195,7 +195,7 @@
                 <!-- img men and women -->
                 <div class="image-men-women">
                     <div class="kiri-men">
-                        <img src="../images/men.jfif" alt="" class="bg-img-men-women">
+                        <img src="images/men.jfif" alt="" class="bg-img-men-women">
                         <p class="title-img">
                             MEN
                         </p>
@@ -204,7 +204,7 @@
                         </p>
                     </div>
                     <div class="kanan-women">
-                        <img src="../images/women.jfif" alt="" class="bg-img-men-women">
+                        <img src="images/women.jfif" alt="" class="bg-img-men-women">
                         <p class="title-img txt-kanan-img">
                             WOMEN
                         </p>
@@ -222,7 +222,7 @@
 
                     <div class="card-our-products">
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -238,7 +238,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -256,7 +256,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -272,7 +272,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -288,7 +288,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -304,7 +304,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -320,7 +320,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -336,7 +336,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -371,7 +371,7 @@
                 <div class="content-about">
                     <!-- about -->
                     <div class="banner-about">
-                        <img src="../images/about.jfif" alt="" class="img-about">
+                        <img src="images/about.jfif" alt="" class="img-about">
                         <div class="kanan-about">
                             <p class="title-about">
                                 ABOUT RIDWAN
@@ -460,16 +460,16 @@
                     <!-- sponsor kondom -->
                     <div class="sponsor-kondom">
                         <li class="list-sponsor">
-                            <img src="../images/dickies logo.png" alt="" class="img-sponsor">
+                            <img src="images/dickies logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="../images/Durex logo.png" alt="" class="img-sponsor">
+                            <img src="images/Durex logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="../images/Camel_Logo_old logo.png" alt="" class="img-sponsor">
+                            <img src="images/Camel_Logo_old logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="../images/Gucci logo.png" alt="" class="img-sponsor">
+                            <img src="images/Gucci logo.png" alt="" class="img-sponsor">
                         </li>
                     </div>
 
@@ -485,7 +485,7 @@
                         <div class="card-latest-news">
                             <div class="card-news">
                                 <div class="con-img-news">
-                                    <img src="../images/latest-news.jfif" alt="" class="img-news">
+                                    <img src="images/latest-news.jfif" alt="" class="img-news">
                                 </div>
 
                                 <p class="title-news">
@@ -497,7 +497,7 @@
                             </div>
                             <div class="card-news">
                                 <div class="con-img-news">
-                                    <img src="../images/latest-news.jfif" alt="" class="img-news">
+                                    <img src="images/latest-news.jfif" alt="" class="img-news">
                                 </div>
 
                                 <p class="title-news">
@@ -511,7 +511,7 @@
                             </div>
                             <div class="card-news">
                                 <div class="con-img-news">
-                                    <img src="../images/latest-news.jfif" alt="" class="img-news">
+                                    <img src="images/latest-news.jfif" alt="" class="img-news">
                                 </div>
 
                                 <p class="title-news">

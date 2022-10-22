@@ -15,7 +15,7 @@
     display: flex;
     justify-content: center;
     background-color: #fff;
-    box-shadow: 0 1px 10px -1px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 10px -1px rgba(0,0,0,0.3);;
 }
 
 .main-navbar .navbar{
@@ -823,10 +823,15 @@
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    transition: 0.2s ease-in-out;
+}
+.main-footer .footer .search .kanan-search .column-input .input-search:focus{
+    border: 1px solid #F8BB31;
 }
 
 .main-footer .footer .search .kanan-search .column-input .btn-subscribe{
     display: flex;
+    position: relative;
     padding: 5px 0;
     width: 120px;
     justify-content: center;
@@ -841,9 +846,38 @@
     font-size: 14px;
     transition: 0.3s ease-in-out;
 }
-
 .main-footer .footer .search .kanan-search .column-input .btn-subscribe:hover{
     background-color: #fff;
+}
+
+/* loading send */
+.main-footer .footer .search .kanan-search .column-input .btn-subscribe .loading-send{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F8BB31;
+    justify-content: center;
+    align-items: center;
+    cursor: not-allowed;
+}
+
+.main-footer .footer .search .kanan-search .column-input .btn-subscribe .loading-send .circle-loading-send{
+    display: flex;
+    height: 20px;
+    width: 20px;
+    border-radius: 500px;
+    border: 2px solid #fff;
+    border-top-color: #1E1E1E;
+    animation: loadSend 0.4s ease-in-out infinite;
+}
+
+@keyframes loadSend {
+    to{
+        transform: rotate(360deg);
+    }
 }
 
 /* error message */
@@ -851,6 +885,36 @@
     margin: 5px 0 0 0;
     font-size: 12px;
     color: #ff0000;
+}
+
+/* pop up message success */
+.main-footer .footer .search .kanan-search .pop-up-success{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    margin-top: 1px;
+    z-index: 99999;
+    padding-bottom: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.main-footer .footer .search .kanan-search .pop-up-success .txt-success{
+    display: flex;
+    height: 40px;
+    width: 300px;
+    font-size: 14px;
+    background-color: #1E1E1E;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    box-shadow: 0 2px 8px -1px rgba(0,0,0,0.5);
 }
 
 /* tod project */

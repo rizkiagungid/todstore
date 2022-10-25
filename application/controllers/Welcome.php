@@ -22,4 +22,17 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+	
+	public function ganteng()
+	{
+		// fungsi untuk me-load view ganteng.php
+		$this->load->view('ganteng');
+	}
+	
+	public function jelek()
+	{
+		// fungsi untuk me-load view jelek.php
+		$this->load->view('jelek');
+	}
+
 }

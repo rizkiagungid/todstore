@@ -1,11 +1,11 @@
     <div class="wrapp-about">
         <!-- header -->
-        <div class="header" style="background-image: url(../images/header-about.png);">
+        <div class="header" style="background-image: url(images/header-about.png);">
             <div class="wrapp-txt-header">
                 <div class="desk-header">
                     <ul class="list-link-page">
-                        <a href="" class="link-page">Home/</a>
-                        <a href="" class="link-page">About Us</a>
+                        <p class="link-page" onclick="toPage('home')" style="margin: 0; cursor: pointer;">Home/</p>
+                        <p class="link-page" onclick="toPage('about')" style="margin: 0; cursor: pointer;">About Us</p>
                     </ul>
                     <p class="txt-header">
                         ABOUT US
@@ -38,7 +38,7 @@
                         </div>
                         <!-- kanan deskripsi tod -->
                         <div class="kanan-deskripsi">
-                            <img src="../images/we.png" alt="" class="img-deskripsi">
+                            <img src="images/we.png" alt="" class="img-deskripsi">
                             <div class="back-image"></div>
                         </div>
 
@@ -46,8 +46,8 @@
 
                     <!-- pengiriman antar alam -->
                     <div class="pengiriman-antar-alam">
-                        <div class="col-antar-alam">
-                            <img src="../images/Vector.png" alt="" class="icon-pengiriman">
+                        <div class="col-antar-alam" style="padding-right: 20px;">
+                            <img src="images/Vector.png" alt="" class="icon-pengiriman">
 
                             <p class="title-antar-alam">
                                 PENGIRIMAN ANTAR ALAM
@@ -58,8 +58,8 @@
                                 yang mustahil
                             </p>
                         </div>
-                        <div class="col-antar-alam" style="border-right: 2px solid #000; border-left: 2px solid #000;">
-                            <img src="../images/XMLID_8897_.png" alt="" class="icon-pengiriman">
+                        <div class="col-antar-alam" style="border-right: 2px solid #000; border-left: 2px solid #000; padding-right: 20px; padding-left: 20px;">
+                            <img src="images/XMLID_8897_.png" alt="" class="icon-pengiriman">
 
                             <p class="title-antar-alam">
                                 100% AUTHENTIC HIGH QUALITY
@@ -70,8 +70,8 @@
                                 pokona mah
                             </p>
                         </div>
-                        <div class="col-antar-alam">
-                            <img src="../images/Phone logo.png" alt="" class="icon-pengiriman">
+                        <div class="col-antar-alam" style="padding-left: 20px;">
+                            <img src="images/Phone logo.png" alt="" class="icon-pengiriman">
 
                             <p class="title-antar-alam">
                                 LAYANAN CS 24/7
@@ -99,7 +99,7 @@
                     <!-- img men and women -->
                     <div class="image-men-women">
                         <div class="kiri-men">
-                            <img src="../images/men.jfif" alt="" class="bg-img-men-women">
+                            <img src="images/men.jfif" alt="" class="bg-img-men-women">
                             <p class="title-img">
                                 MEN
                             </p>
@@ -108,7 +108,7 @@
                             </p>
                         </div>
                         <div class="kanan-women">
-                            <img src="../images/women.jfif" alt="" class="bg-img-men-women">
+                            <img src="images/women.jfif" alt="" class="bg-img-men-women">
                             <p class="title-img txt-kanan-img">
                                 WOMEN
                             </p>
@@ -137,7 +137,7 @@
                     <!-- card our team -->
                     <div class="card-our-team">
                         <div class="card-person">
-                            <img src="../images/ridwan.png" alt="" class="img-person">
+                            <img src="images/ridwan.png" alt="" class="img-person">
 
                             <p class="title-person">
                                 FRONT-END ENGINEER
@@ -150,7 +150,7 @@
                             </p>
                         </div>
                         <div class="card-person">
-                            <img src="../images/rizky.png" alt="" class="img-person">
+                            <img src="images/rizky.png" alt="" class="img-person">
 
                             <p class="title-person">
                                 BACK-END ENGINEER
@@ -163,7 +163,7 @@
                             </p>
                         </div>
                         <div class="card-person">
-                            <img src="../images/marchel.png" alt="" class="img-person">
+                            <img src="images/marchel.png" alt="" class="img-person">
 
                             <p class="title-person">
                                 UI/UX DESIGNER
@@ -176,7 +176,7 @@
                             </p>
                         </div>
                         <div class="card-person">
-                            <img src="../images/thio.png" alt="" class="img-person">
+                            <img src="images/thio.png" alt="" class="img-person">
 
                             <p class="title-person">
                                 TEST ENGINEER
@@ -189,7 +189,7 @@
                             </p>
                         </div>
                         <div class="card-person">
-                            <img src="../images/aoo.png" alt="" class="img-person">
+                            <img src="images/aoo.png" alt="" class="img-person">
 
                             <p class="title-person">
                                 TEST ENGINEER
@@ -262,19 +262,19 @@
                         </button>
                     </div>
 
-                    <!-- sponsor kondom -->
-                    <div class="sponsor-kondom">
+                    <!-- sponsor -->
+                    <div class="sponsor-about">
                         <li class="list-sponsor">
-                            <img src="../images/dickies logo.png" alt="" class="img-sponsor">
+                            <img src="images/dickies logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="../images/Durex logo.png" alt="" class="img-sponsor">
+                            <img src="images/Durex logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="../images/Camel_Logo_old logo.png" alt="" class="img-sponsor">
+                            <img src="images/Camel_Logo_old logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="../images/Gucci logo.png" alt="" class="img-sponsor">
+                            <img src="images/Gucci logo.png" alt="" class="img-sponsor">
                         </li>
                     </div>
                 </div>

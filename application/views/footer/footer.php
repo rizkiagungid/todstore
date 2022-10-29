@@ -8,7 +8,7 @@
                         Subscribe to our website
                     </p>
                     <p class="deskripsi-search">
-                        Mau video/film bokep?, silahkan subscribe di web kami, Anda akan menerima pesan Email
+                        silahkan subscribe di web kami
                     </p>
                 </div>
                 <div class="kanan-search">
@@ -103,6 +103,19 @@
     </div>
 
     <script>
+        // onscroll navbar
+        const navbar = document.getElementById('main-navbar')
+
+        function navbarScroll(){
+            const topPosition = Math.floor(window.pageYOffset)
+
+            if(topPosition > 50){
+                navbar.style.boxShadow = '0 1px 7px -1px rgba(0,0,0,0.2)'
+            }else if(topPosition < 49){
+                navbar.style.boxShadow = 'none'
+            }
+        }
+
         // name products di home
         const nameProducts = document.getElementsByClassName('name-products')
 
@@ -121,6 +134,228 @@
                 const slice = titleNews[i].innerText.length > 60 ? `${titleNews[i].innerHTML.substr(0, 90)}...` : titleNews[i].innerHTML
                 titleNews[i].innerHTML = slice
             }
+        }
+
+        // sort by di shop
+        function clickSortBy() {
+            const dropdown = document.getElementById('on-dropdown')
+
+            if (dropdown.style.display == '') {
+                dropdown.style.display = 'flex'
+            } else if (dropdown.style.display == 'none') {
+                dropdown.style.display = 'flex'
+            } else {
+                dropdown.style.display = 'none'
+            }
+        }
+
+        // card shop
+        const dataShop = [
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Baju',
+                price: 'Rp 1,000,000'
+            },
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Baju',
+                price: 'Rp 1,000,000'
+            },
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Baju',
+                price: 'Rp 1,000,000'
+            },
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Baju',
+                price: 'Rp 1,000,000'
+            },
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Sepatu',
+                price: 'Rp 1,000,000'
+            },
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Sepatu',
+                price: 'Rp 1,000,000'
+            },
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Sepatu',
+                price: 'Rp 1,000,000'
+            },
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Sepatu',
+                price: 'Rp 1,000,000'
+            },
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Sepatu',
+                price: 'Rp 1,000,000'
+            },
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Sepatu',
+                price: 'Rp 1,000,000'
+            },
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Sepatu',
+                price: 'Rp 1,000,000'
+            },
+            {
+                img: 'images/products.jfif',
+                gender: 'Men',
+                nameProducts: 'Sepatu',
+                price: 'Rp 1,000,000'
+            },
+        ]
+
+        const list_element = document.getElementById('card-shop')
+        const pagination = document.getElementById('list-index-paginate')
+
+        let current_page = 1
+        let rows = 8
+
+        function DisplayList(items, wrapper, rows_per_page, page) {
+            wrapper.innerHTML = ''
+            page--
+
+            let start = rows_per_page * page
+            let end = start + rows_per_page
+            let paginatedItems = items.slice(start, end)
+
+            let newData = []
+
+            for (let i = 0; i < paginatedItems.length; i++) {
+                let item = paginatedItems[i]
+                newData.push(item)
+            }
+
+            wrapper.innerHTML = newData.map((e) => {
+                return `<div class="card-products">
+                <img src="${e.img}" alt="" class="img-products">
+                            <p class="gender">
+                                ${e.gender}
+                            </p>
+                            <p class="name-products">
+                                ${e.nameProducts.length > 35 ? `${e.nameProducts.substr(0, 35)}...` : e.nameProducts}
+                            </p>
+                            <p class="price">
+                                ${e.price}
+                            </p>
+                            <button class="view-product">
+                                View Product
+                            </button>
+                </div>`
+            }).join('')
+        }
+
+        const leftPagination = document.getElementById('left-pagination')
+        const rightPagination = document.getElementById('right-pagination')
+
+        function clickPaginate(index) {
+            current_page = index
+            DisplayList(dataShop, list_element, rows, index)
+
+            setTimeout(() => {
+                SetupPagination(dataShop, pagination, rows)
+            }, [])
+
+            const indexPaginate = document.getElementsByClassName('index-paginate')
+
+            leftPagination.style.display = 'flex'
+            rightPagination.style.display = 'flex'
+
+            if(current_page === 1){
+                leftPagination.style.display = 'none'
+            }else if(current_page === indexPaginate.length){
+                rightPagination.style.display = 'none'
+            }
+
+            window.scrollTo(0, 200)
+        }
+
+        function clickLeftPaginate() {
+            if (current_page > 1) {
+                current_page = current_page - 1
+
+                DisplayList(dataShop, list_element, rows, current_page)
+
+                setTimeout(() => {
+                    SetupPagination(dataShop, pagination, rows)
+                }, [])
+
+                if(current_page === 1){
+                    leftPagination.style.display = 'none'
+                }
+                rightPagination.style.display = 'flex'
+
+                window.scrollTo(0, 200)
+            }
+        }
+
+        function clickRightPaginate() {
+            const indexPaginate = document.getElementsByClassName('index-paginate')
+
+            if (current_page < indexPaginate.length) {
+                current_page = current_page + 1
+
+                DisplayList(dataShop, list_element, rows, current_page)
+
+                setTimeout(() => {
+                    SetupPagination(dataShop, pagination, rows)
+                }, [])
+
+                if(current_page === indexPaginate.length){
+                    rightPagination.style.display = 'none'
+                }
+                leftPagination.style.display = 'flex'
+
+                window.scrollTo(0, 200)
+            }
+        }
+
+        function SetupPagination(items, wrapper, rows_per_page) {
+            wrapper.innerHTML = ''
+
+            let dataPaginate = []
+
+            let page_count = Math.ceil(items.length / rows_per_page - 1)
+            for (let i = 0; i < page_count + 1; i++) {
+                dataPaginate.push(i)
+            }
+
+            wrapper.innerHTML = dataPaginate.map((e) => {
+                return `<li class="index-paginate ${current_page === e + 1 ? 'active-paginate' : ''}" onclick="clickPaginate(${e + 1})">
+                                ${e + 1}
+                            </li>`
+            }).join('')
+        }
+
+        DisplayList(dataShop, list_element, rows, current_page)
+        SetupPagination(dataShop, pagination, rows)
+
+        // to page
+        function toPage(path){
+            const origin = window.location.origin
+            const pathname = window.location.pathname.split('/')[1]
+
+            window.location.href = `${origin}/${pathname}/${path}`
         }
     </script>
 

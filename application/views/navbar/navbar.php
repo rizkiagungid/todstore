@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/index.css">
+    <link rel="stylesheet" href="assets/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
     <!-- google fonts -->
@@ -24,7 +24,7 @@
     <title>TOD E-Commerce</title>
 </head>
 
-<body>
+<body onscroll="navbarScroll()">
     <script>
         // untuk subscribe di input footer
         const serviceID = 'service_hmqukxt'
@@ -87,17 +87,17 @@
     </script>
 
     <!-- navbar -->
-    <div class="main-navbar">
+    <div id="main-navbar" class="main-navbar" style="box-shadow: none;">
         <div class="navbar">
-            <a href="#" class="link-logo">
-                <img src="../images/logo.png" alt="" class="logo">
-            </a>
+            <div class="link-logo" onclick="toPage('home')">
+                <img src="images/logo.png" alt="" class="logo">
+            </div>
 
             <ul class="list-menu">
-                <li class="menu">
+                <li class="menu" onclick="toPage('home')">
                     HOME
                 </li>
-                <li class="menu">
+                <li class="menu" onclick="toPage('shop')">
                     SHOP
                 </li>
                 <li class="menu">

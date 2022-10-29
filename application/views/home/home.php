@@ -1,6 +1,6 @@
     <!-- carousel top -->
-    <div id="carouselExampleIndicators" class="carousel slide carousel-slide carousel-top" data-bs-ride="carousel"
-        style="background-image: url(../images/banner-top.jfif)">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade carousel-slide carousel-top" data-bs-ride="carousel"
+        style="background-image: url(images/banner-top.jfif)">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -31,24 +31,24 @@
             <div class="carousel-item active">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <img src="../images/baju1.png" alt="" class="img-baju1">
-                        <img src="../images/baju2.png" alt="" class="img-baju2">
+                        <img src="images/baju1.png" alt="" class="img-baju1">
+                        <img src="images/baju2.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <img src="../images/baju1.png" alt="" class="img-baju1">
-                        <img src="../images/baju2.png" alt="" class="img-baju2">
+                        <img src="images/LINE_ALBUM_2933-2936-TNW 112146-2933-2936-SP_220108_8-1279x1280.jpg" alt="" class="img-baju1">
+                        <img src="images/baju2.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <img src="../images/baju1.png" alt="" class="img-baju1">
-                        <img src="../images/baju2.png" alt="" class="img-baju2">
+                        <img src="images/normal_69234ea215.jpg" alt="" class="img-baju1">
+                        <img src="images/baju2.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                 <!-- img men and women -->
                 <div class="image-men-women">
                     <div class="kiri-men">
-                        <img src="../images/men.jfif" alt="" class="bg-img-men-women">
+                        <img src="images/men.jfif" alt="" class="bg-img-men-women">
                         <p class="title-img">
                             MEN
                         </p>
@@ -94,7 +94,7 @@
                         </p>
                     </div>
                     <div class="kanan-women">
-                        <img src="../images/women.jfif" alt="" class="bg-img-men-women">
+                        <img src="images/women.jfif" alt="" class="bg-img-men-women">
                         <p class="title-img txt-kanan-img">
                             WOMEN
                         </p>
@@ -112,13 +112,13 @@
 
                     <div class="card-our-products">
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
                             </p>
                             <p class="name-products">
-                                Daster Yogs bisa dipake ke oyo. mantep kn. yoi dong kwkwadkowkdkaokdowkad
+                                Daster Yogs
                             </p>
                             <p class="price">
                                 Rp 1,000,000
@@ -128,7 +128,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -146,7 +146,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -162,7 +162,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -178,7 +178,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -194,7 +194,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -210,7 +210,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -226,7 +226,7 @@
                             </button>
                         </div>
                         <div class="card-products">
-                            <img src="../images/products.jfif" alt="" class="img-products">
+                            <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
                                 Men
@@ -261,7 +261,7 @@
                 <div class="content-about">
                     <!-- about -->
                     <div class="banner-about">
-                        <img src="../images/about.jfif" alt="" class="img-about">
+                        <img src="images/about.jfif" alt="" class="img-about">
                         <div class="kanan-about">
                             <p class="title-about">
                                 ABOUT RIDWAN
@@ -347,19 +347,19 @@
                         </div>
                     </div>
 
-                    <!-- sponsor kondom -->
-                    <div class="sponsor-kondom">
+                    <!-- sponsor -->
+                    <div class="sponsor-home">
                         <li class="list-sponsor">
-                            <img src="../images/dickies logo.png" alt="" class="img-sponsor">
+                            <img src="images/dickies logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="../images/Durex logo.png" alt="" class="img-sponsor">
+                            <img src="images/Durex logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="../images/Camel_Logo_old logo.png" alt="" class="img-sponsor">
+                            <img src="images/Camel_Logo_old logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="../images/Gucci logo.png" alt="" class="img-sponsor">
+                            <img src="images/Gucci logo.png" alt="" class="img-sponsor">
                         </li>
                     </div>
 
@@ -375,11 +375,11 @@
                         <div class="card-latest-news">
                             <div class="card-news">
                                 <div class="con-img-news">
-                                    <img src="../images/latest-news.jfif" alt="" class="img-news">
+                                    <img src="images/latest-news.jfif" alt="" class="img-news">
                                 </div>
 
                                 <p class="title-news">
-                                    Dua sejoli tertangkap basah di oyo sedang bermesra mesraan. pukul
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic fugiat, fuga laudantium porro itaque dolor quia. Odit voluptate cumque corporis, praesentium doloribus consectetur at cupiditate modi assumenda, nobis accusantium tempora.
                                 </p>
                                 <button class="read-more">
                                     Read More <i class="fa-solid fa-arrow-right"></i>
@@ -387,7 +387,7 @@
                             </div>
                             <div class="card-news">
                                 <div class="con-img-news">
-                                    <img src="../images/latest-news.jfif" alt="" class="img-news">
+                                    <img src="images/latest-news.jfif" alt="" class="img-news">
                                 </div>
 
                                 <p class="title-news">
@@ -401,7 +401,7 @@
                             </div>
                             <div class="card-news">
                                 <div class="con-img-news">
-                                    <img src="../images/latest-news.jfif" alt="" class="img-news">
+                                    <img src="images/latest-news.jfif" alt="" class="img-news">
                                 </div>
 
                                 <p class="title-news">

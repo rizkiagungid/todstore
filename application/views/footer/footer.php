@@ -8,7 +8,7 @@
                         Subscribe to our website
                     </p>
                     <p class="deskripsi-search">
-                        silahkan subscribe di web kami
+                        silahkan subscribe di web kami.
                     </p>
                 </div>
                 <div class="kanan-search">

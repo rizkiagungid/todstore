@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/icon type">
     <link rel="stylesheet" href="assets/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
@@ -34,20 +35,59 @@
         let data = {
             fullName: 'TOD E-Commerce',
             email: '',
-            message: 'user telah subscribe di website kami (TOD-Ecommerce).'
+            toEmail: 'iwanwawan455@gmail.com',
+            message: 'user telah subscribe di website kami (TOD E-Commerce).'
+        }
+
+        let dataToUser = {
+            to_name: 'Rizky',
+            fullName: 'TOD E-Commerce',
+            phone: 'Terima kasih, Anda telah berhasil subscribe di website kami (TOD E-Commerce)!.',
+            nations: 'Anda akan menerima informasi berbagai pakaian baju terbaru dari kami.',
+            toEmail: '',
+            message: 'Kunjungi TOD E-Commerce : https://rizkiagungid.github.io/'
         }
 
         function changeInput() {
-            return data.email = document.getElementById('subscribe').value
+            data.email = document.getElementById('subscribe').value
+            dataToUser.toEmail = document.getElementById('subscribe').value
         }
 
         let submitCondition = true
 
-        function submit() {
-            const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        async function sendToUser(){
+            return await new Promise((resolve, reject)=>{
+                emailjs.send(serviceID, templateID, dataToUser, publicKey)
+                .then(res=>resolve('success'))
+                .catch(err=>reject('Terjadi kesalahan server, mohon coba beberapa saat lagi!'))
+            })
+        }
+
+        function submitMessage(textSuccess, bgColor, second){
             const errorMessage = document.getElementById('error-message-subscribe')
-            const popUpMessage = document.getElementById('pop-up-success')
             const loadSend = document.getElementById('loading-send')
+            const txtSuccess = document.getElementById('txt-success')
+            const popUpMessage = document.getElementById('pop-up-success')
+
+            errorMessage.innerHTML = ''
+            loadSend.style.display = 'none'
+            txtSuccess.style.backgroundColor = bgColor
+            txtSuccess.style.color = '#fff'
+            txtSuccess.textContent = textSuccess
+
+            popUpMessage.style.marginTop = '100px'
+
+            setTimeout(() => {
+                popUpMessage.style.marginTop = '1px'
+                submitCondition = true
+            }, second);
+        }
+
+        function submit() {
+            const errorMessage = document.getElementById('error-message-subscribe')
+            const loadSend = document.getElementById('loading-send')
+            
+            const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
             let err = ''
 
@@ -64,21 +104,29 @@
 
                 if (submitCondition) {
                     submitCondition = false
+
                     emailjs.send(serviceID, templateID, data, publicKey)
                         .then((res) => {
-                            errorMessage.innerHTML = ''
-                            loadSend.style.display = 'none'
-                            popUpMessage.style.marginTop = '100px'
-                            document.getElementById('subscribe').value = ''
-                            data.email = ''
-                            console.log(res)
+                            sendToUser()
+                            .then(resolve=>{
+                                if(resolve === 'success'){
+                                    submitMessage('Terima kasih sudah subscribe!', '#1E1E1E', 4000)
 
-                            setTimeout(() => {
-                                popUpMessage.style.marginTop = '1px'
-                                submitCondition = true
-                            }, 4000);
+                                    document.getElementById('subscribe').value = ''
+                                    data.email = ''
+                                    dataToUser.toEmail = ''
+                                    console.log(resolve)
+                                }
+                            })
+                            .catch(err=>{
+                                submitMessage(err, '#FF0000', 5000)
+                                console.log(err)
+                            })
                         })
-                        .catch(err => console.log(err))
+                        .catch(err => {
+                            submitMessage('Terjadi kesalahan server, mohon coba beberapa saat lagi!', '#FF0000', 5000)
+                            console.log(err)
+                        })
                 }
             } else {
                 errorMessage.innerHTML = err

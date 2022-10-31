@@ -903,10 +903,7 @@
 .main-footer .footer .search .kanan-search .pop-up-success .txt-success{
     display: flex;
     height: 40px;
-    width: 300px;
     font-size: 14px;
-    background-color: #1E1E1E;
-    color: #fff;
     justify-content: center;
     align-items: center;
     border-radius: 10px;

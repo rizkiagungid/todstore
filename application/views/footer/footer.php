@@ -25,14 +25,12 @@
                     </div>
 
                     <!-- error message -->
-                    <p id="error-message-subscribe" class="error-message-subscribe">
-
-                    </p>
+                    <p id="error-message-subscribe" class="error-message-subscribe"></p>
 
                     <!-- pop up message success -->
                     <div id="pop-up-success" class="pop-up-success">
-                        <p class="txt-success">
-                            Terima kasih sudah subscribe!
+                        <p id="txt-success" class="txt-success" style="background-color: #ff0000; color: #fff; margin-top: 0px; width: auto; padding: 0 40px;">
+                        
                         </p>
                     </div>
                 </div>

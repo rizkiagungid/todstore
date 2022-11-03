@@ -142,19 +142,19 @@
             </div>
 
             <ul class="list-menu">
-                <li class="menu" onclick="toPage('home')">
+                <li class="menu menu-navbar" onclick="toPage('home')">
                     HOME
                 </li>
-                <li class="menu" onclick="toPage('shop')">
+                <li class="menu menu-navbar" onclick="toPage('shop')">
                     SHOP
                 </li>
-                <li class="menu">
+                <li class="menu menu-navbar">
                     PRODUCT
                 </li>
-                <li class="menu">
+                <li class="menu menu-navbar">
                     BLOG
                 </li>
-                <li class="menu">
+                <li class="menu menu-navbar">
                     PAGE
                 </li>
             </ul>

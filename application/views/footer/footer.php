@@ -101,6 +101,22 @@
     </div>
 
     <script>
+        // active menu navbar
+        const menuNavbar = document.getElementsByClassName('menu-navbar')
+
+        function activeNavbar(){
+            const pathname = window.location.pathname.split('/')[2]
+
+            if(menuNavbar.length > 0){
+                for(let i = 0; i < menuNavbar.length; i++){
+                    if(menuNavbar[i].innerText.toLowerCase() === pathname.toLowerCase()){
+                        menuNavbar[i].style.color = '#F8BB31'
+                    }
+                }
+            }
+        }
+        activeNavbar()
+
         // onscroll navbar
         const navbar = document.getElementById('main-navbar')
 
@@ -272,7 +288,7 @@
 
             setTimeout(() => {
                 SetupPagination(dataShop, pagination, rows)
-            }, [])
+            }, 0)
 
             const indexPaginate = document.getElementsByClassName('index-paginate')
 
@@ -296,7 +312,7 @@
 
                 setTimeout(() => {
                     SetupPagination(dataShop, pagination, rows)
-                }, [])
+                }, 0)
 
                 if(current_page === 1){
                     leftPagination.style.display = 'none'
@@ -317,7 +333,7 @@
 
                 setTimeout(() => {
                     SetupPagination(dataShop, pagination, rows)
-                }, [])
+                }, 0)
 
                 if(current_page === indexPaginate.length){
                     rightPagination.style.display = 'none'

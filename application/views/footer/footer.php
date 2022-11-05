@@ -76,7 +76,7 @@
                     <p class="title-menu">
                         CONTACT US
                     </p>
-                    <a href="#" class="deskripsi-menu">
+                    <a target="_blank" href="https://maps.google.com/maps/dir//Jl.+Sunan+Muria+IV+Pabuaran+Kecamatan+Bojonggede+Kabupaten+Bogor,+Jawa+Barat+16921/@-6.4547463,106.7950764,15z/data=!4m5!4m4!1m0!1m2!1m1!1s0x2e69e9e7ede517f7:0xb8953bf5dd0f86f1" class="deskripsi-menu">
                         <i class="fa-solid fa-location-dot"></i> Jalan YatemPiatu Sejahtera 01-00
                     </a>
                     <a href="tel:+6281383959452" class="deskripsi-menu">
@@ -361,9 +361,13 @@
             }).join('')
         }
 
-        DisplayList(dataShop, list_element, rows, current_page)
-        SetupPagination(dataShop, pagination, rows)
+        const newPathName = window.location.pathname.split('/')[2]
 
+        if(newPathName === 'shop'){
+            DisplayList(dataShop, list_element, rows, current_page)
+            SetupPagination(dataShop, pagination, rows)
+        }
+        
         // to page
         function toPage(path){
             const origin = window.location.origin
@@ -371,6 +375,19 @@
 
             window.location.href = `${origin}/${pathname}/${path}`
         }
+
+        // loading page
+        const wrappLoadPage = document.getElementById('wrapp-loading-page')
+
+        function loadingPage(){
+            if(wrappLoadPage){
+                setTimeout(() => {
+                    window.scrollTo(0, 0)
+                    wrappLoadPage.style.display = 'none'
+                }, 3000);
+            }
+        }
+        loadingPage()
     </script>
 
     <!-- emailjs cdn -->

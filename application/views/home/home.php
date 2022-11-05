@@ -1,3 +1,9 @@
+    <!-- loading page -->
+    <div id="wrapp-loading-page" class="wrapp-loading-page" style="display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; justify-content: center; align-items: center; background-color: #fff; z-index: 99999999999999999999999999;">
+        <div class="circle-loading-page" style="display: flex; height: 40px; width: 40px; border: 4px solid #1E1E1E; border-top-color: #fff; border-radius: 500px;">
+        </div>
+    </div>
+    
     <!-- carousel top -->
     <div id="carouselExampleIndicators" class="carousel slide carousel-fade carousel-slide carousel-top" data-bs-ride="carousel"
         style="background-image: url(images/banner-top.jfif)">

@@ -12,6 +12,7 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -148,13 +149,13 @@
                 <li class="menu menu-navbar" onclick="toPage('shop')">
                     SHOP
                 </li>
-                <li class="menu menu-navbar">
+                <li class="menu menu-navbar" onclick="toPage('product')">
                     PRODUCT
                 </li>
-                <li class="menu menu-navbar">
+                <li class="menu menu-navbar" onclick="toPage('blog')">
                     BLOG
                 </li>
-                <li class="menu menu-navbar">
+                <li class="menu menu-navbar" onclick="toPage('page')">
                     PAGE
                 </li>
             </ul>

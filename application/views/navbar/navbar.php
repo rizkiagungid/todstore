@@ -24,6 +24,92 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>TOD E-Commerce</title>
+
+<style type="text/css">
+    .wrapp-loading-page .logo-loading{
+        position: absolute;
+        width: 100px;
+        margin-top: -180px;
+        opacity: 0;
+        animation: wrappLoad 0.3s ease-in-out forwards;
+        animation-delay: 0.3s;
+    }
+
+    .wrapp-loading-page .container-loading{
+    display: flex;
+    height: 100px;
+    width: 600px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.wrapp-loading-page .container-loading .border-loading{
+    display: flex;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 500px;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.wrapp-loading-page .container-loading .border-satu{
+    background-color: #1e1e1e;
+    animation: load1 1.1s infinite;
+}
+
+.wrapp-loading-page .container-loading .border-dua{
+    background-color: #F8BB31;
+    margin-left: 50px;
+    animation: load2 1.1s infinite;
+}
+
+.wrapp-loading-page .txt-link-web-load{
+    position: absolute;
+    bottom: 40px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    opacity: 0;
+    animation: wrappLoad 0.3s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes wrappLoad {
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes load1 {
+    0%{
+        margin-left: -30px;
+    }
+    50%{
+        margin-left: 30px;
+    }
+    100%{
+        margin-left: -30px;
+        z-index: 9999999;
+    }
+}
+@keyframes load2 {
+    0%{
+        margin-left: 30px;
+    }
+    50%{
+        margin-left: -30px;
+        z-index: 9999999;
+    }
+    100%{
+        margin-left: 30px;
+    }
+}
+</style>
+
 </head>
 
 <body onscroll="navbarScroll()">

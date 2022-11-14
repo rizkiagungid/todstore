@@ -27,6 +27,90 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <title>404 Page Not Found</title>
 <style type="text/css">
 
+/* loading page */
+    .wrapp-loading-page .logo-loading{
+        position: absolute;
+        width: 100px;
+        margin-top: -180px;
+        opacity: 0;
+        animation: wrappLoad 0.3s ease-in-out forwards;
+        animation-delay: 0.3s;
+    }
+
+    .wrapp-loading-page .container-loading{
+    display: flex;
+    height: 100px;
+    width: 600px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.wrapp-loading-page .container-loading .border-loading{
+    display: flex;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 500px;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.wrapp-loading-page .container-loading .border-satu{
+    background-color: #1e1e1e;
+    animation: load1 1.1s infinite;
+}
+
+.wrapp-loading-page .container-loading .border-dua{
+    background-color: #F8BB31;
+    margin-left: 50px;
+    animation: load2 1.1s infinite;
+}
+
+.wrapp-loading-page .txt-link-web-load{
+    position: absolute;
+    bottom: 40px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    opacity: 0;
+    animation: wrappLoad 0.3s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes wrappLoad {
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes load1 {
+    0%{
+        margin-left: -30px;
+    }
+    50%{
+        margin-left: 30px;
+    }
+    100%{
+        margin-left: -30px;
+        z-index: 9999999;
+    }
+}
+@keyframes load2 {
+    0%{
+        margin-left: 30px;
+    }
+    50%{
+        margin-left: -30px;
+        z-index: 9999999;
+    }
+    100%{
+        margin-left: 30px;
+    }
+}
+
 /* error page */
 .wrapp-error-page{
 	display: flex;
@@ -182,8 +266,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 	<!-- loading page -->
     <div id="wrapp-loading-page" class="wrapp-loading-page" style="display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; justify-content: center; align-items: center; background-color: #fff; z-index: 99999999999999999999999999;">
-        <div class="circle-loading-page" style="display: flex; height: 40px; width: 40px; border: 4px solid #1E1E1E; border-top-color: #fff; border-radius: 500px;">
+		<img src="images/logo.png" alt="" class="logo-loading">
+        <div class="container-loading">
+            <div class="border-loading border-satu"></div>
+            <div class="border-loading border-dua"></div>
         </div>
+        <p class="txt-link-web-load">
+            www.todstore.com
+        </p>
     </div>
 
 	<!-- content -->
@@ -230,7 +320,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 setTimeout(() => {
                     window.scrollTo(0, 0)
                     wrappLoadPage.style.display = 'none'
-                }, 1000);
+                }, 3000);
             }
         }
         loadingPage()

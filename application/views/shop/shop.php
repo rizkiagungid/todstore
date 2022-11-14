@@ -1,7 +1,13 @@
     <!-- loading page -->
     <div id="wrapp-loading-page" class="wrapp-loading-page" style="display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; justify-content: center; align-items: center; background-color: #fff; z-index: 99999999999999999999999999;">
-        <div class="circle-loading-page" style="display: flex; height: 40px; width: 40px; border: 4px solid #1E1E1E; border-top-color: #fff; border-radius: 500px;">
+        <img src="images/logo.png" alt="" class="logo-loading">
+        <div class="container-loading">
+            <div class="border-loading border-satu"></div>
+            <div class="border-loading border-dua"></div>
         </div>
+        <p class="txt-link-web-load">
+            www.todstore.com
+        </p>
     </div>
 
     <!-- wrapp shop -->

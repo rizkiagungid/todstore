@@ -6,17 +6,6 @@
     scroll-behavior: smooth;
 }
 
-/* wrapp loading page */
-.wrapp-loading-page .circle-loading-page{
-    animation: loadingPage 0.5s ease-in-out infinite;
-}
-
-@keyframes loadingPage {
-    to{
-        transform: rotate(360deg);
-    }
-}
-
 /* navbar */
 .main-navbar{
     position: fixed;

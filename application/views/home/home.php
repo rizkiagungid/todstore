@@ -122,25 +122,6 @@ include 'includes/db.php';
                 </div>
 
                 <!-- our products -->
-                <?php
-        $no = 1;
-        $query = "SELECT * FROM produk ORDER BY id ASC ";
-
-        $result = mysqli_query($conn, $query);
-
-        if (mysqli_num_rows($result) > 0) {
-
-            while ($row = mysqli_fetch_array($result)) {
-
-                $id    = $row['id'];
-                $name  = $row['name'];
-                $harga = $row['harga'];
-                $model = $row['model'];
-                $stok = $row['stok'];
-                $ukuran = $row['ukuran'];
-                $image = $row['image'];
-
-        ?>
                 
                 <div class="our-products">
                     <p class="title-our-products">
@@ -149,19 +130,19 @@ include 'includes/db.php';
 
                     <div class="card-our-products">
                         <div class="card-products">
-                            <img src="<?= "images/" . $image ?>" alt="" class="img-products">
+                        <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
-                            <?= $model; ?>
+                        
                             </p>
                             <p class="name-products">
-                            <?= $name; ?>
+                        
                             </p>
                             <p class="price">
-                            RP.<?= $harga; ?>
+                          
                             </p>
                             <button class="view-product">
-                                View Product
+                            
                             </button>
                         </div>
                         <div class="card-products">
@@ -452,6 +433,3 @@ include 'includes/db.php';
             </div>
         </div>
     </div>
-            <?php
-            }
-        }

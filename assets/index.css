@@ -1678,9 +1678,9 @@
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-.wrapp-shop .wrapp-content .container-content .dropdown-sort-by .pagination i:hover{
+/* .wrapp-shop .wrapp-content .container-content .dropdown-sort-by .pagination i:hover{
     color: #D9D9D9;
-}
+} */
 
 .wrapp-shop .wrapp-content .container-content .dropdown-sort-by .pagination .list-index-paginate{
     display: flex;

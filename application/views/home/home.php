@@ -149,16 +149,16 @@ include 'includes/db.php';
 
                     <div class="card-our-products">
                         <div class="card-products">
-                            <img src="images/products.jfif" alt="" class="img-products">
+                            <img src="<?= "images/" . $image ?>" alt="" class="img-products">
 
                             <p class="gender">
-                                Men
+                            <?= $model; ?>
                             </p>
                             <p class="name-products">
-                                Daster Yogs
+                            <?= $name; ?>
                             </p>
                             <p class="price">
-                                Rp 1,000,000
+                            RP.<?= $harga; ?>
                             </p>
                             <button class="view-product">
                                 View Product
@@ -171,9 +171,7 @@ include 'includes/db.php';
                                 Men
                             </p>
                             <p class="name-products">
-                                Daster Yogs Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quibusdam nam
-                                ad illum facere hic repudiandae debitis culpa unde, dolorum aperiam distinctio est
-                                vitae. Dolorem labore minus ipsum nam obcaecati?
+                                Daster Yogs Lorem
                             </p>
                             <p class="price">
                                 Rp 1,000,000

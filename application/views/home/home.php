@@ -1,4 +1,8 @@
-    <!-- loading page -->
+<?php
+include 'includes/db.php';
+//var_dump($_SESSION);
+?>
+   <!-- loading page -->
     <div id="wrapp-loading-page" class="wrapp-loading-page" style="display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; justify-content: center; align-items: center; background-color: #fff; z-index: 99999999999999999999999999;">
     <img src="images/logo.png" alt="" class="logo-loading">
         <div class="container-loading">
@@ -82,6 +86,7 @@
     </div>
 
     <!-- shop by categories -->
+    
     <div class="wrapp-shop-categories">
         <div class="bg-black-top"></div>
 
@@ -117,6 +122,26 @@
                 </div>
 
                 <!-- our products -->
+                <?php
+        $no = 1;
+        $query = "SELECT * FROM produk ORDER BY id ASC ";
+
+        $result = mysqli_query($conn, $query);
+
+        if (mysqli_num_rows($result) > 0) {
+
+            while ($row = mysqli_fetch_array($result)) {
+
+                $id    = $row['id'];
+                $name  = $row['name'];
+                $harga = $row['harga'];
+                $model = $row['model'];
+                $stok = $row['stok'];
+                $ukuran = $row['ukuran'];
+                $image = $row['image'];
+
+        ?>
+                
                 <div class="our-products">
                     <p class="title-our-products">
                         OUR PRODUCTS
@@ -429,3 +454,6 @@
             </div>
         </div>
     </div>
+            <?php
+            }
+        }

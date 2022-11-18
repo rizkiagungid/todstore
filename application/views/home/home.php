@@ -1,4 +1,8 @@
-    <!-- loading page -->
+<?php
+include 'includes/db.php';
+//var_dump($_SESSION);
+?>
+   <!-- loading page -->
     <div id="wrapp-loading-page" class="wrapp-loading-page" style="display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; justify-content: center; align-items: center; background-color: #fff; z-index: 99999999999999999999999999;">
     <img src="images/logo.png" alt="" class="logo-loading">
         <div class="container-loading">
@@ -82,6 +86,7 @@
     </div>
 
     <!-- shop by categories -->
+    
     <div class="wrapp-shop-categories">
         <div class="bg-black-top"></div>
 
@@ -117,6 +122,7 @@
                 </div>
 
                 <!-- our products -->
+                
                 <div class="our-products">
                     <p class="title-our-products">
                         OUR PRODUCTS
@@ -124,19 +130,19 @@
 
                     <div class="card-our-products">
                         <div class="card-products">
-                            <img src="images/products.jfif" alt="" class="img-products">
+                        <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
-                                Men
+                        
                             </p>
                             <p class="name-products">
-                                Daster Yogs
+                        
                             </p>
                             <p class="price">
-                                Rp 1,000,000
+                          
                             </p>
                             <button class="view-product">
-                                View Product
+                            
                             </button>
                         </div>
                         <div class="card-products">
@@ -146,9 +152,7 @@
                                 Men
                             </p>
                             <p class="name-products">
-                                Daster Yogs Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quibusdam nam
-                                ad illum facere hic repudiandae debitis culpa unde, dolorum aperiam distinctio est
-                                vitae. Dolorem labore minus ipsum nam obcaecati?
+                                Daster Yogs Lorem
                             </p>
                             <p class="price">
                                 Rp 1,000,000

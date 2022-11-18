@@ -57,7 +57,7 @@ if(isset($_POST['update'])){
     
     if($result){
         
-        header('location:homepage.php');
+        header('location:index.php');
     }
     else
     {

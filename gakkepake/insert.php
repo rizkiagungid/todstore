@@ -23,7 +23,7 @@ if(isset($_POST['insert']))
 
     if($result == true)
     {
-        header("Location:homepage.php");
+        header("Location:index.php");
     }
     else
     {
@@ -37,7 +37,7 @@ if(isset($_POST['insert']))
 <div class="container">
 
     <div class="jumbotron text-center">
-        <h2>Menambahkan Produk</h2>
+        <h2>Crud Application Using PHP</h2>
     </div>
     <br>
 <div class="row">
@@ -46,19 +46,19 @@ if(isset($_POST['insert']))
 <form action="" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" name="name" class="form-control" placeholder="Enter Nama Produk">
+        <input type="text" name="name" class="form-control" placeholder="Enter Name">
     </div>
     <div class="form-group">
         <label for="name">model:</label>
-        <input type="text" name="model" class="form-control" placeholder="Enter Model">
+        <input type="text" name="model" class="form-control" placeholder="Enter batch">
     </div>
     <div class="form-group">
         <label for="name">stok:</label>
-        <input type="text" name="stok" class="form-control" placeholder="Enter Stok">
+        <input type="text" name="stok" class="form-control" placeholder="Enter batch">
     </div>
     <div class="form-group">
         <label for="name">ukuran:</label>
-        <input type="text" name="ukuran" class="form-control" placeholder="Enter Ukuran">
+        <input type="text" name="ukuran" class="form-control" placeholder="Enter batch">
     </div>
     <div class="form-group">
         <label for="name">harga:</label>

@@ -1,5 +1,5 @@
 <?php
-include 'includes/db.php';
+// include 'includes/db.php';
 //var_dump($_SESSION);
 ?>
    <!-- loading page -->

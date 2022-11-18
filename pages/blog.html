@@ -1,169 +1,63 @@
-<!-- footer -->
-<div class="main-footer">
-        <div class="footer">
-            <!-- search -->
-            <div class="search">
-                <div class="kiri-search">
-                    <p class="title-search">
-                        Subscribe to our website
-                    </p>
-                    <p class="deskripsi-search">
-                        silahkan subscribe di web kami.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- weight 400 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>TOD E-Commerce</title>
+</head>
+<body>
+    <div class="wrapp-page-blog">
+        <!-- header -->
+        <div class="header" style="background-image: url(../images/header-about.png);">
+            <div class="wrapp-txt-header">
+                <div class="desk-header">
+                    <ul class="list-link-page">
+                        <p class="link-page" onclick="toPage('home')" style="margin: 0; cursor: pointer;">Home/</p>
+                        <p class="link-page" onclick="toPage('blog')" style="margin: 0; cursor: pointer;">Blog</p>
+                    </ul>
+                    <p class="txt-header">
+                        BLOG
                     </p>
                 </div>
-                <div class="kanan-search">
-                    <div class="column-input">
-                        <input type="email" class="input-search" id="subscribe" onchange="changeInput()">
-                        <button class="btn-subscribe" onclick="submit()">
-                            Subscribe
+            </div>
+        </div>
 
-                            <!-- loading send -->
-                            <div id="loading-send" class="loading-send">
-                                <div class="circle-loading-send"></div>
-                            </div>
-                        </button>
-                    </div>
+        <!-- content -->
+        <div class="content-page-blog">
+            <div class="container-content">
+                <!-- card -->
+                <div id="container-card" class="container-card"></div>
 
-                    <!-- error message -->
-                    <p id="error-message-subscribe" class="error-message-subscribe"></p>
-
-                    <!-- pop up message success -->
-                    <div id="pop-up-success" class="pop-up-success">
-                        <p id="txt-success" class="txt-success" style="background-color: #ff0000; color: #fff; margin-top: 0px; width: auto; padding: 0 40px;">
-                        
-                        </p>
-                    </div>
+                <!-- pagination -->
+                <div class="pagination">
+                    <i id="left-pagination" class="fa-solid fa-angle-left" style="margin-right: 3px; display: none;" onclick="clickLeftPaginate()"></i>
+                    <ul id="list-index-paginate" class="list-index-paginate"></ul>
+                    <i id="right-pagination" class="fa-solid fa-angle-right" style="margin-left: 3px;" onclick="clickRightPaginate()"></i>
                 </div>
-            </div>
-
-            <!-- tod project -->
-            <div class="tod-project">
-                <li class="menu-footer">
-                    <p class="title-menu">
-                        TOD PROJECT
-                    </p>
-                    <p class="deskripsi-menu" style="cursor: text; color: #fff;">
-                        Ya sakumaha aing weh nu bikin
-                        tangkurank siaaa!!!
-                    </p>
-                </li>
-                <li class="menu-footer">
-                    <p class="title-menu">
-                        INFORMATION
-                    </p>
-                    <p class="deskripsi-menu">
-                        About TOD PROJECT
-                    </p>
-                    <p class="deskripsi-menu">
-                        Contact Us
-                    </p>
-                </li>
-                <li class="menu-footer">
-                    <p class="title-menu">
-                        QUICK LINKS
-                    </p>
-                    <p class="deskripsi-menu">
-                        Wishlist
-                    </p>
-                    <p class="deskripsi-menu">
-                        Checkout
-                    </p>
-                    <p class="deskripsi-menu">
-                        Cart
-                    </p>
-                </li>
-                <li class="menu-footer">
-                    <p class="title-menu">
-                        CONTACT US
-                    </p>
-                    <a target="_blank" href="https://maps.google.com/maps/dir//Jl.+Sunan+Muria+IV+Pabuaran+Kecamatan+Bojonggede+Kabupaten+Bogor,+Jawa+Barat+16921/@-6.4547463,106.7950764,15z/data=!4m5!4m4!1m0!1m2!1m1!1s0x2e69e9e7ede517f7:0xb8953bf5dd0f86f1" class="deskripsi-menu">
-                        <i class="fa-solid fa-location-dot"></i> Jalan YatemPiatu Sejahtera 01-00
-                    </a>
-                    <a href="tel:+6281383959452" class="deskripsi-menu">
-                        <i class="fa-solid fa-phone-volume" style="transform: rotate(-50deg);"></i> (99) 100-500
-                    </a>
-                    <a href="mailto:yatempiatu@gmail.com" class="deskripsi-menu">
-                        <i class="fa-solid fa-envelope"></i> yatempiatu@gmail.com
-                    </a>
-                </li>
-            </div>
-
-            <!-- copy right -->
-            <div class="copy-right">
-                <p class="txt-copy-right">
-                    COPYRIGHT © 2022 TOD PROJECT
-                </p>
-                <p class="reserved">
-                    ALL RIGHT RESERVED
-                </p>
             </div>
         </div>
     </div>
 
     <script>
-        // active menu navbar
-        const menuNavbar = document.getElementsByClassName('menu-navbar')
-
-        function activeNavbar(){
-            const pathname = window.location.pathname.split('/')[2]
-
-            if(menuNavbar.length > 0){
-                for(let i = 0; i < menuNavbar.length; i++){
-                    if(menuNavbar[i].innerText.toLowerCase() === pathname.toLowerCase()){
-                        menuNavbar[i].style.color = '#F8BB31'
-                    }
-                }
-            }
-        }
-        activeNavbar()
-
-        // onscroll navbar
-        const navbar = document.getElementById('main-navbar')
-
-        function navbarScroll(){
-            const topPosition = Math.floor(window.pageYOffset)
-
-            if(topPosition > 50){
-                navbar.style.boxShadow = '0 1px 7px -1px rgba(0,0,0,0.2)'
-            }else if(topPosition < 49){
-                navbar.style.boxShadow = 'none'
-            }
-        }
-
-        // name products di home
-        const nameProducts = document.getElementsByClassName('name-products')
-
-        if (nameProducts.length > 0) {
-            for (let i = 0; i < nameProducts.length; i++) {
-                const slice = nameProducts[i].innerText.length > 70 ? `${nameProducts[i].innerHTML.substr(0, 70)}...` : nameProducts[i].innerHTML
-                nameProducts[i].innerHTML = slice
-            }
-        }
-
-        // latest news di home
-        const titleNews = document.getElementsByClassName('title-news')
-
-        if (titleNews.length > 0) {
-            for (let i = 0; i < titleNews.length; i++) {
-                const slice = titleNews[i].innerText.length > 60 ? `${titleNews[i].innerHTML.substr(0, 90)}...` : titleNews[i].innerHTML
-                titleNews[i].innerHTML = slice
-            }
-        }
-
-        // sort by di shop
-        function clickSortBy() {
-            const dropdown = document.getElementById('on-dropdown')
-
-            if (dropdown.style.display == '') {
-                dropdown.style.display = 'flex'
-            } else if (dropdown.style.display == 'none') {
-                dropdown.style.display = 'flex'
-            } else {
-                dropdown.style.display = 'none'
-            }
-        }
-
-        // card shop
+// card shop
 // data page shop
 const dataShop = [
             {
@@ -246,40 +140,7 @@ const dataShop = [
                 date: 'JUN 19, 2021',
                 byAuthor: 'by Admin',
                 title: 'NUNC RHONCUS AUCTOR RISUS TEMPOR',
-                deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat earum nobis, tempora repellendus veniam fuga debitis impedit in quia dolore eaque veritatis perspiciatis nulla aut, dicta voluptatibus ipsa consectetur?',
-                url: 'saya-tidak-tahu'
-            },
-            {
-                img: 'images/dajjal.jpg',
-                date: 'JUN 28, 2090',
-                byAuthor: 'by Dajjal',
-                title: 'SESEORANG MENGAKU IA DAJJAL',
-                deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat earum nobis, tempora repellendus veniam fuga debitis impedit in quia dolore eaque veritatis perspiciatis nulla aut, dicta voluptatibus ipsa consectetur?',
-                url: 'saya-tidak-tahu'
-            },
-            {
-                img: 'images/products.jfif',
-                date: 'JUN 28, 2090',
-                byAuthor: 'by Dajjal',
-                title: 'KAMU ITU SAYA ATAU DIA?',
-                deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat earum nobis, tempora repellendus veniam fuga debitis impedit in quia dolore eaque veritatis perspiciatis nulla aut, dicta voluptatibus ipsa consectetur?',
-                url: 'saya-tidak-tahu'
-            },
-            {
-                img: 'images/products.jfif',
-                date: 'JUN 28, 2090',
-                byAuthor: 'by Dajjal',
-                title: 'KAMU ITU SAYA ATAU DIA?',
-                deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat earum nobis, tempora repellendus veniam fuga debitis impedit in quia dolore eaque veritatis perspiciatis nulla aut, dicta voluptatibus ipsa consectetur?',
-                url: 'saya-tidak-tahu'
-            },
-            {
-                img: 'images/products.jfif',
-                date: 'JUN 28, 2090',
-                byAuthor: 'by Dajjal',
-                title: 'KAMU ITU SAYA ATAU DIA?',
-                deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat earum nobis, tempora repellendus veniam fuga debitis impedit in quia dolore eaque veritatis perspiciatis nulla aut, dicta voluptatibus ipsa consectetur?',
-                url: 'saya-tidak-tahu'
+                deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat earum nobis, tempora repellendus veniam fuga debitis impedit in quia dolore eaque veritatis perspiciatis nulla aut, dicta voluptatibus ipsa consectetur?'
             },
         ]
 
@@ -354,7 +215,7 @@ const dataShop = [
                             ${e.deskripsi}
                         </p>
 
-                        <button class="read-more" onclick="toPage('${e.url}')">
+                        <button class="read-more">
                             Read More <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>`
@@ -483,31 +344,6 @@ const dataShop = [
             DisplayList(dataBlog, list_element_blog, rowsBlog, current_page)
             SetupPagination(dataBlog, pagination, rowsBlog)
         }
-        
-        // to page
-        function toPage(path){
-            const origin = window.location.origin
-            const pathname = window.location.pathname.split('/')[1]
-
-            window.location.href = `${origin}/${pathname}/${path}`
-        }
-
-        // loading page
-        const wrappLoadPage = document.getElementById('wrapp-loading-page')
-
-        function loadingPage(){
-            if(wrappLoadPage){
-                setTimeout(() => {
-                    window.scrollTo(0, 0)
-                    wrappLoadPage.style.display = 'none'
-                }, 3000);
-            }
-        }
-        loadingPage()
-    </script>
-
-    <!-- emailjs cdn -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
 
     <!-- JavaScript Bundle with Popper -->
@@ -515,5 +351,4 @@ const dataShop = [
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
 </body>
-
 </html>

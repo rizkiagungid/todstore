@@ -241,8 +241,8 @@
                 <li class="menu menu-navbar" onclick="toPage('blog')">
                     BLOG
                 </li>
-                <li class="menu menu-navbar" onclick="toPage('page')">
-                    PAGE
+                <li class="menu menu-navbar" onclick="toPage('about')">
+                    ABOUT
                 </li>
             </ul>
 

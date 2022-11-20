@@ -4,6 +4,28 @@
 <?php
 include 'includes/db.php';
 require_once 'berhasil_login.php';
+
+if (isset($_SESSION['username'])) {
+    //header("Location: index.php");
+}
+ 
+if (isset($_POST['submit'])) {
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
+ 
+    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $result = mysqli_query($conn, $sql);
+    if ($result->num_rows > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['username'];
+        //id
+        $_SESSION['id'] = $row['id'];
+        header("Location: berhasil_login.php");
+
+    } else {
+        echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
+    }
+}
 //var_dump($_SESSION);
 ?>
 

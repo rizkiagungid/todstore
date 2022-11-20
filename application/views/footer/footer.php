@@ -1,5 +1,5 @@
 <!-- footer -->
-<div class="main-footer">
+<div id="main-footer" class="main-footer">
         <div class="footer">
             <!-- search -->
             <div class="search">
@@ -8,7 +8,7 @@
                         Subscribe to our website
                     </p>
                     <p class="deskripsi-search">
-                        silahkan subscribe di web kami.
+                        silahkan subscribe di website kami.
                     </p>
                 </div>
                 <div class="kanan-search">
@@ -103,15 +103,22 @@
     <script>
         // active menu navbar
         const menuNavbar = document.getElementsByClassName('menu-navbar')
+        const iconNavbar = document.getElementsByClassName('ic-nav')
 
         function activeNavbar(){
             const pathname = window.location.pathname.split('/')[2]
 
             if(menuNavbar.length > 0){
+                // menu nav
                 for(let i = 0; i < menuNavbar.length; i++){
                     if(menuNavbar[i].innerText.toLowerCase() === pathname.toLowerCase()){
                         menuNavbar[i].style.color = '#F8BB31'
                     }
+                }
+
+                // icon nav
+                if(pathname === 'cart'){
+                    iconNavbar[2].style.color = "#F8BB31"
                 }
             }
         }
@@ -128,6 +135,24 @@
             }else if(topPosition < 49){
                 navbar.style.boxShadow = 'none'
             }
+        }
+
+        const newPathName = window.location.pathname.split('/')[2]
+        const popUpMessage = document.getElementById('pop-up-success')
+        const footer = document.getElementById('main-footer')
+
+        // page login
+        if(navbar && newPathName === 'login'){
+            navbar.style.display = 'none'
+            popUpMessage.style.display = 'none'
+            footer.style.display = 'none'
+        }
+
+        // page register
+        if(navbar && newPathName === 'register'){
+            navbar.style.display = 'none'
+            popUpMessage.style.display = 'none'
+            footer.style.display = 'none'
         }
 
         // name products di home
@@ -165,80 +190,7 @@
 
         // card shop
 // data page shop
-const dataShop = [
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Baju',
-                price: 'Rp 1,000,000'
-            },
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Baju',
-                price: 'Rp 1,000,000'
-            },
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Baju',
-                price: 'Rp 1,000,000'
-            },
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Baju',
-                price: 'Rp 1,000,000'
-            },
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Sepatu',
-                price: 'Rp 1,000,000'
-            },
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Sepatu',
-                price: 'Rp 1,000,000'
-            },
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Sepatu',
-                price: 'Rp 1,000,000'
-            },
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Sepatu',
-                price: 'Rp 1,000,000'
-            },
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Sepatu',
-                price: 'Rp 1,000,000'
-            },
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Sepatu',
-                price: 'Rp 1,000,000'
-            },
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Sepatu',
-                price: 'Rp 1,000,000'
-            },
-            {
-                img: 'images/products.jfif',
-                gender: 'Men',
-                nameProducts: 'Sepatu',
-                price: 'Rp 1,000,000'
-            },
-        ]
+const dataShop = []
 
         const dataBlog = [
             {
@@ -283,6 +235,21 @@ const dataShop = [
             },
         ]
 
+        const cardProducts = document.getElementsByClassName('card-products')
+
+        if(newPathName === 'shop' && cardProducts.length > 0){
+            for(let i = 0; i < cardProducts.length; i++){
+                dataShop.push({
+                    stok: cardProducts[i].id,
+                    img: cardProducts[i].children[0].currentSrc,
+                    gender: cardProducts[i].children[1].innerText,
+                    nameProducts: cardProducts[i].children[2].innerText,
+                    price: cardProducts[i].children[3].innerText,
+                    id: cardProducts[i].children[4].id
+                })   
+            }
+        }
+
         const list_element = document.getElementById('card-shop')
         const list_element_blog = document.getElementById('container-card')
         const pagination = document.getElementById('list-index-paginate')
@@ -290,8 +257,6 @@ const dataShop = [
         let current_page = 1
         let rows = 8
         let rowsBlog = 4
-
-        const newPathName = window.location.pathname.split('/')[2]
 
         function DisplayList(items, wrapper, rows_per_page, page) {
             wrapper.innerHTML = ''
@@ -322,8 +287,8 @@ const dataShop = [
                                 <p class="price">
                                     ${e.price}
                                 </p>
-                                <button class="view-product">
-                                    View Product
+                                <button class="view-product" onclick="tambahKeranjang(${e.stok}, ${e.id})">
+                                    Add to cart
                                 </button>
                     </div>`
                 }).join('')
@@ -467,6 +432,10 @@ const dataShop = [
                 dataPaginate.push(i)
             }
 
+            if(items.length < rows_per_page){
+                rightPagination.style.display = 'none'
+            }
+
             wrapper.innerHTML = dataPaginate.map((e) => {
                 return `<li class="index-paginate ${current_page === e + 1 ? 'active-paginate' : ''}" onclick="clickPaginate(${e + 1})">
                                 ${e + 1}
@@ -490,6 +459,58 @@ const dataShop = [
             const pathname = window.location.pathname.split('/')[1]
 
             window.location.href = `${origin}/${pathname}/${path}`
+        }
+
+        const txtSuccess = document.getElementById('txt-success')
+
+        // tambah ke keranjang
+        function tambahKeranjang(stok, id){
+            if(parseInt(stok) > 0){
+                toPage(`keranjangaction?id=${id}`)
+            }else{
+                txtSuccess.style.backgroundColor = '#FF0000'
+                txtSuccess.style.color = '#fff'
+                txtSuccess.textContent = 'Stok baju sudah habis!'
+                popUpMessage.style.marginTop = '100px'
+
+                setTimeout(() => {
+                    popUpMessage.style.marginTop = '1px'
+                }, 2000);
+            }
+        }
+
+        // detail transaksi di page cart
+        const cardCart = document.getElementsByClassName('card-cart')
+        const numberTotalQty = document.getElementById('number-total-qty')
+        const numberTotalQtyTwo = document.getElementById('number-subtotals')
+
+        let totalQty = []
+
+        if(cardCart.length > 0){
+            for(let i = 0; i < cardCart.length; i++){
+                totalQty.push(parseInt(cardCart[i].children[3].children[1].innerText))
+            }
+            numberTotalQty.innerHTML = eval(totalQty.join('+'))
+            numberTotalQtyTwo.innerHTML = eval(totalQty.join('+'))
+        }
+
+        // editing keranjang kosong di page cart
+        const containerCart = document.getElementById('container-cart')
+        const containerCartEmpty = document.getElementById('container-cart-empty')
+
+        if(cardCart.length === 0 && containerCart){
+            containerCart.style.display = "none"
+        }
+        if(cardCart.length > 0 && containerCartEmpty){
+            containerCartEmpty.style.display = "none"
+        }
+
+        // page checkout
+        if(newPathName === 'checkout' && cardCart.length === 0){
+            const loc = window.location
+            const pisah = loc.href.split('/')
+            const getHRF = `${pisah[0]}//${pisah[2]}/${pisah[3]}/cart`
+            window.location.assign(getHRF)
         }
 
         // loading page

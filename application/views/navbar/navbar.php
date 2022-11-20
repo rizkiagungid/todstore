@@ -223,7 +223,7 @@
 
     <!-- navbar -->
     <div id="main-navbar" class="main-navbar" style="box-shadow: none;">
-        <div class="navbar">
+        <div class="navbar" style="margin: 0;">
             <div class="link-logo" onclick="toPage('home')">
                 <img src="images/logo.png" alt="" class="logo">
             </div>
@@ -248,13 +248,13 @@
 
             <ul class="list-icon">
                 <li class="icon-nav">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass ic-nav"></i>
                 </li>
                 <li class="icon-nav">
-                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-heart ic-nav"></i>
                 </li>
                 <li class="icon-nav">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping ic-nav" onclick="toPage('cart')"></i>
                 </li>
             </ul>
         </div>

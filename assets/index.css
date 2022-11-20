@@ -1918,3 +1918,792 @@
     background-color: #F8BB31;
     color: #fff;
 }
+
+/* FROM CAAAAAAAAAART */
+.wrapp-cart{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+/* header */
+.wrapp-cart .header{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    justify-content: center;
+}
+
+.wrapp-cart .header .wrapp-txt-header .desk-header{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 900px;
+    justify-content: center;
+}
+
+.wrapp-cart .header .wrapp-txt-header .desk-header .list-link-page{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.wrapp-cart .header .wrapp-txt-header .desk-header .list-link-page .link-page{
+    text-decoration: none;
+    color: #fff;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+.wrapp-cart .header .wrapp-txt-header .desk-header .list-link-page .link-page:hover{
+    color: #F8BB31;
+}
+
+.wrapp-cart .header .wrapp-txt-header .desk-header .txt-header{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+/* content */
+.wrapp-cart .content-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapp-cart .content-cart .container-cart{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    padding: 60px 80px 0 80px;
+}
+
+.wrapp-cart .content-cart .container-cart .title-product{
+    display: flex;
+    font-size: 18px;
+    color: #000;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+/* card */
+.wrapp-cart .content-cart .container-cart .card-cart{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.wrapp-cart .content-cart .container-cart .card-cart .btn-close-cart{
+    display: flex;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 500px;
+    height: 25px;
+    width: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapp-cart .content-cart .container-cart .card-cart .btn-close-cart i{
+    font-size: 14px;
+}
+
+.wrapp-cart .content-cart .container-cart .card-cart .img-cart{
+    width: 130px;
+    margin: 0 30px;
+}
+
+.wrapp-cart .content-cart .container-cart .card-cart .name-product-cart{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    margin: 0;
+}
+
+.wrapp-cart .content-cart .container-cart .card-cart .btn-total{
+    display: flex;
+    height: 40px;
+    width: 100px;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid #F8BB31;
+    margin: 0 60px;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.wrapp-cart .content-cart .container-cart .card-cart .btn-total i{
+    cursor: pointer;
+}
+
+.wrapp-cart .content-cart .container-cart .card-cart .btn-total .number-total{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    margin: 0;
+}
+
+.wrapp-cart .content-cart .container-cart .card-cart .total-price{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    margin: 0;
+}
+
+/* detail transaksi */
+.wrapp-cart .content-cart .container-cart .detail-transaksi{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    width: 100%;
+    background-color: #1E1E1E;
+    color: #fff;
+    padding: 40px 100px 60px 100px;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .qty{
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-bottom: 4px solid #D9D9D980;
+    padding-bottom: 3px;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .qtytotals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #D9D9D980;
+    padding-bottom: 3px;
+    margin-top: 3px;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .qtytotals .txt-qtytotals{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #D9D9D980;
+    margin: 0;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .qtytotals .number-total-qty{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .cart-totals{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    border-bottom: 4px solid #D9D9D980;
+    padding-bottom: 3px;
+    margin-top: 3px;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .harga-dan-total{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 4px solid #D9D9D980;
+    padding: 5px 0;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .harga-dan-total .subtotals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .harga-dan-total .subtotals .txt-subtotals{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #D9D9D980;
+    margin: 0;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .harga-dan-total .subtotals .number-subtotals{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 3px 0 0 0;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .total .txt-total{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+.wrapp-cart .content-cart .container-cart .detail-transaksi .total .number-total{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+/* btn eksekusi */
+.wrapp-cart .content-cart .container-cart .container-button-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 150px 0;
+}
+
+.wrapp-cart .content-cart .container-cart .container-button-cart .btn-checkout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background-color: #7A7A7A;
+    border: none;
+    outline: none;
+    padding: 5px 0;
+    width: 45%;
+    border-radius: 5px;
+}
+
+.wrapp-cart .content-cart .container-cart .container-button-cart .btn-shopping{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #000000CC;
+    background-color: transparent;
+    border: 1px solid #FFB100;
+    outline: none;
+    padding: 5px 0;
+    width: 45%;
+    border-radius: 5px;
+}
+
+/* FROM LOGIIIIIIIIIIIIIN */
+.wrapp-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #1E1E1E;
+}
+
+.wrapp-login .container-black-login{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    padding: 40px 70px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.wrapp-login .container-black-login .title-login{
+    display: flex;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #000;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.wrapp-login .container-black-login .label-input{
+    display: flex;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+.wrapp-login .container-black-login .input-login{
+    display: flex;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #000;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    outline: none;
+    border-radius: 5px;
+    padding: 7px 12px;
+    margin: 5px 0;
+}
+
+.wrapp-login .container-black-login .btn-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 7px;
+    background-color: #1E1E1E;
+    outline: none;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+.wrapp-login .container-black-login .btn-login:hover{
+    background-color: #333;
+}
+
+.wrapp-login .container-black-login .non-akun{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.wrapp-login .container-black-login .non-akun .txt-non-akun{
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #666;
+    margin: 0;
+}
+
+.wrapp-login .container-black-login .non-akun .btn-register{
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #666;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-left: 3px;
+    border-bottom: 1px solid #666;
+    transition: 0.2s ease-in-out;
+}
+.wrapp-login .container-black-login .non-akun .btn-register:hover{
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+/* FROM REGISTEEEEEEEEER */
+.wrapp-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #1E1E1E;
+}
+
+.wrapp-register .container-black-login{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    padding: 40px 70px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.wrapp-register .container-black-login .title-login{
+    display: flex;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #000;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.wrapp-register .container-black-login .label-input{
+    display: flex;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+.wrapp-register .container-black-login .input-login{
+    display: flex;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #000;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    outline: none;
+    border-radius: 5px;
+    padding: 7px 12px;
+    margin: 5px 0;
+}
+
+.wrapp-register .container-black-login .btn-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 7px;
+    background-color: #1E1E1E;
+    outline: none;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+.wrapp-register .container-black-login .btn-login:hover{
+    background-color: #333;
+}
+
+.wrapp-register .container-black-login .non-akun{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.wrapp-register .container-black-login .non-akun .txt-non-akun{
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #666;
+    margin: 0;
+}
+
+.wrapp-register .container-black-login .non-akun .btn-register{
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #666;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-left: 3px;
+    border-bottom: 1px solid #666;
+    transition: 0.2s ease-in-out;
+}
+.wrapp-register .container-black-login .non-akun .btn-register:hover{
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.wrapp-register .container-black-login .container-input-admin .container-admin{
+    display: flex;
+    align-items: center;
+}
+
+.wrapp-register .container-black-login .container-input-admin .container-admin .input-admin{
+    display: flex;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.wrapp-register .container-black-login .container-input-admin .container-admin .txt-admin{
+    display: flex;
+    margin: 5px 0 0 5px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+/* FROM CHECKOUUUUUUUUUT */
+.wrapp-checkout{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+/* header */
+.wrapp-checkout .header{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    justify-content: center;
+}
+
+.wrapp-checkout .header .wrapp-txt-header .desk-header{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 900px;
+    justify-content: center;
+}
+
+.wrapp-checkout .header .wrapp-txt-header .desk-header .list-link-page{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.wrapp-checkout .header .wrapp-txt-header .desk-header .list-link-page .link-page{
+    text-decoration: none;
+    color: #fff;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+.wrapp-checkout .header .wrapp-txt-header .desk-header .list-link-page .link-page:hover{
+    color: #F8BB31;
+}
+
+.wrapp-checkout .header .wrapp-txt-header .desk-header .txt-header{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+/* content */
+.wrapp-checkout .content-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapp-checkout .content-cart .container-cart{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    padding: 60px 80px 0 80px;
+}
+
+.wrapp-checkout .content-cart .container-cart .title-product{
+    display: flex;
+    font-size: 18px;
+    color: #000;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+/* form checkout */
+.wrapp-checkout .content-cart .container-cart .form-checkout{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .container-input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .container-input .label-input{
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .container-input .input-checkout{
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #F8BB31;
+    border-radius: 5px;
+    padding: 5px 12px;
+    outline: none;
+}
+
+/* detail transaksi */
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    width: 100%;
+    background-color: #1E1E1E;
+    color: #fff;
+    padding: 40px 100px 60px 100px;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .qty{
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-bottom: 4px solid #D9D9D980;
+    padding-bottom: 3px;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .qtytotals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #D9D9D980;
+    padding-bottom: 3px;
+    margin-top: 3px;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .qtytotals .txt-qtytotals{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #D9D9D980;
+    margin: 0;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .qtytotals .number-total-qty{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .cart-totals{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    border-bottom: 4px solid #D9D9D980;
+    padding-bottom: 3px;
+    margin-top: 3px;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .harga-dan-total{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 4px solid #D9D9D980;
+    padding: 5px 0;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .harga-dan-total .subtotals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .harga-dan-total .subtotals .txt-subtotals{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #D9D9D980;
+    margin: 0;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .harga-dan-total .subtotals .number-subtotals{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 3px 0 0 0;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .total .txt-total{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .detail-transaksi .total .number-total{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+/* btn eksekusi */
+.wrapp-checkout .content-cart .container-cart .form-checkout .container-button-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 150px 0;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .container-button-cart .btn-checkout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background-color: #7A7A7A;
+    border: none;
+    outline: none;
+    padding: 5px 0;
+    width: 45%;
+    border-radius: 5px;
+}
+
+.wrapp-checkout .content-cart .container-cart .form-checkout .container-button-cart .btn-shopping{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #000000CC;
+    background-color: transparent;
+    border: 1px solid #FFB100;
+    outline: none;
+    padding: 5px 0;
+    width: 45%;
+    border-radius: 5px;
+}
+
+/* container cart empty */
+.wrapp-checkout .content-cart .container-cart-empty .btn-go-home{
+    background-color: #1E1E1E;
+    color: #fff;
+    transition: 0.2s ease-in-out;
+}
+.wrapp-checkout .content-cart .container-cart-empty .btn-go-home:hover{
+    background-color: #333;
+}

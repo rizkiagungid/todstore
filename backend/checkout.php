@@ -77,7 +77,7 @@ require_once 'berhasil_login.php';
 					<div class="row">
 						<div class="col-md-4">
 							<div class="form-group">
-								<input type="text" readonly value="<?= $da['namalengkap']; ?>" class="form-control">
+								<input type="text" value="<?= $da['namalengkap']; ?>" class="form-control">
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -88,7 +88,7 @@ require_once 'berhasil_login.php';
 					</div>
 					<div class="form-group">
 						<label>Alamat Lengkap Pengiriman</label>
-						<textarea class="form-control" name="alamat_pengiriman" placeholder="Masukkan alamat lengkap pengiriman (termasuk kode pos)" readonly><?= $da['alamat']; ?></textarea>
+						<textarea class="form-control" name="alamat_pengiriman" placeholder="Masukkan alamat lengkap pengiriman (termasuk kode pos)"><?= $da['alamat']; ?></textarea>
 					</div>
 					<button class="btn btn-primary" name="checkout">Checkout</button>
 				</form>

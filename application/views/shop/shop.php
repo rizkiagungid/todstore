@@ -1,3 +1,9 @@
+<?php
+include 'includes/db.php';
+// require_once 'berhasil_login.php';
+//var_dump($_SESSION);
+?>   
+    
     <!-- loading page -->
     <div id="wrapp-loading-page" class="wrapp-loading-page" style="display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; justify-content: center; align-items: center; background-color: #fff; z-index: 99999999999999999999999999;">
         <img src="images/logo.png" alt="" class="logo-loading">
@@ -49,7 +55,45 @@
                     </div> -->
 
                     <!-- card shop -->
-                    <div id="card-shop" class="card-shop"></div>
+                    <div id="card-shop" class="card-shop">
+                    <?php
+                    $no = 1;
+                    $query = "SELECT * FROM produk ORDER BY id ASC ";
+
+                    $result = mysqli_query($conn, $query);
+
+                    if (mysqli_num_rows($result) > 0) {
+
+                        while ($row = mysqli_fetch_array($result)) {
+
+                            $id    = $row['id'];
+                            $name  = $row['name'];
+                            $harga = $row['harga'];
+                            $model = $row['model'];
+                            $stok = $row['stok'];
+                            $ukuran = $row['ukuran'];
+                            $image = $row['image'];
+                    ?>                
+                    <div class="card-products" id="<?= $stok; ?>">
+                    <img src="<?= "images/" . $image; ?>" alt="" class="img-products">
+                                <p class="gender">
+                                <?= $model; ?>
+                                </p>
+                                <p class="name-products">
+                                <?= $name; ?>
+                                </p>
+                                <p class="price">
+                                RP.<?= $harga; ?>
+                                </p>
+                                <button class="view-product" id="<?= $id; ?>">
+                                    Tambah
+                                </button>
+                    </div>
+                    <?php
+                }
+            }
+        ?>
+                    </div>
 
                     <!-- pagination -->
                     <div class="pagination">

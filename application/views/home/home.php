@@ -1,6 +1,16 @@
 <?php
-// include 'includes/db.php';
+include 'includes/db.php';
+// require_once 'berhasil_login.php';
 //var_dump($_SESSION);
+
+// check session start or not
+if (session_status() === PHP_SESSION_NONE) {
+	session_start();
+}
+ 
+if (!isset($_SESSION['username'])) {
+    header("Location: login");
+}
 ?>
    <!-- loading page -->
     <div id="wrapp-loading-page" class="wrapp-loading-page" style="display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; justify-content: center; align-items: center; background-color: #fff; z-index: 99999999999999999999999999;">
@@ -15,6 +25,26 @@
     </div>
     
     <!-- carousel top -->
+
+    <?php  		            
+		
+$query = "SELECT * FROM tentangtodstore ORDER BY id DESC ";
+
+$result = mysqli_query($conn,$query);
+
+if(mysqli_num_rows($result) > 0){
+    
+    while($row = mysqli_fetch_array($result)){
+        
+       
+        $deskripsi = $row['deskripsi'];
+        $judul  = $row['judul'];
+?> 
+<?php
+    }
+}  
+?>
+     
     <div id="carouselExampleIndicators" class="carousel slide carousel-fade carousel-slide carousel-top" data-bs-ride="carousel"
         style="background-image: url(images/banner-top.jfif)">
         <div class="carousel-indicators">
@@ -29,14 +59,14 @@
             <div class="wrapp-text-carousel-top">
                 <div class="text-carousel-top">
                     <p class="title-deskripsi">
-                        CHOOSE YOUR CLOTHES WITH US.
+                    <?=$judul; ?>
                     </p>
+                    
                     <p class="deskripsi">
-                        We will help you to choose the product that without the doubt and suits you bestand we
-                        mean
-                        it.
+                    <?=$deskripsi; ?>
+                    
                     </p>
-                    <button class="shop-now">
+                    <button class="shop-now" onclick="toPage('shop')">
                         <p class="txt-btn">
                             SHOP NOW
                         </p>
@@ -47,24 +77,24 @@
             <div class="carousel-item active">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <img src="images/baju1.png" alt="" class="img-baju1">
-                        <img src="images/baju2.png" alt="" class="img-baju2">
+                        <img src="images/baju1-carousel-top-removebg-preview.png" alt="" class="img-baju1">
+                        <img src="images/baju1-carousel-top-removebg-preview.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <img src="images/LINE_ALBUM_2933-2936-TNW 112146-2933-2936-SP_220108_8-1279x1280.jpg" alt="" class="img-baju1">
-                        <img src="images/baju2.png" alt="" class="img-baju2">
+                        <img src="images/baju2-carousel-top-removebg-preview.png" alt="" class="img-baju1">
+                        <img src="images/baju2-carousel-top-removebg-preview.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="container-deskripsi">
                     <div class="deskripsi-carousel">
-                        <img src="images/normal_69234ea215.jpg" alt="" class="img-baju1">
-                        <img src="images/baju2.png" alt="" class="img-baju2">
+                        <img src="images/baju3-carousel-top-removebg-preview.png" alt="" class="img-baju1">
+                        <img src="images/baju3-carousel-top-removebg-preview.png" alt="" class="img-baju2">
                     </div>
                 </div>
             </div>
@@ -122,30 +152,48 @@
                 </div>
 
                 <!-- our products -->
-                
                 <div class="our-products">
                     <p class="title-our-products">
                         OUR PRODUCTS
                     </p>
 
                     <div class="card-our-products">
-                        <div class="card-products">
-                        <img src="images/products.jfif" alt="" class="img-products">
+                    <?php
+                    $no = 1;
+                    $query = "SELECT * FROM produk ORDER BY id ASC ";
 
-                            <p class="gender">
-                        
-                            </p>
-                            <p class="name-products">
-                        
-                            </p>
-                            <p class="price">
-                          
-                            </p>
-                            <button class="view-product">
-                            
-                            </button>
+                    $result = mysqli_query($conn, $query);
+
+                    if (mysqli_num_rows($result) > 0) {
+
+                        while ($row = mysqli_fetch_array($result)) {
+
+                            $id    = $row['id'];
+                            $name  = $row['name'];
+                            $harga = $row['harga'];
+                            $model = $row['model'];
+                            $stok = $row['stok'];
+                            $ukuran = $row['ukuran'];
+                            $image = $row['image'];
+                    ?>
+                        <div class="card-products" id="<?= $stok; ?>">
+                        <img src="<?= "images/" . $image; ?>" alt="" class="img-products">
+                                <p class="gender">
+                                    <?= $model; ?>
+                                </p>
+                                <p class="name-products">
+                                <?= $name; ?>
+                                </p>
+                                <p class="price">
+                                RP.<?= $harga; ?>
+                                </p>
+                                <button class="view-product" onclick="tambahKeranjang(<?= $stok; ?>, <?= $id; ?>)">Add to cart</button>
                         </div>
-                        <div class="card-products">
+            <?php
+                }
+            }
+        ?>
+                        <!-- <div class="card-products">
                             <img src="images/products.jfif" alt="" class="img-products">
 
                             <p class="gender">
@@ -256,7 +304,7 @@
                             <button class="view-product">
                                 View Product
                             </button>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="container-btn-show">
@@ -277,17 +325,16 @@
                 <div class="content-about">
                     <!-- about -->
                     <div class="banner-about">
-                        <img src="images/about.jfif" alt="" class="img-about">
+                        <img src="images/aboutus.png" alt="" class="img-about">
                         <div class="kanan-about">
                             <p class="title-about">
-                                ABOUT RIDWAN
+                                ABOUT US
                             </p>
                             <div class="deskripsi-about">
-                                Ridwan adalah seorang karnivora wanita pemakan segala
-                                wanita pecinta wanita bahkan memiliki sensual gila tidak
-                                terbatas melampaui siapapun di muka bumi ini jadi
-                                hati - hati ya gais kalo ketemu ridwan
-                                Cheersss...
+                            TOD Project’s Adalah sebuah digital clothing store karya
+                            anak bangsa yang berbasis di Cilebut - Citayem 
+                            mempunyai Visi untuk turut berpartisipasi dalam 
+                            kearifan lokal.
                             </div>
                         </div>
                     </div>
@@ -369,7 +416,7 @@
                             <img src="images/dickies logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="images/Durex logo.png" alt="" class="img-sponsor">
+                            <img src="images/Adidas logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
                             <img src="images/Camel_Logo_old logo.png" alt="" class="img-sponsor">
@@ -433,3 +480,4 @@
             </div>
         </div>
     </div>
+    

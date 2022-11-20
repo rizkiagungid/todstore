@@ -280,7 +280,7 @@
                             <img src="images/dickies logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
-                            <img src="images/Durex logo.png" alt="" class="img-sponsor">
+                            <img src="images/Adidas logo.png" alt="" class="img-sponsor">
                         </li>
                         <li class="list-sponsor">
                             <img src="images/Camel_Logo_old logo.png" alt="" class="img-sponsor">

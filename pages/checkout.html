@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- weight 400 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>TOD E-Commerce</title>
+</head>
+<body>
+    <!-- wrapp cart -->
+    <div class="wrapp-checkout">
+        <!-- header -->
+        <div class="header" style="background-image: url(../images/header-about.png);">
+            <div class="wrapp-txt-header">
+                <div class="desk-header">
+                    <ul class="list-link-page">
+                        <p class="link-page" onclick="toPage('home')" style="margin: 0; cursor: pointer;">Home/</p>
+                        <p class="link-page" onclick="toPage('checkout')" style="margin: 0; cursor: pointer;">Shopping Cart</p>
+                    </ul>
+                    <p class="txt-header">
+                        SHOPPING CART
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="content-cart">
+            <div class="container-cart">
+                <p class="title-product">
+                    BILLING DETAILS
+                </p>
+
+                <!-- form checkout -->
+                <form action="" class="form-checkout">
+                    <div class="container-input">
+                        <label for="label" class="label-input">
+                            Name
+                        </label>
+                        <input type="text" class="input-checkout">
+                    </div>
+
+                    <div class="container-input">
+                        <label for="label" class="label-input">
+                            Alamat
+                        </label>
+                        <input type="text" class="input-checkout">
+                    </div>
+                </form>
+
+                <!-- detail transaksi -->
+                <div class="detail-transaksi">
+                    <p class="qty">
+                        QTY
+                    </p>
+                    <div class="qtytotals">
+                        <p class="txt-qtytotals">
+                            qtytotals:
+                        </p>
+                        <p class="number-total-qty">
+                            6
+                        </p>
+                    </div>
+                    <p class="cart-totals">
+                        CART TOTALS
+                    </p>
+                    <div class="harga-dan-total">
+                        <div class="subtotals">
+                            <p class="txt-subtotals">
+                                subtotals:
+                            </p>
+                            <p class="number-subtotals">
+                                Rp 900,000
+                            </p>
+                        </div>
+                        <div class="subtotals">
+                            <p class="txt-subtotals">
+                                qtytotals:
+                            </p>
+                            <p class="number-subtotals" style="margin: 0;">
+                                6
+                            </p>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <p class="txt-total">
+                            TOTAL:
+                        </p>
+                        <p class="number-total">
+                            Rp 900,000
+                        </p>
+                    </div>
+                </div>
+
+                <!-- btn eksekusi -->
+                <div class="container-button-cart">
+                    <button class="btn-checkout">
+                        Proceed to checkout
+                    </button>
+                    <button class="btn-shopping">
+                        Continue Shopping
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+</html>

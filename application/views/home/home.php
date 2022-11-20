@@ -1,16 +1,17 @@
 <?php
 include 'includes/db.php';
-// require_once 'berhasil_login.php';
-//var_dump($_SESSION);
+// require_once './application/views/berhasil/berhasil.php';
+// var_dump($_SESSION);
 
 // check session start or not
-if (session_status() === PHP_SESSION_NONE) {
-	session_start();
+if (session_status() === PHP_SESSION_ACTIVE) {
+    session_start();
+	
 }
  
-if (!isset($_SESSION['username'])) {
-    header("Location: login");
-}
+// if (!isset($_SESSION['username'])) {
+//     header("Location: berhasil");
+// }
 ?>
    <!-- loading page -->
     <div id="wrapp-loading-page" class="wrapp-loading-page" style="display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; justify-content: center; align-items: center; background-color: #fff; z-index: 99999999999999999999999999;">

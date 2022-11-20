@@ -235,9 +235,6 @@
                 <li class="menu menu-navbar" onclick="toPage('shop')">
                     SHOP
                 </li>
-                <li class="menu menu-navbar" onclick="toPage('product')">
-                    PRODUCT
-                </li>
                 <li class="menu menu-navbar" onclick="toPage('blog')">
                     BLOG
                 </li>

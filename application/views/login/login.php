@@ -1,6 +1,6 @@
 <?php 
  
-include 'includes/db.php';
+include './includes/db.php';
 // error_reporting(0);
 
 // session_start();
@@ -20,8 +20,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['username'] = $row['username'];
         //id
         $_SESSION['id'] = $row['id'];
-        header("Location: home");
-        // echo "<script>window.open('http://localhost/todstore/backend/berhasil_login.php')</script>";
+        header("Location: berhasil");
 
     } else {
         echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";

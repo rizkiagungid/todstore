@@ -46,6 +46,7 @@ if (isset($_POST['submit'])) {
         <?php echo @$_SESSION['error']?>
     </div>
  
+    <center>
     <div class="container">
         <form action="" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight: 800;">Login TOD Store</p>
@@ -55,11 +56,13 @@ if (isset($_POST['submit'])) {
             <div class="input-group">
                 <input type="password" placeholder="Password" name="password" value="<?php echo @$_POST['password']; ?>" required>
             </div>
+            <br>
             <div class="input-group">
                 <button name="submit" class="btn">Login</button>
             </div>
             <p class="login-register-text">Anda belum punya akun? <a href="register.php">Register</a></p>
         </form>
     </div>
+    </center>
 </body>
 </html>

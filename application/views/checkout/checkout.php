@@ -9,7 +9,8 @@ if (session_status() === PHP_SESSION_NONE) {
 }
  
 if (!isset($_SESSION['username'])) {
-    header("Location: login");
+    // header("Location: login");
+    echo "<script>window.location.assign('http://localhost/todstore/page/login.php')</script>";
 }
 ?>
 
@@ -21,7 +22,7 @@ if (!isset($_SESSION['username'])) {
             <div class="border-loading border-dua"></div>
         </div>
         <p class="txt-link-web-load">
-            www.todstore.com
+            our dream together
         </p>
     </div>
 

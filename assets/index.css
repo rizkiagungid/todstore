@@ -2212,6 +2212,16 @@
     border-radius: 5px;
 }
 
+/* container cart empty */
+.wrapp-cart .content-cart .container-cart-empty .btn-go-home{
+    background-color: #1E1E1E;
+    color: #fff;
+    transition: 0.2s ease-in-out;
+}
+.wrapp-cart .content-cart .container-cart-empty .btn-go-home:hover{
+    background-color: #333;
+}
+
 /* FROM LOGIIIIIIIIIIIIIN */
 .wrapp-login{
     display: flex;
@@ -2696,14 +2706,4 @@
     padding: 5px 0;
     width: 45%;
     border-radius: 5px;
-}
-
-/* container cart empty */
-.wrapp-checkout .content-cart .container-cart-empty .btn-go-home{
-    background-color: #1E1E1E;
-    color: #fff;
-    transition: 0.2s ease-in-out;
-}
-.wrapp-checkout .content-cart .container-cart-empty .btn-go-home:hover{
-    background-color: #333;
 }

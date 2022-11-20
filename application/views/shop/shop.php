@@ -2,6 +2,16 @@
 include 'includes/db.php';
 // require_once 'berhasil_login.php';
 //var_dump($_SESSION);
+
+// check session start or not
+if (session_status() === PHP_SESSION_NONE) {
+	session_start();
+}
+ 
+if (!isset($_SESSION['username'])) {
+    // header("Location: login");
+    echo "<script>window.location.assign('http://localhost/todstore/page/login.php')</script>";
+}
 ?>   
     
     <!-- loading page -->
@@ -12,7 +22,7 @@ include 'includes/db.php';
             <div class="border-loading border-dua"></div>
         </div>
         <p class="txt-link-web-load">
-            www.todstore.com
+            our dream together
         </p>
     </div>
 

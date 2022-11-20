@@ -272,7 +272,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="border-loading border-dua"></div>
         </div>
         <p class="txt-link-web-load">
-            www.todstore.com
+            our dream together
         </p>
     </div>
 
@@ -292,9 +292,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<button class="back-to-home" onclick="toPage('home')">
 							BACK TO HOMEPAGE
 						</button>
-						<button class="to-contact-us" onclick="toPage('contact')">
+						<!-- <button class="to-contact-us" onclick="toPage('contact')">
 							CONTACT US
-						</button>
+						</button> -->
 					</div>
 				</div>
 			</div>

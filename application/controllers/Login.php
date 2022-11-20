@@ -20,8 +20,9 @@ class Login extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('navbar/navbar');
-		$this->load->view('login/login');
-		$this->load->view('footer/footer');
+		// $this->load->view('navbar/navbar');
+		// $this->load->view('login/login');
+		$this->load->view('login/teslogin');
+		// $this->load->view('footer/footer');
 	}
 }

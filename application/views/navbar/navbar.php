@@ -245,10 +245,10 @@
 
             <ul class="list-icon">
                 <li class="icon-nav">
-                    <i class="fa-solid fa-magnifying-glass ic-nav"></i>
+                    <i class="fa-solid fa-user ic-nav" onclick="<?php echo "window.location.assign('http://localhost/todstore/page/login.php')";?>"></i>
                 </li>
                 <li class="icon-nav">
-                    <i class="fa-solid fa-heart ic-nav"></i>
+                <i class="fa-solid fa-right-from-bracket ic-nav" onclick="<?php echo "window.location.assign('http://localhost/todstore/page/logout.php')";?>"></i>
                 </li>
                 <li class="icon-nav">
                     <i class="fa-solid fa-cart-shopping ic-nav" onclick="toPage('cart')"></i>

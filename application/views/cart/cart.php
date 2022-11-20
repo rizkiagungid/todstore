@@ -9,7 +9,8 @@ if (session_status() === PHP_SESSION_NONE) {
 }
  
 if (!isset($_SESSION['username'])) {
-    header("Location: login");
+    // header("Location: login");
+    echo "<script>window.location.assign('http://localhost/todstore/page/login.php')</script>";
 }
 ?>
 
@@ -21,7 +22,7 @@ if (!isset($_SESSION['username'])) {
             <div class="border-loading border-dua"></div>
         </div>
         <p class="txt-link-web-load">
-            www.todstore.com
+            our dream together
         </p>
     </div>
 
@@ -74,9 +75,13 @@ if (!isset($_SESSION['username'])) {
 
                 ?>
                 <div class="card-cart">
-                    <button class="btn-close-cart">
+                    <form action="keranjangaction" method="GET">
+                    <input type="hidden" name="id" value="<?= $id; ?>">
+                    <input type="hidden" name="jumlah" value="<?= 0; ?>">
+                    <button class="btn-close-cart" type="submit" name="action" value="update">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
+                    </form>
 
                     <img src="images/<?= $image; ?>" alt="" class="img-cart">
 

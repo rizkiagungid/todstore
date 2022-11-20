@@ -8,7 +8,8 @@ if (session_status() === PHP_SESSION_NONE) {
 }
  
 if (!isset($_SESSION['username'])) {
-    header("Location: login");
+    // header("Location: login");
+    echo "<script>window.location.assign('http://localhost/todstore/page/login.php')</script>";
 }
 
 // get transaksi_id

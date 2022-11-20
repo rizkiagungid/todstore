@@ -3,22 +3,19 @@
 </head>
 <?php
 include 'includes/db.php';
-require_once './berhasil_login.php';
+// require_once './berhasil_login.php';
 ?>
 
 <div class="container">
     <div class="jumbotron text-center">
-        <h2>ADMIN HOME TOD PRODUK</h2>
-        <?php echo "<h1>Selamat Datang, " . $_SESSION['username'] ."!". "</h1>"; ?>
+        <?php echo "<h2>Login Sebagai: " . $_SESSION['username'] ."!". "</h2>"; ?>
     </div>
     <br>
     
     <a href="insert.php" role="button" class="btn btn-primary pull-right">INSERT DATA</a>
-    <a href="logout.php" role="button" class="btn btn-primary pull-right">LOGOUT</a>
     <a href="admin/userdata.php" role="button" class="btn btn-primary pull-leaft">USER DATA</a>
     <a href="homepage.php" role="button" class="btn btn-primary pull-leaft">Homepage</a>
-    <a href="about-us.php" role="button" class="btn btn-primary pull-leaft">about-us</a>
-    <a href="./order/shopping.php" role="button" class="btn btn-primary pull-leaft">Shopping</a>
+    <a href="transaksi.php" role="button" class="btn btn-primary pull-leaft">transaksi</a>
     <br>
     
     <br>

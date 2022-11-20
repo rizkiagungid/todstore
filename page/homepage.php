@@ -3,7 +3,7 @@
 </head>
 <?php
 include 'includes/db.php';
-require_once 'berhasil_login.php';
+// require_once 'berhasil_login.php';
 
 if (isset($_SESSION['username'])) {
     //header("Location: index.php");
@@ -31,9 +31,10 @@ if (isset($_POST['submit'])) {
 
 <div class="container">
     <div class="jumbotron text-center">
-        <h2>HOME TOD PRODUK</h2>
-        <h3>Selamat datang cuyyy</h3>
-        <?php echo "<h1>" . $_SESSION['username'] . "!" . "</h1>"; ?>
+        <h3>HALAMAN ADMIN</h3>
+        Anda Login Sebagai: 
+       
+       <h4> <?php echo "<h4>" . $_SESSION['username'] . "!" . "</h4>"; ?></h4>
     </div>
     <br>
 
@@ -41,7 +42,6 @@ if (isset($_POST['submit'])) {
 
     <a href="keranjang.php" role="button" class="btn btn-primary pull-leaft">Keranjang</a>
     <a href="checkout.php" role="button" class="btn btn-primary pull-leaft">Checkout</a>
-    <a href="order/shopping.php" role="button" class="btn btn-primary pull-leaft">Shoping</a>
     <br>
 
     <br>
@@ -131,13 +131,6 @@ if (isset($_POST['submit'])) {
 </div>
 
 
-<div>
-    <center>
-        <h1>about us</h1>
-        <h3>aku adalah seorang manusia biasa</h3>
-        <button type="button"><a href="about-us.php">Selengkapnya disini</a></button>
-    </center>
-</div>
 
 <script>
     $(document).ready(function() {

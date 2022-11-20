@@ -12,6 +12,7 @@ if (isset($_SESSION['username'])) {
  
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
+    $namalengkap = $_POST['namalengkap'];
     $email = $_POST['email'];
     $telepon = $_POST['telepon'];
     $alamat = $_POST['alamat'];
@@ -23,12 +24,13 @@ if (isset($_POST['submit'])) {
         $sql = "SELECT * FROM users WHERE email='$email'";
         $result = mysqli_query($conn, $sql);
         if (!$result->num_rows > 0) {
-            $sql = "INSERT INTO users (username, email, telepon, alamat, level,  password)
-                    VALUES ('$username', '$email','$telepon','$alamat','$level', '$password')";
+            $sql = "INSERT INTO users (username, namalengkap, email, telepon, alamat, level,  password)
+                    VALUES ('$username','namalengkap','$email','$telepon','$alamat','$level', '$password')";
             $result = mysqli_query($conn, $sql);
             if ($result) {
                 echo "<script>alert('Selamat, registrasi berhasil!')</script>";
                 $username = "";
+                $namalengkap = "";
                 $email = "";
                 $telepon = "";
                 $alamat = "";
@@ -69,6 +71,9 @@ if (isset($_POST['submit'])) {
                 <input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
             </div>
             <div class="input-group">
+                <input type="text" placeholder="Nama Lengkap" name="username" value="<?php echo $namalengkap; ?>" required>
+            </div>
+            <div class="input-group">
                 <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
             </div>
             <div class="input-group">
@@ -95,7 +100,7 @@ if (isset($_POST['submit'])) {
             <div class="input-group">
                 <button name="submit" class="btn">Register</button>
             </div>
-            <p class="login-register-text">Anda sudah punya akun? <a href="index.php">Login </a></p>
+            <p class="login-register-text">Anda sudah punya akun? <a href="login    .php">Login </a></p>
         </form>
     </div>
 </body>

@@ -34,18 +34,28 @@ if (isset($_GET['id'])) {
 <html>
 
 <body>
+  <br>
+  <br>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <!-- alert berhasil sukses checkout -->
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-19">
             <div class="alert alert-success">
               <p class="text-center">
                 Checkout Berhasil
                 <br>
-                Silahkan lakukan pembayaran Rp. <?php echo number_format($total_harga); ?> ke rekening <strong>Bank BCA 123-456-789</strong> a.n. <strong>PT. Toko Online</strong> dan lakukan konfirmasi pembayaran <a href="transaksi.php">disini</a>
+                <b>Segera transfer</b>  
+                <br>
+                ID Enkripsi Pesanan:
+                <?php
+echo rand() . "\n";
+?>
+<br>
+                Silahkan lakukan pembayaran Rp. <?php echo number_format($total_harga); ?> ke rekening <strong>Bank BCA 123-456-789</strong> a.n. <strong>TOD STORE OFFICIAL</strong> dan lakukan konfirmasi pembayaran Otomatis<a href="transaksi"> disini</a>
               </p>
+              <br>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@
 </head>
 <?php
 include 'includes/db.php';
-require_once 'berhasil_login.php';
+// require_once 'berhasil_login.php';
 //var_dump($_SESSION);
 ?>
 
@@ -18,7 +18,6 @@ require_once 'berhasil_login.php';
 
     <a href="keranjang.php" role="button" class="btn btn-primary pull-leaft">Keranjang</a>
     <a href="checkout.php" role="button" class="btn btn-primary pull-leaft">Checkout</a>
-    <a href="order/shopping.php" role="button" class="btn btn-primary pull-leaft">Shoping</a>
     <br>
 
     <br>
@@ -98,14 +97,6 @@ require_once 'berhasil_login.php';
 </div>
 
 
-
-<div>
-    <center>
-        <h1>about us</h1>
-        <h3>aku adalah seorang manusia biasa</h3>
-        <button type="button"><a href="about-us.php">Selengkapnya disini</a></button>
-    </center>
-</div>
 
 <script>
     $(document).ready(function() {

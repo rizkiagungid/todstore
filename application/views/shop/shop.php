@@ -65,7 +65,7 @@ if (!isset($_SESSION['username'])) {
                     </div> -->
 
                     <!-- card shop -->
-                    <div id="card-shop" class="card-shop">
+                    <div id="card-shop" class="card-shop" style="display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 300px); grid-gap: 30px; justify-content: space-between; overflow: hidden;">
                     <?php
                     $no = 1;
                     $query = "SELECT * FROM produk ORDER BY id ASC ";

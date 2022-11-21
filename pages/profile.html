@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- weight 400 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>TOD E-Commerce</title>
+</head>
+<body>
+    <!-- wrapp profile -->
+    <div class="wrapp-profile">
+        <!-- header -->
+        <div class="header" style="background-image: url(../images/head-shop.png);">
+            <div class="wrapp-txt-header">
+                <div class="desk-header">
+                    <ul class="list-link-page">
+                        <p class="link-page" onclick="toPage('home')" style="margin: 0; cursor: pointer;">Home/</p>
+                        <p class="link-page" onclick="toPage('cart')" style="margin: 0; cursor: pointer;">Profile</p>
+                    </ul>
+                    <p class="txt-header">
+                        YOUR PROFILE
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="wrapp-content">
+            <div class="container-content">
+                <img src="../images/tzuyu.jpg" alt="" class="img-profile">
+
+                <p class="nama">
+                    Ridwan
+                </p>
+                <p class="nama-lengkap">
+                    Mohamad Ridwan Apriyadi
+                </p>
+
+                <!-- form -->
+                <form action="" class="edit-profile">
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Nama
+                            </label>
+                            <button class="btn-edit-profile">
+                                EDIT
+                            </button>
+                        </div>
+                        <input type="text" class="input-profile" value="ridwan">
+                    </div>
+
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Nama Lengkap
+                            </label>
+                            <button class="btn-edit-profile">
+                                EDIT
+                            </button>
+                        </div>
+                        <input type="text" class="input-profile" value="ridwan">
+                    </div>
+
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Email
+                            </label>
+                            <button class="btn-edit-profile">
+                                EDIT
+                            </button>
+                        </div>
+                        <input type="text" class="input-profile" value="ridwan">
+                    </div>
+
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Password
+                            </label>
+                            <button class="btn-edit-profile">
+                                EDIT
+                            </button>
+                        </div>
+                        <input type="text" class="input-profile" value="ridwan">
+                    </div>
+
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Status
+                            </label>
+                            <button class="btn-edit-profile">
+                                EDIT
+                            </button>
+                        </div>
+                        <input type="text" class="input-profile" value="ridwan">
+                    </div>
+
+                    <button class="btn-submit-profile">
+                        Edit Profile
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -242,11 +242,10 @@ if (!isset($_SESSION['username'])) {
                             <div class="carousel-item active">
                                 <div class="deskripsi">
                                     <p class="comment-people">
-                                        “ Wahhh barang disini legit sekali ya gaes yah kalian wajib
-                                        beut dah beli dimarih”
+                                    “Wah barang di sini bagus-bagus sekali”
                                     </p>
                                     <p class="name-people">
-                                        -GUS SAMSUDIN
+                                    -Aldi (Aooo)
                                     </p>
                                 </div>
 
@@ -254,22 +253,20 @@ if (!isset($_SESSION['username'])) {
                             <div class="carousel-item">
                                 <div class="deskripsi">
                                     <p class="comment-people">
-                                        “ Wahhh barang disini legit sekali ya gaes yah kalian wajib
-                                        beut dah beli dimarih”
+                                    “Barang disini cukup bagus yah, dari impor juga ternyata”
                                     </p>
                                     <p class="name-people">
-                                        -GUS SAMSUDIN
+                                    -Rizky Agung
                                     </p>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="deskripsi">
                                     <p class="comment-people">
-                                        “ Wahhh barang disini legit sekali ya gaes yah kalian wajib
-                                        beut dah beli dimarih”
+                                    “Hmm Barang disini oke-oke banget”
                                     </p>
                                     <p class="name-people">
-                                        -GUS SAMSUDIN
+                                    -Thio
                                     </p>
                                 </div>
                             </div>

@@ -56,8 +56,8 @@
 
                     <img src="../images/products.jfif" alt="" class="img-cart">
 
-                    <p class="name-product-cart">
-                        DASTER YOGS
+                    <p class="name-product-cart" style="width: 200px;">
+                        DASTER YOGS Lorem ipsum dolor, sit amet consectetur adidadada dawoaoda
                     </p>
 
                     <div class="btn-total">
@@ -80,8 +80,80 @@
 
                     <img src="../images/products.jfif" alt="" class="img-cart">
 
-                    <p class="name-product-cart">
-                        DASTER YOGS
+                    <p class="name-product-cart" style="width: 200px;">
+                        DASTER YOGS Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus 
+                    </p>
+
+                    <div class="btn-total">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <p class="number-total">
+                            1
+                        </p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+
+                    <p class="total-price">
+                        Rp 150,000
+                    </p>
+                </div>
+
+                <div class="card-cart">
+                    <button class="btn-close-cart">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <img src="../images/products.jfif" alt="" class="img-cart">
+
+                    <p class="name-product-cart" style="width: 200px;">
+                        DASTER YOGS Lorem ipsum dolor sit amet
+                    </p>
+
+                    <div class="btn-total">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <p class="number-total">
+                            1
+                        </p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+
+                    <p class="total-price">
+                        Rp 150,000
+                    </p>
+                </div>
+
+                <div class="card-cart">
+                    <button class="btn-close-cart">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <img src="../images/products.jfif" alt="" class="img-cart">
+
+                    <p class="name-product-cart" style="width: 200px;">
+                        DASTER YOGS Lorem ipsum dolor sit amet consectetur adipi
+                    </p>
+
+                    <div class="btn-total">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <p class="number-total">
+                            1
+                        </p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+
+                    <p class="total-price">
+                        Rp 150,000
+                    </p>
+                </div>
+
+                <div class="card-cart">
+                    <button class="btn-close-cart">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <img src="../images/products.jfif" alt="" class="img-cart">
+
+                    <p class="name-product-cart" style="width: 200px;">
+                        DASTER YOGS Lorem ipsum dolor sit amet consectetur adipisicing
                     </p>
 
                     <div class="btn-total">
@@ -154,9 +226,32 @@
         </div>
     </div>
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+    <script>
+// page cart
+const newPathName = window.location.pathname.split('/')[2]
+
+const nameProductCart = document.getElementsByClassName('name-product-cart')
+console.log(nameProductCart)
+
+if(newPathName === 'cart.html' && nameProductCart.length > 0){
+    for(let i = 0; i < nameProductCart.length; i++){
+        if(nameProductCart[i].innerText.length > 68){
+            nameProductCart[i].style.fontSize = '15px'
+        }
+    }
+}
+    </script>
+
+<!-- emailjs cdn -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
 </body>
 </html>

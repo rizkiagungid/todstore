@@ -360,11 +360,10 @@ if(mysqli_num_rows($result) > 0){
                                 <div class="carousel-item active">
                                     <div class="deskripsi">
                                         <p class="comment-people">
-                                            “ Wahhh barang disini legit sekali ya gaes yah kalian wajib
-                                            beut dah beli dimarih”
+                                            “Wah barang di sini bagus-bagus sekali”
                                         </p>
                                         <p class="name-people">
-                                            -GUS SAMSUDIN
+                                            -Aldi (Aooo)
                                         </p>
                                     </div>
 
@@ -372,22 +371,20 @@ if(mysqli_num_rows($result) > 0){
                                 <div class="carousel-item">
                                     <div class="deskripsi">
                                         <p class="comment-people">
-                                            “ Wahhh barang disini legit sekali ya gaes yah kalian wajib
-                                            beut dah beli dimarih”
+                                            “Barang disini cukup bagus yah, dari impor juga ternyata”
                                         </p>
                                         <p class="name-people">
-                                            -GUS SAMSUDIN
+                                            -Rizky Agung
                                         </p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="deskripsi">
                                         <p class="comment-people">
-                                            “ Wahhh barang disini legit sekali ya gaes yah kalian wajib
-                                            beut dah beli dimarih”
+                                            “Hmm Barang disini oke-oke banget”
                                         </p>
                                         <p class="name-people">
-                                            -GUS SAMSUDIN
+                                            -Thio
                                         </p>
                                     </div>
                                 </div>
@@ -433,7 +430,7 @@ if(mysqli_num_rows($result) > 0){
                             LATEST NEWS
                         </p>
                         <p class="deskripsi-latest-news">
-                            Berita gosip terhangat wow ya cuman di marih ya ges yah.
+                            Berita terbaru kami mengenai fashion
                         </p>
 
                         <div class="card-latest-news">

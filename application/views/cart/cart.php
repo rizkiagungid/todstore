@@ -85,7 +85,7 @@ if (!isset($_SESSION['username'])) {
 
                     <img src="images/<?= $image; ?>" alt="" class="img-cart">
 
-                    <p class="name-product-cart">
+                    <p class="name-product-cart" style="width: 200px;">
                     <?= $name; ?>
                     </p>
 
@@ -183,7 +183,7 @@ if (!isset($_SESSION['username'])) {
 
                 <!-- btn eksekusi -->
                 <div class="container-button-cart">
-                    <button class="btn-checkout" onclick="toPage('checkout')">
+                    <button class="btn-checkout" onclick="toPage('checkout')" style="border: 1px solid #7A7A7A;">
                         Proceed to checkout
                     </button>
                     <button class="btn-shopping" onclick="toPage('shop')">
@@ -200,7 +200,7 @@ if (!isset($_SESSION['username'])) {
                 <p class="deskripsi-cart-empty" style="font-size: 14px; font-family: 'Montserrat', sans-serif; font-weight: 500; color: #000; margin: 10px 0 60px 0; width: 300px; text-align: center;">
                     Looks like you haven't added any courses to your cart yet.
                 </p>
-                <button class="btn-go-home" style="font-size: 15px; font-family: 'Montserrat', sans-serif; font-weight: 500; border-radius: 10px; padding: 10px 80px" onclick="toPage('home')">
+                <button class="btn-go-home" style="font-size: 15px; font-family: 'Montserrat', sans-serif; font-weight: 500; border-radius: 10px; padding: 10px 80px; border: none;" onclick="toPage('home')">
                     ADD COURSES TO CART
                 </button>
             </div>

@@ -1,37 +1,58 @@
 <?php 
  
 include './includes/db.php';
-// error_reporting(0);
-
-// session_start();
+ 
+error_reporting(0);
+ 
+session_start();
  
 if (isset($_SESSION['username'])) {
-    //header("Location: index.php");
+    header("Location: login.php");
 }
  
 if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $namalengkap = $_POST['namalengkap'];
     $email = $_POST['email'];
+    $telepon = $_POST['telepon'];
+    $alamat = $_POST['alamat'];
+    $level = $_POST['level'];
     $password = md5($_POST['password']);
+    $cpassword = md5($_POST['cpassword']);
  
-    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-    $result = mysqli_query($conn, $sql);
-    if ($result->num_rows > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['username'] = $row['username'];
-        //id
-        $_SESSION['id'] = $row['id'];
-        // header("Location: berhasil_login.php");
-        echo "<script>window.location.assign('http://localhost/todstore/home')</script>";
-
+    if ($password == $cpassword) {
+        $sql = "SELECT * FROM users WHERE email='$email'";
+        $result = mysqli_query($conn, $sql);
+        if (!$result->num_rows > 0) {
+            $sql = "INSERT INTO users (username, namalengkap, email, telepon, alamat, level,  password)
+                    VALUES ('$username','$namalengkap', '$email','$telepon','$alamat','$level', '$password')";
+            $result = mysqli_query($conn, $sql);
+            if ($result) {
+                echo "<script>alert('Selamat, registrasi berhasil!')</script>";
+                $username = "";
+                $namalengkap = "";
+                $email = "";
+                $telepon = "";
+                $alamat = "";
+                $level = "";
+                $_POST['password'] = "";
+                $_POST['cpassword'] = "";
+            } else {
+                echo "<script>alert('Woops! Terjadi kesalahan.')</script>";
+            }
+        } else {
+            echo "<script>alert('Woops! Email Sudah Terdaftar.')</script>";
+        }
+         
     } else {
-        echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
+        echo "<script>alert('Password Tidak Sesuai')</script>";
     }
 }
  
 ?>
- 
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -154,47 +175,89 @@ if (isset($_POST['submit'])) {
             our dream together
         </p>
     </div>
- 
-    <!-- wrapp login -->
-<div class="wrapp-login">
+
+<!-- wrapp register -->
+    <div class="wrapp-register" style="height: auto; padding: 80px 0;">
         <div class="container-black-login">
-            <div style="display:flex; justify-content: center; margin-bottom: 10px;">
+        <div style="display:flex; justify-content: center; margin-bottom: 10px;">
             <img src="images/logo.png" alt="" class="logo-login" style="width: 80px;">
             </div>
-            
-            <p class="title-login" style="font-weight: 500;">
-                Log in to your account
+
+            <p class="title-login">
+                Register TOD Store
             </p>
 
             <form action="" method="POST" style="display: flex; flex-direction: column;">
+            <label for="label" class="label-input">
+                Nama
+            </label>
+            <input type="text" name="username" class="input-login" value="<?php echo $username; ?>" required>
 
             <label for="label" class="label-input">
-                Username
+                Nama Lengkap
             </label>
-            <input type="email" name="email" class="input-login" value="<?php echo @$email; ?>" required>
+            <input type="text" name="namalengkap" class="input-login" value="<?php echo $namalengkap; ?>" required>
+
+            <label for="label" class="label-input">
+                Email
+            </label>
+            <input type="email" name="email" class="input-login" value="<?php echo $email; ?>" required>
+
+            <label for="label" class="label-input">
+                Telepon
+            </label>
+            <input type="number" name="telepon" class="input-login" value="<?php echo $telepon; ?>" required>
+
+            <label for="label" class="label-input">
+                Alamat
+            </label>
+            <input type="text" name="alamat" class="input-login" value="<?php echo $alamat; ?>" required>
 
             <label for="label" class="label-input">
                 Password
             </label>
-            <input type="password" name="password" class="input-login" value="<?php echo @$_POST['password']; ?>" required>
+            <input type="password" name="password" class="input-login" value="<?php echo $_POST['password']; ?>" required>
+
+            <label for="label" class="label-input">
+                Confirm Password
+            </label>
+            <input type="password" name="cpassword" class="input-login" value="<?php echo $_POST['cpassword']; ?>" required>
+
+            <label for="label" class="label-input">
+                Pilih Status Pengguna
+            </label>
+            
+            <div class="container-input-admin">
+                <div class="container-admin">
+                    <input type="radio" name="level" value="admin" class="input-admin">
+                    <p class="txt-admin">
+                        Admin
+                    </p>
+                </div>
+                <div class="container-admin">
+                    <input type="radio" name="level" value="member" class="input-admin">
+
+                    <p class="txt-admin">
+                        Member
+                    </p>
+                </div>
+            </div>
 
             <button name="submit" class="btn-login">
-                Login
+                Register
             </button>
             </form>
 
             <div class="non-akun">
-                    <p class="txt-non-akun">
-                        Anda belum punya akun?
-                    </p>
-                    <button class="btn-register" onclick="<?php echo "window.location.assign('http://localhost/todstore/page/registeruser.php')";?>">
-                        Register
-                    </button>
-                </div>
+                <p class="txt-non-akun">
+                    Anda sudah punya akun?
+                </p>
+                <button class="btn-register" onclick="<?php echo "window.location.assign('http://localhost/todstore/page/login.php')";?>">
+                    Login
+                </button>
+            </div>
         </div>
     </div>
-
-
 
     <!-- footer -->
 <div id="main-footer" class="main-footer" style="display: none;">
@@ -206,7 +269,7 @@ if (isset($_POST['submit'])) {
                         Subscribe to our website
                     </p>
                     <p class="deskripsi-search">
-                        silahkan subscribe di website kami.
+                        Menantikan informasi mengenai baju terbaru dari kabar kami melalui email Anda!.
                     </p>
                 </div>
                 <div class="kanan-search">
@@ -216,7 +279,7 @@ if (isset($_POST['submit'])) {
                             Subscribe
 
                             <!-- loading send -->
-                            <div id="loading-send" class="loading-send">
+                            <div id="loading-send" class="loading-send" style="border-radius: 10px;">
                                 <div class="circle-loading-send"></div>
                             </div>
                         </button>
@@ -241,32 +304,31 @@ if (isset($_POST['submit'])) {
                         TOD PROJECT
                     </p>
                     <p class="deskripsi-menu" style="cursor: text; color: #fff;">
-                        Ya sakumaha aing weh nu bikin
-                        tangkurank siaaa!!!
+                        Website ini dibangun oleh kami untuk Anda yang cocok dalam berpakaian baju sesuai dengan fashion Anda.
                     </p>
                 </li>
                 <li class="menu-footer">
                     <p class="title-menu">
                         INFORMATION
                     </p>
-                    <p class="deskripsi-menu">
+                    <p class="deskripsi-menu" onclick="toPage('about')">
                         About TOD PROJECT
                     </p>
-                    <p class="deskripsi-menu">
-                        Contact Us
+                    <p class="deskripsi-menu" onclick="toPage('blog')">
+                        Blog
                     </p>
                 </li>
                 <li class="menu-footer">
                     <p class="title-menu">
                         QUICK LINKS
                     </p>
-                    <p class="deskripsi-menu">
-                        Wishlist
+                    <p class="deskripsi-menu" onclick="toPage('shop')">
+                        Shop
                     </p>
-                    <p class="deskripsi-menu">
+                    <p class="deskripsi-menu" onclick="toPage('checkout')">
                         Checkout
                     </p>
-                    <p class="deskripsi-menu">
+                    <p class="deskripsi-menu" onclick="toPage('cart')">
                         Cart
                     </p>
                 </li>
@@ -351,16 +413,6 @@ if (isset($_POST['submit'])) {
             navbar.style.display = 'none'
             popUpMessage.style.display = 'none'
             footer.style.display = 'none'
-        }
-
-        // name products di home
-        const nameProducts = document.getElementsByClassName('name-products')
-
-        if (nameProducts.length > 0) {
-            for (let i = 0; i < nameProducts.length; i++) {
-                const slice = nameProducts[i].innerText.length > 70 ? `${nameProducts[i].innerHTML.substr(0, 70)}...` : nameProducts[i].innerHTML
-                nameProducts[i].innerHTML = slice
-            }
         }
 
         // latest news di home
@@ -650,6 +702,30 @@ const dataShop = []
             DisplayList(dataBlog, list_element_blog, rowsBlog, current_page)
             SetupPagination(dataBlog, pagination, rowsBlog)
         }
+
+        // page cart
+        const nameProductCart = document.getElementsByClassName('name-product-cart')
+
+        if(newPathName === 'cart' && nameProductCart.length > 0){
+            for(let i = 0; i < nameProductCart.length; i++){
+                if(nameProductCart[i].innerText.length > 50){
+                    nameProductCart[i].style.fontSize = '15px'
+                }
+            }
+        }
+
+        // name products di home
+        const nameProducts = document.getElementsByClassName('name-products')
+
+        if (newPathName === 'home' && nameProducts.length > 0) {
+            for (let i = 0; i < nameProducts.length; i++) {
+                if(nameProducts[i].innerText.length > 20){
+                    nameProducts[i].innerHTML = `${nameProducts[i].innerText.substr(0, 39)}...`
+                }
+                // const slice = nameProducts[i].innerText.length > 70 ? `${nameProducts[i].innerHTML.substr(0, 70)}...` : nameProducts[i].innerHTML
+                // nameProducts[i].innerHTML = slice
+            }
+        }
         
         // to page
         function toPage(path){
@@ -733,5 +809,8 @@ const dataShop = []
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
+</body>
+
+</html>
 </body>
 </html>

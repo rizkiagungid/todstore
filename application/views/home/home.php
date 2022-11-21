@@ -343,7 +343,7 @@ if(mysqli_num_rows($result) > 0){
                     <!-- people say about us -->
                     <div class="people-say-about">
                         <p class="title-people-say">
-                            WHAT PEOPLE SAY ABOUT US
+                            WHAT PEOPLE SAY ABOUT PRODUCK
                         </p>
 
                         <!-- carousel people -->
@@ -439,11 +439,11 @@ if(mysqli_num_rows($result) > 0){
                         <div class="card-latest-news">
                             <div class="card-news">
                                 <div class="con-img-news">
-                                    <img src="images/latest-news.jfif" alt="" class="img-news">
+                                    <img src="images/artikelfoto.jpg" alt="" class="img-news">
                                 </div>
 
                                 <p class="title-news">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic fugiat, fuga laudantium porro itaque dolor quia. Odit voluptate cumque corporis, praesentium doloribus consectetur at cupiditate modi assumenda, nobis accusantium tempora.
+                                   Topup saldo tod gratis baju
                                 </p>
                                 <button class="read-more">
                                     Read More <i class="fa-solid fa-arrow-right"></i>
@@ -451,13 +451,11 @@ if(mysqli_num_rows($result) > 0){
                             </div>
                             <div class="card-news">
                                 <div class="con-img-news">
-                                    <img src="images/latest-news.jfif" alt="" class="img-news">
+                                    <img src="images/artikelfoto.jpg" alt="" class="img-news">
                                 </div>
 
                                 <p class="title-news">
-                                    TIPS ANTI BEGAL Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum eius
-                                    sunt, blanditiis dignissimos quos odit aperiam iste totam nihil voluptate quibusdam,
-                                    voluptatem ullam, nisi fugiat cumque nesciunt adipisci earum. Et?
+                               Belanja Murah.
                                 </p>
                                 <button class="read-more">
                                     Read More <i class="fa-solid fa-arrow-right"></i>
@@ -465,11 +463,11 @@ if(mysqli_num_rows($result) > 0){
                             </div>
                             <div class="card-news">
                                 <div class="con-img-news">
-                                    <img src="images/latest-news.jfif" alt="" class="img-news">
+                                    <img src="images/artikelfoto.jpg" alt="" class="img-news">
                                 </div>
 
                                 <p class="title-news">
-                                    TIPS ANTI BEGAL
+                                   Promo Ceria
                                 </p>
                                 <button class="read-more">
                                     Read More <i class="fa-solid fa-arrow-right"></i>

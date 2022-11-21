@@ -1,5 +1,5 @@
-<!-- footer -->
-<div id="main-footer" class="main-footer">
+ <!-- footer -->
+ <div class="main-footer">
         <div class="footer">
             <!-- search -->
             <div class="search">
@@ -8,7 +8,7 @@
                         Subscribe to our website
                     </p>
                     <p class="deskripsi-search">
-                        silahkan subscribe di website kami.
+                      Subscribe Untuk Mendapatkan Informasi Terbaru mengenai Tod store
                     </p>
                 </div>
                 <div class="kanan-search">
@@ -16,35 +16,23 @@
                         <input type="email" class="input-search" id="subscribe" onchange="changeInput()">
                         <button class="btn-subscribe" onclick="submit()">
                             Subscribe
-
-                            <!-- loading send -->
-                            <div id="loading-send" class="loading-send">
-                                <div class="circle-loading-send"></div>
-                            </div>
                         </button>
                     </div>
 
                     <!-- error message -->
-                    <p id="error-message-subscribe" class="error-message-subscribe"></p>
-
-                    <!-- pop up message success -->
-                    <div id="pop-up-success" class="pop-up-success">
-                        <p id="txt-success" class="txt-success" style="background-color: #ff0000; color: #fff; margin-top: 0px; width: auto; padding: 0 40px;">
+                    <p id="error-message-subscribe" class="error-message-subscribe">
                         
-                        </p>
-                    </div>
+                    </p>
                 </div>
             </div>
-
-            <!-- tod project -->
-            <div class="tod-project">
+                 <!-- tod project -->
+                 <div class="tod-project">
                 <li class="menu-footer">
                     <p class="title-menu">
                         TOD PROJECT
                     </p>
                     <p class="deskripsi-menu" style="cursor: text; color: #fff;">
-                        Ya sakumaha aing weh nu bikin
-                        tangkurank siaaa!!!
+                      Web Aplikasi Belanja buatan anak bangsa
                     </p>
                 </li>
                 <li class="menu-footer">
@@ -76,7 +64,7 @@
                     <p class="title-menu">
                         CONTACT US
                     </p>
-                    <a target="_blank" href="https://maps.google.com/maps/dir//Jl.+Sunan+Muria+IV+Pabuaran+Kecamatan+Bojonggede+Kabupaten+Bogor,+Jawa+Barat+16921/@-6.4547463,106.7950764,15z/data=!4m5!4m4!1m0!1m2!1m1!1s0x2e69e9e7ede517f7:0xb8953bf5dd0f86f1" class="deskripsi-menu">
+                    <a href="#" class="deskripsi-menu">
                         <i class="fa-solid fa-location-dot"></i> Jalan YatemPiatu Sejahtera 01-00
                     </a>
                     <a href="tel:+6281383959452" class="deskripsi-menu">

@@ -48,79 +48,48 @@ if (!isset($_SESSION['username'])) {
             <div class="container-content">
                 <img src="images/tzuyu.jpg" alt="" class="img-profile">
 
-                <p class="nama">
-                    Ridwan
-                </p>
-                <p class="nama-lengkap">
-                    ridwan@gmail.com
-                </p>
-
-                <!-- form -->
-                <form action="" class="edit-profile">
-                    <div class="container-input">
-                        <div class="column-label">
-                            <label for="label" class="label-profile">
-                                Nama
-                            </label>
-                            <button class="btn-edit-profile">
-                                EDIT
-                            </button>
-                        </div>
-                        <input type="text" class="input-profile" value="ridwan">
-                    </div>
-
-                    <div class="container-input">
-                        <div class="column-label">
-                            <label for="label" class="label-profile">
-                                Nama Lengkap
-                            </label>
-                            <button class="btn-edit-profile">
-                                EDIT
-                            </button>
-                        </div>
-                        <input type="text" class="input-profile" value="ridwan">
-                    </div>
-
-                    <div class="container-input">
-                        <div class="column-label">
-                            <label for="label" class="label-profile">
-                                Email
-                            </label>
-                            <button class="btn-edit-profile">
-                                EDIT
-                            </button>
-                        </div>
-                        <input type="text" class="input-profile" value="ridwan">
-                    </div>
-
-                    <div class="container-input">
-                        <div class="column-label">
-                            <label for="label" class="label-profile">
-                                Password
-                            </label>
-                            <button class="btn-edit-profile">
-                                EDIT
-                            </button>
-                        </div>
-                        <input type="text" class="input-profile" value="ridwan">
-                    </div>
-
-                    <div class="container-input">
-                        <div class="column-label">
-                            <label for="label" class="label-profile">
-                                Status
-                            </label>
-                            <button class="btn-edit-profile">
-                                EDIT
-                            </button>
-                        </div>
-                        <input type="text" class="input-profile" value="ridwan">
-                    </div>
-
-                    <button class="btn-submit-profile">
-                        Edit Profile
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
+                <form method="post"z>
+					<?php
+					$username = $_SESSION['username'];
+					$query_users = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
+					$da = mysqli_fetch_array($query_users);
+					//var_dump($da);
+					?>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+                                <p>ini nama lengkap</p>
+								<input type="text" value="<?= $da['namalengkap']; ?>" class="form-control">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+                            <p>ini telepon</p>
+								<input type="text" readonly value="<?= $da['telepon']; ?>" class="form-control">
+							</div>
+						</div>
+                        <div class="col-md-4">
+							<div class="form-group">
+                            <p>ini id</p>
+								<input type="text" readonly value="<?= $da['id']; ?>" class="form-control">
+							</div>
+						</div>
+                        <div class="col-md-4">
+							<div class="form-group">
+                            <p>ini alamat</p>
+								<input type="text" readonly value="<?= $da['alamat']; ?>" class="form-control">
+							</div>
+						</div>
+                        <div class="col-md-4">
+							<div class="form-group">
+                            <p>ini level</p>
+								<input type="text" readonly value="<?= $da['level']; ?>" class="form-control">
+							</div>
+						</div>
+                        <div class="col-md-4">
+							<div class="form-group">
+                            <p>ini password di encrypt</p>
+								<input type="text" readonly value="<?= $da['password']; ?>" class="form-control">
+							</div>
+						</div>
+					</div>

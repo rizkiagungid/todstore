@@ -8,7 +8,7 @@
                         Subscribe to our website
                     </p>
                     <p class="deskripsi-search">
-                      Subscribe Untuk Mendapatkan Informasi Terbaru mengenai Tod store
+                        silahkan subscribe di website kami.
                     </p>
                 </div>
                 <div class="kanan-search">
@@ -16,6 +16,11 @@
                         <input type="email" class="input-search" id="subscribe" onchange="changeInput()">
                         <button class="btn-subscribe" onclick="submit()">
                             Subscribe
+
+                            <!-- loading send -->
+                            <div id="loading-send" class="loading-send">
+                                <div class="circle-loading-send"></div>
+                            </div>
                         </button>
                     </div>
 
@@ -32,31 +37,32 @@
                         TOD PROJECT
                     </p>
                     <p class="deskripsi-menu" style="cursor: text; color: #fff;">
-                      Web Aplikasi Belanja buatan anak bangsa
+                        Ya sakumaha aing weh nu bikin
+                        tangkurank siaaa!!!
                     </p>
                 </li>
                 <li class="menu-footer">
                     <p class="title-menu">
                         INFORMATION
                     </p>
-                    <p class="deskripsi-menu">
+                    <p class="deskripsi-menu" onclick="toPage('about')">
                         About TOD PROJECT
                     </p>
-                    <p class="deskripsi-menu">
-                        Contact Us
+                    <p class="deskripsi-menu" onclick="toPage('blog')">
+                        Blog
                     </p>
                 </li>
                 <li class="menu-footer">
                     <p class="title-menu">
                         QUICK LINKS
                     </p>
-                    <p class="deskripsi-menu">
-                        Wishlist
+                    <p class="deskripsi-menu" onclick="toPage('shop')">
+                        Shop
                     </p>
-                    <p class="deskripsi-menu">
+                    <p class="deskripsi-menu" onclick="toPage('checkout')">
                         Checkout
                     </p>
-                    <p class="deskripsi-menu">
+                    <p class="deskripsi-menu" onclick="toPage('cart')">
                         Cart
                     </p>
                 </li>
@@ -141,16 +147,6 @@
             navbar.style.display = 'none'
             popUpMessage.style.display = 'none'
             footer.style.display = 'none'
-        }
-
-        // name products di home
-        const nameProducts = document.getElementsByClassName('name-products')
-
-        if (nameProducts.length > 0) {
-            for (let i = 0; i < nameProducts.length; i++) {
-                const slice = nameProducts[i].innerText.length > 70 ? `${nameProducts[i].innerHTML.substr(0, 70)}...` : nameProducts[i].innerHTML
-                nameProducts[i].innerHTML = slice
-            }
         }
 
         // latest news di home
@@ -439,6 +435,30 @@ const dataShop = []
         if(newPathName === 'blog'){
             DisplayList(dataBlog, list_element_blog, rowsBlog, current_page)
             SetupPagination(dataBlog, pagination, rowsBlog)
+        }
+
+        // page cart
+        const nameProductCart = document.getElementsByClassName('name-product-cart')
+
+        if(newPathName === 'cart' && nameProductCart.length > 0){
+            for(let i = 0; i < nameProductCart.length; i++){
+                if(nameProductCart[i].innerText.length > 50){
+                    nameProductCart[i].style.fontSize = '15px'
+                }
+            }
+        }
+
+        // name products di home
+        const nameProducts = document.getElementsByClassName('name-products')
+
+        if (newPathName === 'home' && nameProducts.length > 0) {
+            for (let i = 0; i < nameProducts.length; i++) {
+                if(nameProducts[i].innerText.length > 20){
+                    nameProducts[i].innerHTML = `${nameProducts[i].innerText.substr(0, 39)}...`
+                }
+                // const slice = nameProducts[i].innerText.length > 70 ? `${nameProducts[i].innerHTML.substr(0, 70)}...` : nameProducts[i].innerHTML
+                // nameProducts[i].innerHTML = slice
+            }
         }
         
         // to page

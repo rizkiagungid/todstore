@@ -31,39 +31,50 @@ if (isset($_GET['id'])) {
 
 ?>
 
-<html>
-
-<body>
-  <br>
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <!-- alert berhasil sukses checkout -->
-        <div class="row">
-          <div class="col-md-19">
-            <div class="alert alert-success">
-              <p class="text-center">
-                Checkout Berhasil
-                <br>
-                <b>Segera transfer</b>  
-                <br>
-                ID Enkripsi Pesanan:
-                <?php
-echo rand() . "\n";
-?>
-<br>
-                Silahkan lakukan pembayaran Rp. <?php echo number_format($total_harga); ?> ke rekening <strong>Bank BCA 123-456-789</strong> a.n. <strong>TOD STORE OFFICIAL</strong> dan lakukan konfirmasi pembayaran Otomatis<a href="transaksi"> disini</a>
-              </p>
-              <br>
-            </div>
-          </div>
+<!-- loading page -->
+<div id="wrapp-loading-page" class="wrapp-loading-page" style="display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; justify-content: center; align-items: center; background-color: #fff; z-index: 99999999999999999999999999;">
+        <img src="images/logo.png" alt="" class="logo-loading">
+        <div class="container-loading">
+            <div class="border-loading border-satu"></div>
+            <div class="border-loading border-dua"></div>
         </div>
-      </div>
+        <p class="txt-link-web-load">
+            our dream together
+        </p>
     </div>
-  </div>
 
+<!-- wrapp checkout success -->
+<div class="wrapp-checkout-success">
+    <!-- header -->
+    <div class="header" style="background-image: url(images/head-shop.png);">
+        <div class="wrapp-txt-header">
+            <div class="desk-header">
+                <ul class="list-link-page">
+                    <p class="link-page" onclick="toPage('home')" style="margin: 0; cursor: pointer;">Home/</p>
+                    <p class="link-page" onclick="toPage('checkoutsuccess')" style="margin: 0; cursor: pointer;">Shopping Cart</p>
+                </ul>
+                <p class="txt-header">
+                    CHECKOUT
+                </p>
+            </div>
+        </div>
+    </div>
 
-</body>
+    <!-- content -->
+    <div class="wrapp-content-checkout-success">
+        <div class="container-content-checkout-success">
+            <p class="title-checkout-success">
+                THANK YOU YOUR ORDER
+            </p>
+            <p class="deskripsi-checkout-success">
+                Your order is accepted. The managaer will 
+                contact your shortly
+            </p>
+        </div>
+    </div>
 
-</html>
+    <!-- button -->
+    <button class="btn-checkout" onclick="toPage('shop')" style="border: 1px solid #7A7A7A;">
+        Go to shop
+    </button>
+</div>

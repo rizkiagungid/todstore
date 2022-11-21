@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Checkoutsuccess extends CI_Controller {
+class Profile extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,7 +21,7 @@ class Checkoutsuccess extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('navbar/navbar');
-		$this->load->view('checkoutsuccess/checkoutsuccess');
+		$this->load->view('profile/profile');
 		$this->load->view('footer/footer');
 	}
 }

@@ -46,50 +46,79 @@ if (!isset($_SESSION['username'])) {
         <!-- content -->
         <div class="wrapp-content">
             <div class="container-content">
-                <img src="images/tzuyu.jpg" alt="" class="img-profile">
-
-                <form method="post"z>
-					<?php
+            <?php
 					$username = $_SESSION['username'];
 					$query_users = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
 					$da = mysqli_fetch_array($query_users);
 					//var_dump($da);
 					?>
-					<div class="row">
-						<div class="col-md-4">
-							<div class="form-group">
-                                <p>ini nama lengkap</p>
-								<input type="text" value="<?= $da['namalengkap']; ?>" class="form-control">
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="form-group">
-                            <p>ini telepon</p>
-								<input type="text" readonly value="<?= $da['telepon']; ?>" class="form-control">
-							</div>
-						</div>
-                        <div class="col-md-4">
-							<div class="form-group">
-                            <p>ini id</p>
-								<input type="text" readonly value="<?= $da['id']; ?>" class="form-control">
-							</div>
-						</div>
-                        <div class="col-md-4">
-							<div class="form-group">
-                            <p>ini alamat</p>
-								<input type="text" readonly value="<?= $da['alamat']; ?>" class="form-control">
-							</div>
-						</div>
-                        <div class="col-md-4">
-							<div class="form-group">
-                            <p>ini level</p>
-								<input type="text" readonly value="<?= $da['level']; ?>" class="form-control">
-							</div>
-						</div>
-                        <div class="col-md-4">
-							<div class="form-group">
-                            <p>ini password di encrypt</p>
-								<input type="text" readonly value="<?= $da['password']; ?>" class="form-control">
-							</div>
-						</div>
-					</div>
+                <img src="images/tzuyu.jpg" alt="" class="img-profile">
+
+                <p class="nama">
+                <?= $da['namalengkap']; ?>
+                </p>
+                <p class="nama-lengkap">
+                <?= $da['email']; ?>
+                </p>
+
+                <form method="post" class="edit-profile">
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Nama
+                            </label>
+                        </div>
+                        <input type="text" class="input-profile" value="<?= $da['namalengkap']; ?>">
+                    </div>
+
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Telepon
+                            </label>
+                        </div>
+                        <input type="text" class="input-profile" readonly value="<?= $da['telepon']; ?>" style="background-color: #ddd">
+                    </div>
+
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Id User
+                            </label>
+                        </div>
+                        <input type="text" class="input-profile" readonly value="<?= $da['id']; ?>" style="background-color: #ddd">
+                    </div>
+
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Alamat
+                            </label>
+                        </div>
+                        <input type="text" class="input-profile" readonly value="<?= $da['alamat']; ?>" style="background-color: #ddd">
+                    </div>
+
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Status
+                            </label>
+                        </div>
+                        <input type="text" class="input-profile" readonly value="<?= $da['level']; ?>" style="background-color: #ddd">
+                    </div>
+
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Password
+                            </label>
+                        </div>
+                        <input type="password" class="input-profile" readonly value="<?= $da['password']; ?>" style="background-color: #ddd">
+                    </div>
+
+                    <button type="submit" name="submit" class="btn-submit-profile">
+                        Edit Profile
+                    </button>
+                </form>
+            </div>
+        </div>

@@ -159,7 +159,7 @@ if (!isset($_SESSION['username'])) {
                         OUR TEAM
                     </p>
                     <p class="deskripsi-our-team">
-                        Si paling so professional
+                        Pekerja Keras
                     </p>
 
                     <!-- card our team -->

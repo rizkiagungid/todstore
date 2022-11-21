@@ -309,7 +309,7 @@ if(mysqli_num_rows($result) > 0){
                     </div>
 
                     <div class="container-btn-show">
-                        <button class="show-more">
+                        <button class="show-more" onclick="toPage('shop')">
                             Show More
                         </button>
                     </div>

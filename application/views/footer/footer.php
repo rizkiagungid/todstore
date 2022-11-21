@@ -8,7 +8,7 @@
                         Subscribe to our website
                     </p>
                     <p class="deskripsi-search">
-                        silahkan subscribe di website kami.
+                        Menantikan kabar dari kami mengenai baju terbaru, yang akan kami sebarkan melalui email Anda!.
                     </p>
                 </div>
                 <div class="kanan-search">
@@ -28,6 +28,13 @@
                     <p id="error-message-subscribe" class="error-message-subscribe">
                         
                     </p>
+
+                    <!-- pop up success -->
+                    <div id="pop-up-success" class="pop-up-success" style="margin-top: 1px;">
+                        <p id="txt-success" class="txt-success" style="padding: 14px 80px; overflow: hidden;">
+
+                        </p>
+                    </div>
                 </div>
             </div>
                  <!-- tod project -->
@@ -37,8 +44,7 @@
                         TOD PROJECT
                     </p>
                     <p class="deskripsi-menu" style="cursor: text; color: #fff;">
-                        Ya sakumaha aing weh nu bikin
-                        tangkurank siaaa!!!
+                        website ini dibangun untuk Anda yang cocok dengan baju fashion.
                     </p>
                 </li>
                 <li class="menu-footer">
@@ -178,48 +184,57 @@ const dataShop = []
 
         const dataBlog = [
             {
-                img: 'images/products.jfif',
-                date: 'JUN 19, 2021',
-                byAuthor: 'by Admin',
-                title: 'NUNC RHONCUS AUCTOR RISUS TEMPOR',
-                deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat earum nobis, tempora repellendus veniam fuga debitis impedit in quia dolore eaque veritatis perspiciatis nulla aut, dicta voluptatibus ipsa consectetur?',
-                url: 'saya-tidak-tahu'
+                img: 'images/cute-g49cdaa9e8_1920.jpg',
+                date: '30-juni-1987',
+                byAuthor: 'iwan',
+                title: 'TIPS BELANJA MAHAL',
+                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney dan dapatkan keuntungan lainnya. Belanja online murah merupakan salah satu keuntungan belanja secara online yang disukai para konsumen. Saat ini, semakin banyak munculnya berbagai toko online. Belanja Online Lebih Hemat dengan Promo Menarik Ke-10 situs belanja online tersebut bisa dipilih oleh konsumen yang ingin berbelanja online dengan mudah dan terpercaya. Apalagi, ada berbagai promo menarik dari setiap marketplace yang dibuat khusus untuk memudahkan para customer dalam berbelanj',
+                url: `detailblog?=1`
             },
             {
-                img: 'images/dajjal.jpg',
-                date: 'JUN 28, 2090',
-                byAuthor: 'by Dajjal',
-                title: 'SESEORANG MENGAKU IA DAJJAL',
-                deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat earum nobis, tempora repellendus veniam fuga debitis impedit in quia dolore eaque veritatis perspiciatis nulla aut, dicta voluptatibus ipsa consectetur?',
-                url: 'saya-tidak-tahu'
-            },
-            {
-                img: 'images/products.jfif',
-                date: 'JUN 28, 2090',
-                byAuthor: 'by Dajjal',
-                title: 'KAMU ITU SAYA ATAU DIA?',
-                deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat earum nobis, tempora repellendus veniam fuga debitis impedit in quia dolore eaque veritatis perspiciatis nulla aut, dicta voluptatibus ipsa consectetur?',
-                url: 'saya-tidak-tahu'
+                img: 'images/aboutus.png',
+                date: '13-juni-1990',
+                byAuthor: 'thio',
+                title: 'TIPS BELANJA GA KELUAR UANG',
+                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney dan dapatkan keuntungan lainnya. Belanja online murah merupakan salah satu keuntungan belanja secara online yang disukai para konsumen. Saat ini, semakin banyak munculnya berbagai',
+                url: `detailblog?=2`
             },
             {
                 img: 'images/products.jfif',
-                date: 'JUN 28, 2090',
-                byAuthor: 'by Dajjal',
-                title: 'KAMU ITU SAYA ATAU DIA?',
-                deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat earum nobis, tempora repellendus veniam fuga debitis impedit in quia dolore eaque veritatis perspiciatis nulla aut, dicta voluptatibus ipsa consectetur?',
-                url: 'saya-tidak-tahu'
+                date: '18-juli-2000',
+                byAuthor: 'thio',
+                title: 'TIPS BELANJA TAPI GA DAPET BARANGNYA',
+                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney dan dapatkan keuntungan lainnya. Belanja online',
+                url: `detailblog?=3`
             },
             {
                 img: 'images/products.jfif',
-                date: 'JUN 28, 2090',
-                byAuthor: 'by Dajjal',
-                title: 'KAMU ITU SAYA ATAU DIA?',
-                deskripsi: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat earum nobis, tempora repellendus veniam fuga debitis impedit in quia dolore eaque veritatis perspiciatis nulla aut, dicta voluptatibus ipsa consectetur?',
-                url: 'saya-tidak-tahu'
+                date: '23-mei-2020',
+                byAuthor: 'marchel',
+                title: 'TIPS BELANJA BANYAK',
+                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney',
+                url: `detailblog?=4`
             },
+            {
+                img: 'images/products.jfif',
+                date: '31-mei-2021',
+                byAuthor: 'aldi',
+                title: 'TIPS BELANJA TAPI GA BAYAR',
+                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney Belanja Murah kini bisa menggunakan Emoney dan dapatkan keuntungan lainnya. Belanja online',
+                url: `detailblog?=5`
+            },
+            {
+                img: 'images/products.jfif',
+                date: '22-mei-2021',
+                byAuthor: 'ridwan',
+                title: 'TIPS BELANJA TAPI GA PUNYA UANG',
+                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney Belanja Murah kini bisa menggunakan Emoney dan dapatkan keuntungan lainnya. Belanja online',
+                url: `detailblog?=6`
+            }
         ]
 
         const cardProducts = document.getElementsByClassName('card-products')
+        const cardBlog = document.getElementsByClassName('card-blog')
 
         if(newPathName === 'shop' && cardProducts.length > 0){
             for(let i = 0; i < cardProducts.length; i++){
@@ -231,6 +246,19 @@ const dataShop = []
                     price: cardProducts[i].children[3].innerText,
                     id: cardProducts[i].children[4].id
                 })   
+            }
+        }
+
+        if(newPathName === 'blog' && cardBlog.length > 0){
+            for(let i = 0; i < cardBlog.length; i++){
+                dataBlog.push({
+                    img: cardBlog[i].children[0].currentSrc,
+                    date: cardBlog[i].children[1].children[0].innerText,
+                    byAuthor: cardBlog[i].children[1].children[1].innerText,
+                    title: cardBlog[i].children[2].innerText,
+                    deskripsi: cardBlog[i].children[3].innerText,
+                    url: `detailblog?=${cardBlog[i].children[4].id}`
+                })
             }
         }
 

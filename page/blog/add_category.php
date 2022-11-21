@@ -1,5 +1,24 @@
 <?php
 include_once('resources/init.php');
+if(isset($_POST['name'])){
+    $name = trim($_POST['name']);
+    
+    if(empty($name)){
+        $error = 'You must submit the category name';
+    }
+    else if(category_exists('name',$name) == true){ 
+        $error = 'That category already exists';
+    } else if(strlen($name)> 24){
+        $error = 'The category name only be up to 24 characters only';
+    }
+
+    if(!isset($error)){
+        $save = add_category($name);
+          header("Location:add_category.php");
+        die();
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
@@ -80,19 +99,19 @@ include_once('resources/init.php');
 
 	   		<article class="entry">
 					<header class="entry-header">
-	
+	     <?php if(isset($error)){
+            echo $error;
+            } ?>
 						<h2 class="entry-title">
-							<h2></h2>
+							<h2>Add Category</h2>
 						</h2> 				 
 					
 						<div class="entry-meta">
-
-        <button type='button' value='Add Category' /><a href="add_category.php">Add Category</a></button>
-		<button type='button' value='Add Category' /><a href="add_post.php">Add Post</a></button>
-		<button type='button' value='Add Category' /><a href="category_list.php">Delete Categories</a></button>
-		<button type='button' value='Add Category' /><a href="manage_post.php">Manage Post</a></button>
-	
-		
+		<form action='' method='post'>
+        <label for='name'>Name </label>
+        <input type='text' name='name' />
+        <input type='submit' value='Add Category' />
+		</form>
 						</div> 
 					 
 					</header> 

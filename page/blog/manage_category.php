@@ -1,5 +1,6 @@
 <?php
 include_once('resources/init.php');
+$posts = get_posts(null,$_GET['id']);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
@@ -32,6 +33,13 @@ include_once('resources/init.php');
    <!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="favicon.png" >
+
+	<script type="text/javascript">
+function confirm_delete()
+{
+return confirm("Are you sure you want to delete this record?");
+}
+</script>
 
 </head>
 
@@ -80,19 +88,27 @@ include_once('resources/init.php');
 
 	   		<article class="entry">
 					<header class="entry-header">
-	
+	    <?php
+     foreach($posts as $post){
+
+     ?>
 						<h2 class="entry-title">
-							<h2></h2>
+							<h2>Category</h2><br/>
 						</h2> 				 
 					
 						<div class="entry-meta">
-
-        <button type='button' value='Add Category' /><a href="add_category.php">Add Category</a></button>
-		<button type='button' value='Add Category' /><a href="add_post.php">Add Post</a></button>
-		<button type='button' value='Add Category' /><a href="category_list.php">Delete Categories</a></button>
-		<button type='button' value='Add Category' /><a href="manage_post.php">Manage Post</a></button>
-	
-		
+	     <h2><a href='index.php?id=<?php echo $post['post_id']; ?>' ><?php echo $post['title']; ?></a></h2>
+     <p>
+        Posted on <?php echo date('d-m-y h:i:s',strtotime($post['date_posted'])); ?>
+        In <a href='category.php?id=<?php echo $post['category_id']; ?>' ><?php echo $post['name']; ?></a>
+     </p>
+     <div><?php echo nl2br($post['contents']); ?></div>
+     <menu>
+        <ul>
+            <li><a href='delete_post.php?id=<?php echo $post['post_id']; ?>' onclick='return confirm_delete()'><font color="red">Delete This Post</font></a>&nbsp;||</li>
+            <li><a href='edit_post.php?id=<?php echo $post['post_id']; ?>' ><font color="blue">Edit This Post</font></a></li>
+        </ul>
+     </menu>
 						</div> 
 					 
 					</header> 
@@ -102,7 +118,9 @@ include_once('resources/init.php');
 						<p><!--insert here--></p>
 					</div> 
 
-
+    <?php   
+     }
+     ?>
 				</article> <!-- end entry -->
 
    		</div> <!-- end main -->

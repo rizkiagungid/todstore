@@ -33,6 +33,13 @@ include_once('resources/init.php');
 	================================================== -->
 	<link rel="shortcut icon" href="favicon.png" >
 
+<script type="text/javascript">
+function confirm_delete()
+{
+return confirm("Are you sure you want to delete this record?");
+}
+</script>
+
 </head>
 
 <body>
@@ -80,19 +87,20 @@ include_once('resources/init.php');
 
 	   		<article class="entry">
 					<header class="entry-header">
-	
+
 						<h2 class="entry-title">
-							<h2></h2>
+							<h2>List of Categories</h2><br/>
 						</h2> 				 
 					
 						<div class="entry-meta">
-
-        <button type='button' value='Add Category' /><a href="add_category.php">Add Category</a></button>
-		<button type='button' value='Add Category' /><a href="add_post.php">Add Post</a></button>
-		<button type='button' value='Add Category' /><a href="category_list.php">Delete Categories</a></button>
-		<button type='button' value='Add Category' /><a href="manage_post.php">Manage Post</a></button>
-	
-		
+    <?php
+     foreach(get_categories() as $category){
+     ?>
+      <p><a href="category.php?id=<?php echo $category['id'];?>"><?php echo $category['name']; ?></a> -
+      <a href="delete_category.php?id=<?php echo $category['id'];?>" onclick='return confirm_delete()'><font color="red">Delete</font></a></p> 
+     <?php  
+     }
+     ?>
 						</div> 
 					 
 					</header> 

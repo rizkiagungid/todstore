@@ -69,7 +69,7 @@ if(isset($_POST['update'])){
 ?>
 <div class="container">
     <div class="jumbotron text-center">
-        <h2>Crud Application Using PHP</h2>
+        <h2>CRUD TODSTORE</h2>
     </div>
     <br>
 <form action="" method="post" enctype="multipart/form-data">

@@ -248,7 +248,7 @@
 
             <ul class="list-icon">
                 <li class="icon-nav">
-                    <i class="fa-solid fa-user ic-nav" onclick="<?php echo "window.location.assign('http://localhost/todstore/page/login.php')";?>"></i>
+                    <i class="fa-solid fa-user ic-nav"  onclick="toPage('profile')";?></i>
                 </li>
                 <li class="icon-nav">
                 <i class="fa-solid fa-right-from-bracket ic-nav" onclick="<?php echo "window.location.assign('http://localhost/todstore/page/logout.php')";?>"></i>

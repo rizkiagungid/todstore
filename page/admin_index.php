@@ -16,6 +16,7 @@ include 'includes/db.php';
     <a href="admin/userdata.php" role="button" class="btn btn-primary pull-leaft">USER DATA</a>
     <a href="homepage.php" role="button" class="btn btn-primary pull-leaft">Homepage</a>
     <a href="transaksi.php" role="button" class="btn btn-primary pull-leaft">transaksi</a>
+    <a href="profile.php" role="button" class="btn btn-primary pull-leaft">Profile</a>
     <br>
     
     <br>

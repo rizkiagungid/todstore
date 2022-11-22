@@ -11,13 +11,13 @@ include 'includes/db.php';
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-    <form method="post"z>
-					<?php
+    <!-- <form method="post"z>
+				<?php
 					$username = $_SESSION['username'];
 					$query_users = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
 					$da = mysqli_fetch_array($query_users);
 					//var_dump($da);
-					?>
+					?> -->
 					<div class="row">
 						<div class="col-md-4">
 							<div class="form-group">
@@ -50,6 +50,11 @@ include 'includes/db.php';
 							</div>
 						</div>
 					</div>
+					<td><a href="update_users.php?update=<?= $da['id']; ?>" class="btn btn-success btn-sm" role="button">Update</a>
+            <a href="index.php?delete=<?= $da['id']; ?>" class="btn btn-danger btn-sm" id="delete" role="button">Delete</a></td>
+        </tr>
    
+
+					
     </body>
 </html>

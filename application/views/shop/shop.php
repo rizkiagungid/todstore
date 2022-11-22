@@ -93,7 +93,7 @@ if (!isset($_SESSION['username'])) {
                                 <?= $name; ?>
                                 </p>
                                 <p class="price">
-                                RP.<?= $harga; ?>
+                                RP <?= number_format($harga); ?>
                                 </p>
                                 <button class="view-product" id="<?= $id; ?>">
                                     Tambah

@@ -138,7 +138,7 @@ if(mysqli_num_rows($result) > 0){
                             MEN
                         </p>
                         <p class="deskripsi-img">
-                            10 Products
+                            11 Products
                         </p>
                     </div>
                     <div class="kanan-women">
@@ -158,7 +158,7 @@ if(mysqli_num_rows($result) > 0){
                         OUR PRODUCTS
                     </p>
 
-                    <div class="card-our-products">
+                    <div id="card-our-products" class="card-our-products">
                     <?php
                     $no = 1;
                     $query = "SELECT * FROM produk ORDER BY id ASC ";
@@ -177,7 +177,7 @@ if(mysqli_num_rows($result) > 0){
                             $ukuran = $row['ukuran'];
                             $image = $row['image'];
                     ?>
-                        <div class="card-products" id="<?= $stok; ?>">
+                        <div class="card-products-home" id="<?= $id; ?>" style="display: none;">
                         <img src="<?= "images/" . $image; ?>" alt="" class="img-products">
                                 <p class="gender">
                                     <?= $model; ?>
@@ -186,126 +186,14 @@ if(mysqli_num_rows($result) > 0){
                                 <?= $name; ?>
                                 </p>
                                 <p class="price">
-                                RP.<?= $harga; ?>
+                                <?= number_format($harga); ?>
                                 </p>
-                                <button class="view-product" onclick="tambahKeranjang(<?= $stok; ?>, <?= $id; ?>)">Add to cart</button>
+                                <button class="view-product" id="<?= $stok; ?>" onclick="tambahKeranjang(<?= $stok; ?>, <?= $id; ?>)">Add to cart</button>
                         </div>
             <?php
                 }
             }
         ?>
-                        <!-- <div class="card-products">
-                            <img src="images/products.jfif" alt="" class="img-products">
-
-                            <p class="gender">
-                                Men
-                            </p>
-                            <p class="name-products">
-                                Daster Yogs Lorem
-                            </p>
-                            <p class="price">
-                                Rp 1,000,000
-                            </p>
-                            <button class="view-product">
-                                View Product
-                            </button>
-                        </div>
-                        <div class="card-products">
-                            <img src="images/products.jfif" alt="" class="img-products">
-
-                            <p class="gender">
-                                Men
-                            </p>
-                            <p class="name-products">
-                                Daster Yogs
-                            </p>
-                            <p class="price">
-                                Rp 1,000,000
-                            </p>
-                            <button class="view-product">
-                                View Product
-                            </button>
-                        </div>
-                        <div class="card-products">
-                            <img src="images/products.jfif" alt="" class="img-products">
-
-                            <p class="gender">
-                                Men
-                            </p>
-                            <p class="name-products">
-                                Daster Yogs
-                            </p>
-                            <p class="price">
-                                Rp 1,000,000
-                            </p>
-                            <button class="view-product">
-                                View Product
-                            </button>
-                        </div>
-                        <div class="card-products">
-                            <img src="images/products.jfif" alt="" class="img-products">
-
-                            <p class="gender">
-                                Men
-                            </p>
-                            <p class="name-products">
-                                Daster Yogs
-                            </p>
-                            <p class="price">
-                                Rp 1,000,000
-                            </p>
-                            <button class="view-product">
-                                View Product
-                            </button>
-                        </div>
-                        <div class="card-products">
-                            <img src="images/products.jfif" alt="" class="img-products">
-
-                            <p class="gender">
-                                Men
-                            </p>
-                            <p class="name-products">
-                                Daster Yogs
-                            </p>
-                            <p class="price">
-                                Rp 1,000,000
-                            </p>
-                            <button class="view-product">
-                                View Product
-                            </button>
-                        </div>
-                        <div class="card-products">
-                            <img src="images/products.jfif" alt="" class="img-products">
-
-                            <p class="gender">
-                                Men
-                            </p>
-                            <p class="name-products">
-                                Daster Yogs
-                            </p>
-                            <p class="price">
-                                Rp 1,000,000
-                            </p>
-                            <button class="view-product">
-                                View Product
-                            </button>
-                        </div>
-                        <div class="card-products">
-                            <img src="images/products.jfif" alt="" class="img-products">
-
-                            <p class="gender">
-                                Men
-                            </p>
-                            <p class="name-products">
-                                Daster Yogs
-                            </p>
-                            <p class="price">
-                                Rp 1,000,000
-                            </p>
-                            <button class="view-product">
-                                View Product
-                            </button>
-                        </div> -->
                     </div>
 
                     <div class="container-btn-show">
@@ -332,7 +220,7 @@ if(mysqli_num_rows($result) > 0){
                                 ABOUT US
                             </p>
                             <div class="deskripsi-about">
-                            TOD Project’s Adalah sebuah digital clothing store karya
+                            TOD Project's Adalah sebuah digital clothing store karya
                             anak bangsa yang berbasis di Cilebut - Citayem 
                             mempunyai Visi untuk turut berpartisipasi dalam 
                             kearifan lokal.
@@ -435,41 +323,47 @@ if(mysqli_num_rows($result) > 0){
 
                         <div class="card-latest-news">
                             <div class="card-news">
-                                <div class="con-img-news">
-                                    <img src="images/artikelfoto.jpg" alt="" class="img-news">
+                                <div class="con-img-news" style="width: 100%;">
+                                    <img src="images/topup.jpg" alt="" class="img-news" style="height: 200px;">
                                 </div>
 
                                 <p class="title-news">
                                    Topup saldo tod gratis baju
                                 </p>
-                                <button class="read-more">
+                                <!-- <button class="read-more">
                                     Read More <i class="fa-solid fa-arrow-right"></i>
-                                </button>
+                                </button> -->
                             </div>
                             <div class="card-news">
-                                <div class="con-img-news">
-                                    <img src="images/artikelfoto.jpg" alt="" class="img-news">
+                                <div class="con-img-news" style="width: 100%;">
+                                    <img src="images/artikelfoto.jpg" alt="" class="img-news" style="height: 200px;">
                                 </div>
 
                                 <p class="title-news">
                                Belanja Murah.
                                 </p>
-                                <button class="read-more">
+                                <!-- <button class="read-more">
                                     Read More <i class="fa-solid fa-arrow-right"></i>
-                                </button>
+                                </button> -->
                             </div>
                             <div class="card-news">
-                                <div class="con-img-news">
-                                    <img src="images/artikelfoto.jpg" alt="" class="img-news">
+                                <div class="con-img-news" style="width: 100%;">
+                                    <img src="images/promo2.jpg" alt="" class="img-news" style="height: 200px;">
                                 </div>
 
                                 <p class="title-news">
                                    Promo Ceria
                                 </p>
-                                <button class="read-more">
+                                <!-- <button class="read-more">
                                     Read More <i class="fa-solid fa-arrow-right"></i>
-                                </button>
+                                </button> -->
                             </div>
+                        </div>
+
+                        <div class="container-btn-show" style="display: flex; justify-content: center;">
+                        <button class="show-more" onclick="toPage('blog')">
+                                Show More
+                        </button>
                         </div>
                     </div>
                 </div>

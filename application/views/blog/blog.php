@@ -69,14 +69,14 @@ if (!isset($_SESSION['username'])) {
     }
     ?>
     <div class="card-blog" id="<?= $id; ?>">
-                        <img src="images/products.jfif" alt="" class="img-card">
+                        <img src="images/artikelfoto.jpg" alt="" class="img-card">
 
                         <div class="author">
                             <p class="date">
                             <?= $date; ?>
                             </p>
                             <p class="by-author">
-                                • <?= $posted; ?>
+                             <?= $posted; ?>
                             </p>
                         </div>
                         <p class="title">
@@ -86,7 +86,7 @@ if (!isset($_SESSION['username'])) {
                         <?= $artikel; ?>
                         </p>
 
-                        <button class="read-more" id="<?= $id; ?>">
+                        <button class="read-more" id="<?= $id; ?>" style="display: none;">
                             Read More <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>

@@ -752,6 +752,25 @@
     margin-top: 0px;
 }
 
+.wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .latest-news .container-btn-show .show-more{
+    height: 40px;
+    width: 150px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #949494;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.wrapp-shop-categories .container-bg-black-bottom .container-content-about .content-about .latest-news .container-btn-show .show-more:hover{
+    background-color: #000;
+}
+
 /* footer */
 .main-footer{
     display: flex;

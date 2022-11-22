@@ -12,6 +12,77 @@ if (!isset($_SESSION['username'])) {
     // header("Location: login");
     echo "<script>window.location.assign('http://localhost/todstore/page/login.php')</script>";
 }
+
+?>
+
+
+<?php
+if(isset($_GET['update'])){
+    
+    
+    $id = $_GET['update'];
+    
+
+$query = "SELECT * FROM users WHERE id = $id";
+$username = $_SESSION['username'];
+$query_users = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
+$da = mysqli_fetch_array($query_users);
+$result = mysqli_query($conn,$query);
+
+if(mysqli_num_rows($result) > 0){
+    
+    while($row = mysqli_fetch_array($result)){
+        
+            $username  = $row['username'];
+            $namalengkap = $row['namalengkap'];
+            $alamat = $row['alamat'];
+            $level = $row['level'];
+            $telepon = $row['telepon'];
+
+        }
+    }
+}
+
+if(isset($_POST['update'])){
+    
+
+    $username         = clean($_POST['username']);
+    $namalengkap      = clean($_POST['namalengkap']);
+    $alamat        = clean($_POST['alamat']);
+    $level        = clean($_POST['level']);
+    $telepon        = clean($_POST['telepon']);
+    $password        = clean($_POST['password']);
+    // $id        = clean($_POST['id']);
+    // $image_name   = $_FILES['image']['name'];
+    // $image        = $_FILES['image']['tmp_name'];
+
+    // $location     = "images/".$image_name;
+
+    // move_uploaded_file($image, $location);
+
+    $query  = "UPDATE users SET ";
+    $query .= "namalengkap = '".escape($namalengkap)."', ";
+    $query .= "username = '".escape($username)."', ";
+    $query .= "alamat = '".escape($alamat)."', ";
+    $query .= "telepon = '".escape($telepon)."', ";
+    $query .= "level = '".escape($level)."', ";
+    $query .= "password = '".escape($password)."', ";
+    // $query .= "image = '{$image_name}' ";
+    // $query .= "WHERE id = {$id} ";
+    $query .= "WHERE id = {$id} ";
+    
+    $result = mysqli_query($conn,$query);
+    
+    if($result){
+        // header('Location: profile');
+        echo "<script>window.location.assign('http://localhost/todstore/profile')</script>";
+    }
+    else
+    {
+        die('error' . mysqli_error($conn));
+    }
+    
+}
 ?>
 
 <!-- loading page -->
@@ -61,14 +132,23 @@ if (!isset($_SESSION['username'])) {
                 <?= $da['email']; ?>
                 </p>
 
-                <form method="post" class="edit-profile">
-                    <div class="container-input">
+                <form action="" method="post" class="edit-profile">
+                    <!-- <div class="container-input">
                         <div class="column-label">
                             <label for="label" class="label-profile">
                                 Nama
                             </label>
                         </div>
-                        <input type="text" class="input-profile" value="<?= $da['namalengkap']; ?>">
+                        <input type="text" name="username" readonly class="input-profile" value="<?= $da['username']; ?>">
+                    </div> -->
+
+                    <div class="container-input">
+                        <div class="column-label">
+                            <label for="label" class="label-profile">
+                                Nama Lengkap
+                            </label>
+                        </div>
+                        <input type="text" name="namalengkap" readonly class="input-profile" value="<?= $da['namalengkap']; ?>">
                     </div>
 
                     <div class="container-input">
@@ -77,17 +157,17 @@ if (!isset($_SESSION['username'])) {
                                 Telepon
                             </label>
                         </div>
-                        <input type="text" class="input-profile" readonly value="<?= $da['telepon']; ?>" style="background-color: #ddd">
+                        <input type="text" name="telepon" class="input-profile" readonly value="<?= $da['telepon']; ?>">
                     </div>
 
-                    <div class="container-input">
+                    <!-- <div class="container-input">
                         <div class="column-label">
                             <label for="label" class="label-profile">
                                 Id User
                             </label>
                         </div>
-                        <input type="text" class="input-profile" readonly value="<?= $da['id']; ?>" style="background-color: #ddd">
-                    </div>
+                        <input type="text" name="id" class="input-profile" readonly value="<?= $da['id']; ?>">
+                    </div> -->
 
                     <div class="container-input">
                         <div class="column-label">
@@ -95,30 +175,30 @@ if (!isset($_SESSION['username'])) {
                                 Alamat
                             </label>
                         </div>
-                        <input type="text" class="input-profile" readonly value="<?= $da['alamat']; ?>" style="background-color: #ddd">
+                        <input type="text" name="alamat" class="input-profile" readonly value="<?= $da['alamat']; ?>">
                     </div>
 
-                    <div class="container-input">
+                    <!-- <div class="container-input">
                         <div class="column-label">
                             <label for="label" class="label-profile">
                                 Status
                             </label>
                         </div>
-                        <input type="text" class="input-profile" readonly value="<?= $da['level']; ?>" style="background-color: #ddd">
-                    </div>
+                        <input type="text" name="level" class="input-profile" readonly value="<?= $da['level']; ?>">
+                    </div> -->
 
-                    <div class="container-input">
+                    <!-- <div class="container-input">
                         <div class="column-label">
                             <label for="label" class="label-profile">
                                 Password
                             </label>
                         </div>
-                        <input type="password" class="input-profile" readonly value="<?= $da['password']; ?>" style="background-color: #ddd">
-                    </div>
+                        <input type="password" name="password" class="input-profile" readonly value="<?= $da['password']; ?>">
+                    </div> -->
 
-                    <button type="submit" name="submit" class="btn-submit-profile">
+                    <!-- <button type="submit" name="submit" class="btn-submit-profile">
                         Edit Profile
-                    </button>
+                    </button> -->
                 </form>
             </div>
         </div>

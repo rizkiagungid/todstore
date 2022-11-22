@@ -58,7 +58,7 @@ if (!isset($_SESSION['username'])) {
                                 WE ARE TOD
                             </p>
                             <div class="deskripsi">
-                                TOD Project’s Adalah sebuah digital clothing store karya
+                                TOD Project's Adalah sebuah digital clothing store karya
                                 anak bangsa yang berbasis di Cilebut - Citayem
                                 mempunyai Visi untuk turut berpartisipasi dalam
                                 kearifan lokal.
@@ -132,7 +132,7 @@ if (!isset($_SESSION['username'])) {
                                 MEN
                             </p>
                             <p class="deskripsi-img">
-                                10 Products
+                                11 Products
                             </p>
                         </div>
                         <div class="kanan-women">
@@ -159,7 +159,7 @@ if (!isset($_SESSION['username'])) {
                         OUR TEAM
                     </p>
                     <p class="deskripsi-our-team">
-                        Pekerja Keras
+                        Satu arah dan satu tujuan
                     </p>
 
                     <!-- card our team -->

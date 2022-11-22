@@ -241,9 +241,6 @@
                 <li class="menu menu-navbar" onclick="toPage('about')">
                     ABOUT
                 </li>
-                <li class="menu menu-navbar" onclick="toPage('profile')">
-                    PROFILE
-                </li>
             </ul>
 
             <ul class="list-icon">

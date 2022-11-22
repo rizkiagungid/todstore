@@ -76,7 +76,7 @@
                     <p class="title-menu">
                         CONTACT US
                     </p>
-                    <a href="#" class="deskripsi-menu">
+                    <a target="_blank" href="https://maps.google.com/maps/dir//Jl.+Sunan+Muria+IV+Pabuaran+Kecamatan+Bojonggede+Kabupaten+Bogor,+Jawa+Barat+16921/@-6.4547463,106.7950764,15z/data=!4m5!4m4!1m0!1m2!1m1!1s0x2e69e9e7ede517f7:0xb8953bf5dd0f86f1" class="deskripsi-menu">
                         <i class="fa-solid fa-location-dot"></i> Jalan YatemPiatu Sejahtera 01-00
                     </a>
                     <a href="tel:+6281383959452" class="deskripsi-menu">
@@ -119,6 +119,9 @@
                 // icon nav
                 if(pathname === 'cart'){
                     iconNavbar[2].style.color = "#F8BB31"
+                }
+                if(pathname === 'profile'){
+                    iconNavbar[0].style.color = "#F8BB31"
                 }
             }
         }
@@ -184,51 +187,59 @@ const dataShop = []
 
         const dataBlog = [
             {
-                img: 'images/cute-g49cdaa9e8_1920.jpg',
+                img: 'images/topup.jpg',
                 date: '30-juni-1987',
                 byAuthor: 'iwan',
-                title: 'TIPS BELANJA MAHAL',
-                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney dan dapatkan keuntungan lainnya. Belanja online murah merupakan salah satu keuntungan belanja secara online yang disukai para konsumen. Saat ini, semakin banyak munculnya berbagai toko online. Belanja Online Lebih Hemat dengan Promo Menarik Ke-10 situs belanja online tersebut bisa dipilih oleh konsumen yang ingin berbelanja online dengan mudah dan terpercaya. Apalagi, ada berbagai promo menarik dari setiap marketplace yang dibuat khusus untuk memudahkan para customer dalam berbelanj',
+                title: 'Topup saldo tod gratis baju',
+                deskripsi: 'Event Topup saldo ini berakhir sampai akhir tahun, Anda akan mendapatkan gratis baju sesuai pilihan Anda, Anda akan menerima 10 gratis baju dari pilihan Anda sendiri!.',
                 url: `detailblog?=1`
             },
             {
-                img: 'images/aboutus.png',
+                img: 'images/promo2.jpg',
                 date: '13-juni-1990',
                 byAuthor: 'thio',
-                title: 'TIPS BELANJA GA KELUAR UANG',
-                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney dan dapatkan keuntungan lainnya. Belanja online murah merupakan salah satu keuntungan belanja secara online yang disukai para konsumen. Saat ini, semakin banyak munculnya berbagai',
+                title: 'Promo Ceria',
+                deskripsi: 'Event akhir tahun ini kami mengadakan promo besar-besaran untuk baju dengan kategori gender/jenis kelamin perempuan saja',
                 url: `detailblog?=2`
             },
             {
-                img: 'images/products.jfif',
+                img: 'images/coach.jpg',
                 date: '18-juli-2000',
                 byAuthor: 'thio',
-                title: 'TIPS BELANJA TAPI GA DAPET BARANGNYA',
-                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney dan dapatkan keuntungan lainnya. Belanja online',
+                title: 'Sambut Akhir Tahun, Coach Holiday 2022 Hadirkan Koleksi Super Gemas!',
+                deskripsi: 'Nggak terasa kita sudah berada di akhir tahun 2022, dan seperti biasa beberapa brand sudah siap memanjakan kita dengan rangkaian koleksi liburan mereka yang susah untuk ditolak. Yup! Salah satunya adalah koleksi Coach Holiday 2022. Sekaligus merupakan butik terpilih di Asia, penataan jendela "Windows of The Future" milik Coach di Senayan City pun tampil baru dengan suasana festive yang mendukung.',
                 url: `detailblog?=3`
             },
             {
-                img: 'images/products.jfif',
+                img: 'images/jongkok.jpg',
                 date: '23-mei-2020',
                 byAuthor: 'marchel',
-                title: 'TIPS BELANJA BANYAK',
-                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney',
+                title: '7 Pakaian Mewah Jungkook BTS, Harganya Nggak Kalah Mahal dari Rumah!',
+                deskripsi: 'Kabar Jungkook BTS yang baru saja membeli rumah mewah di kawasan Itaewon, Korea Selatan memang membuat para penggemar K-Idol tercengang. Bukan tanpa alasan, rumah di kawasan elit itu diketahui memiliki harga super mahal hingga mencapai lebih dari 97,6 miliar rupiah!. Selain rumah, ternyata Jungkook juga memiliki selera pakaian yang nggak kalah mewah lho. Maknae BTS ini gemar menggunakan pakaian branded yang harganya puluhan juta rupiah untuk OOTD sehari-hari hingga hadir di karpet merah.',
                 url: `detailblog?=4`
             },
             {
-                img: 'images/products.jfif',
+                img: 'images/jongkook2.jpg',
                 date: '31-mei-2021',
                 byAuthor: 'aldi',
-                title: 'TIPS BELANJA TAPI GA BAYAR',
-                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney Belanja Murah kini bisa menggunakan Emoney dan dapatkan keuntungan lainnya. Belanja online',
+                title: 'Deretan Baju Produksi TOD Ini Langsung Sold Out Setelah Digunakan Jungkook BTS',
+                deskripsi: 'Memiliki popularitas dalam industri musik, para member BTS juga memiliki pengaruh yang besar dalam kehidupan sehari-hari. Hal tersebut dibuktikan dengan deretan barang yang langsung sold out setelah dipakai oleh BTS. Salah satu member yang sering membuat barang yang digunakan terjual habis ialah Jungkook. Nggak butuh waktu lama setelah digunakan oleh Jungkook, deretan pakaian ini langsung sold out dibeli oleh para ARMY yang ingin kembaran dengan si maknae. Nggak heran jika dirinya dijuliki "Sold Out King".',
                 url: `detailblog?=5`
             },
             {
-                img: 'images/products.jfif',
+                img: 'images/kolaborasi.png',
                 date: '22-mei-2021',
                 byAuthor: 'ridwan',
-                title: 'TIPS BELANJA TAPI GA PUNYA UANG',
-                deskripsi: 'Belanja Murah kini bisa menggunakan Emoney Belanja Murah kini bisa menggunakan Emoney dan dapatkan keuntungan lainnya. Belanja online',
+                title: `10 Kolaborasi Eksklusif Brand TOD dengan KOL di Lazada Women's Fest`,
+                deskripsi: `Rangkaian Lazada Women's Fest 2022 telah sukses digelar pada 11-13 November kemarin di JIEXPO Convention & Theater, Kemayoran. Hayo, siapa Bela yang kemarin datang ke acaranya Lazada Indonesia? Seru banget ya event-nya! Banyak aktivitas seru yang bisa dilakukan pengunjung selama berada di area LazBeauty dan LazLook. Bertepatan dengan event Lazada Women's Fest beberapa waktu lalu, Lazada Indonesia juga meluncurkan produk koleksi eksklusif hasil kolaborasi dari brand fashion dan beauty lokal ternama bareng para influencer lho, Bela. Ada produk skincare, makeup, hingga koleksi busana.`,
+                url: `detailblog?=6`
+            },
+            {
+                img: 'images/bg2.jpg',
+                date: '22-mei-2022',
+                byAuthor: 'Aoo',
+                title: `5 Kolaborasi Eksklusif Brand TOD dengan KOL di Lazada Women's Fest`,
+                deskripsi: `Brand asli Indonesia yang pertama ada Erigo. Bagi para pencinta fashion, mungkin sudah tidak asing lagi dengan nama ini. Brand yang didirikan sejak 2010 silam ini, awalnya bernama “Selected and Co”, di mana mereka hanya fokus untuk memproduksi batik kasual saja. Namun, sang founder, Muhammad Sadad, mulai berinovasi dengan nama Erigo lalu menjual pakaian unisex dengan konsep street style dan travelling yang kekinian.`,
                 url: `detailblog?=6`
             }
         ]
@@ -251,7 +262,7 @@ const dataShop = []
 
         if(newPathName === 'blog' && cardBlog.length > 0){
             for(let i = 0; i < cardBlog.length; i++){
-                dataBlog.push({
+                dataBlog.splice(0, 0,{
                     img: cardBlog[i].children[0].currentSrc,
                     date: cardBlog[i].children[1].children[0].innerText,
                     byAuthor: cardBlog[i].children[1].children[1].innerText,
@@ -327,11 +338,11 @@ const dataShop = []
                         <p class="title">
                             ${e.title}
                         </p>
-                        <p class="deskripsi">
+                        <p class="deskripsi" style="text-align: justify;">
                             ${e.deskripsi}
                         </p>
 
-                        <button class="read-more" onclick="toPage('${e.url}')">
+                        <button class="read-more" onclick="toPage('${e.url}')" style="display: none;">
                             Read More <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>`
@@ -444,7 +455,7 @@ const dataShop = []
                 dataPaginate.push(i)
             }
 
-            if(items.length < rows_per_page){
+            if(items.length - 1 < rows_per_page){
                 rightPagination.style.display = 'none'
             }
 
@@ -476,16 +487,52 @@ const dataShop = []
             }
         }
 
+        // card products di home
+        const containerCardProductsHome = document.getElementById('card-our-products')
+        const cardProductsHome = document.getElementsByClassName('card-products-home')
+
+        let newDataProductsHome = []
+        let batasLoop = 8
+
+        if(newPathName === 'home' && cardProductsHome.length > 0){
+            for(let i = 0; i < batasLoop; i++){
+                newDataProductsHome.push({
+                    img: cardProductsHome[i].children[0].currentSrc,
+                    gender: cardProductsHome[i].children[1].innerText,
+                    name: cardProductsHome[i].children[2].innerText,
+                    price: cardProductsHome[i].children[3].innerText,
+                    stok: cardProductsHome[0].children[4].id,
+                    id: cardProductsHome[i].id,
+                })
+            }
+
+            containerCardProductsHome.innerHTML =  newDataProductsHome.map((e)=>{
+                return `
+                <div class="card-products" id="${e.id}">
+                        <img src="${e.img}" alt="" class="img-products">
+                                <p class="gender">
+                                    ${e.gender}
+                                </p>
+                                <p class="name-products">
+                                    ${e.name}
+                                </p>
+                                <p class="price">
+                                RP ${e.price}
+                                </p>
+                                <button class="view-product" id="${e.stok}" onclick="tambahKeranjang(${e.stok}, ${e.id})">Add to cart</button>
+                    </div>
+                `
+            }).join('')
+        }
+
         // name products di home
         const nameProducts = document.getElementsByClassName('name-products')
 
         if (newPathName === 'home' && nameProducts.length > 0) {
             for (let i = 0; i < nameProducts.length; i++) {
-                if(nameProducts[i].innerText.length > 20){
-                    nameProducts[i].innerHTML = `${nameProducts[i].innerText.substr(0, 39)}...`
+                if(nameProducts[i].innerText.length > 30){
+                    nameProducts[i].innerHTML = `${nameProducts[i].innerText.substr(0, 40)}...`
                 }
-                // const slice = nameProducts[i].innerText.length > 70 ? `${nameProducts[i].innerHTML.substr(0, 70)}...` : nameProducts[i].innerHTML
-                // nameProducts[i].innerHTML = slice
             }
         }
         

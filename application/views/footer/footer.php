@@ -541,18 +541,21 @@ const dataShop = []
             const origin = window.location.origin
             const pathname = window.location.pathname.split('/')[1]
 
-            if(newPathName === 'checkout'){
-                const wrappPdf = document.getElementById('wrapp-pdf')
-
-                let pdf = new jsPDF();
-                let section = wrappPdf
-                let page= function() {
-                    pdf.save('resi.pdf');
-                }
-                pdf.addHTML(section,page);
-            }
-
             window.location.href = `${origin}/${pathname}/${path}`
+        }
+
+        // to checkout success and download pdf
+        function toFinishCheckout(){
+            const wrappPdf = document.getElementById('wrapp-pdf')
+
+            let pdf = new jsPDF();
+            let section = wrappPdf
+            let page= function() {
+                pdf.save('resi.pdf');
+            }
+            pdf.addHTML(section,page);
+
+            toPage('checkout')
         }
 
         const txtSuccess = document.getElementById('txt-success')

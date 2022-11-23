@@ -114,28 +114,28 @@ if (!isset($_SESSION['username'])) {
                         <label for="label" class="label-input">
                             Name
                         </label>
-                        <input type="text" class="input-checkout" value="<?= $da['namalengkap']; ?>">
+                        <input type="text" class="input-checkout" readonly value="<?= $da['namalengkap']; ?>">
                     </div>
 
                     <div class="container-input">
                         <label for="label" class="label-input">
                             Phone Number
                         </label>
-                        <input type="text" class="input-checkout" readonly value="<?= $da['telepon']; ?>" style="background-color: #eee;">
+                        <input type="text" class="input-checkout" readonly value="<?= $da['telepon']; ?>">
                     </div>
 
                     <div class="container-input">
                         <label for="label" class="label-input">
                             Address
                         </label>
-                        <input type="text" name="alamat_pengiriman" class="input-checkout" value="<?= $da['alamat']; ?>">
+                        <input type="text" name="alamat_pengiriman" class="input-checkout" readonly value="<?= $da['alamat']; ?>">
                     </div>
 
                     <div class="container-input">
                         <label for="label" class="label-input">
                             E-mail
                         </label>
-                        <input type="email" name="email" class="input-checkout" value="<?= $da['email']; ?>" readonly style="background-color: #eee;">
+                        <input type="email" name="email" class="input-checkout" value="<?= $da['email']; ?>" readonly>
                     </div>
 
                     <!-- <div class="container-input">
@@ -191,7 +191,7 @@ if (!isset($_SESSION['username'])) {
 
                 <!-- btn eksekusi -->
                 <div class="container-button-cart">
-                    <button name="checkout" class="btn-checkout" onclick="toPage('checkout')" style="width: 100%; border: 1px solid #7A7A7A;">
+                    <button name="checkout" class="btn-checkout" onclick="toFinishCheckout()" style="width: 100%; border: 1px solid #7A7A7A;">
                         Place Order
                     </button>
                     <!-- <button class="btn-shopping" onclick="toPage('shop')">
@@ -241,7 +241,7 @@ if (!isset($_SESSION['username'])) {
     <!-- wrapp pdf transaksi -->
     <div id="wrapp-pdf" class="wrapp-pdf" style="background-color: #fff;">
         <div class="container-pdf" style="background-color: #fff;">
-            <img src="logo.png" alt="" class="logo-pdf">
+            <img src="images/logo.png" alt="" class="logo-pdf">
 
             <?php
 					$username = $_SESSION['username'];

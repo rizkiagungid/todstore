@@ -332,17 +332,18 @@
         }
 
         let dataToUser = {
-            to_name: 'Rizky',
+            to_name: '',
             fullName: 'TOD E-Commerce',
             phone: 'Terima kasih, Anda telah berhasil subscribe di website kami (TOD E-Commerce)!.',
             nations: 'Anda akan menerima informasi berbagai pakaian baju terbaru dari kami.',
             toEmail: '',
-            message: 'Kunjungi TOD E-Commerce : https://rizkiagungid.github.io/'
+            message: 'Selamat menikmati baju fashion dari TOD-Store kami! :)'
         }
 
         function changeInput() {
             data.email = document.getElementById('subscribe').value
             dataToUser.toEmail = document.getElementById('subscribe').value
+            dataToUser.to_name = document.getElementById('subscribe').value
         }
 
         let submitCondition = true
@@ -407,6 +408,7 @@
                                     document.getElementById('subscribe').value = ''
                                     data.email = ''
                                     dataToUser.toEmail = ''
+                                    dataToUser.to_name = ''
                                     console.log(resolve)
                                 }
                             })

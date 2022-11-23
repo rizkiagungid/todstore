@@ -178,7 +178,7 @@ if(mysqli_num_rows($result) > 0){
                             $image = $row['image'];
                     ?>
                         <div class="card-products-home" id="<?= $id; ?>" style="display: none;">
-                        <img src="<?= "images/" . $image; ?>" alt="" class="img-products">
+                        <img src="<?= "page/images/" . $image; ?>" alt="" class="img-products">
                                 <p class="gender">
                                     <?= $model; ?>
                                 </p>

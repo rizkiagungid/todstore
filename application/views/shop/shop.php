@@ -85,7 +85,7 @@ if (!isset($_SESSION['username'])) {
                             $image = $row['image'];
                     ?>                
                     <div class="card-products" id="<?= $stok; ?>">
-                    <img src="<?= "images/" . $image; ?>" alt="" class="img-products">
+                    <img src="<?= "page/images/" . $image; ?>" alt="" class="img-products">
                                 <p class="gender">
                                 <?= $model; ?>
                                 </p>

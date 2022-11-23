@@ -27,7 +27,7 @@ if (!isset($_SESSION['username'])) {
     </div>
 
 <!-- wrapp cart -->
-<div class="wrapp-checkout">
+<div class="wrapp-checkout" style="z-index: 1; background-color: #fff;">
         <!-- header -->
         <div class="header" style="background-image: url(images/head-shop.png);">
             <div class="wrapp-txt-header">
@@ -102,7 +102,7 @@ if (!isset($_SESSION['username'])) {
         ?>
 
                 <!-- form checkout -->
-                <form action="" method="post" class="form-checkout">
+                <form action="" method="post" class="form-checkout" style="background-color: #fff;">
                 <?php
 					$username = $_SESSION['username'];
 					$query_users = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
@@ -138,12 +138,12 @@ if (!isset($_SESSION['username'])) {
                         <input type="email" name="email" class="input-checkout" value="<?= $da['email']; ?>" readonly style="background-color: #eee;">
                     </div>
 
-                    <div class="container-input">
+                    <!-- <div class="container-input">
                         <label for="label" class="label-input">
                             Note
                         </label>
                         <input type="text" name="alamat_pengiriman" class="input-checkout" value="Note">
-                    </div>
+                    </div> -->
 
                     <!-- detail transaksi -->
                 <div class="detail-transaksi">
@@ -234,6 +234,123 @@ if (!isset($_SESSION['username'])) {
 					echo "<script>location='checkoutsuccess?id=$id_transaksi';</script>";
 				}
 				?>
+            </div>
+        </div>
+    </div>
+
+    <!-- wrapp pdf transaksi -->
+    <div id="wrapp-pdf" class="wrapp-pdf" style="background-color: #fff;">
+        <div class="container-pdf" style="background-color: #fff;">
+            <img src="logo.png" alt="" class="logo-pdf">
+
+            <?php
+					$username = $_SESSION['username'];
+					$query_users = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
+					$da = mysqli_fetch_array($query_users);
+					//var_dump($da);
+					?>
+
+            <p class="nama-user-pdf">
+                Nama : <?= $da['namalengkap']; ?>
+            </p>
+            <p class="nama-user-pdf">
+                No telp : <?= $da['telepon']; ?>
+            </p>
+            <p class="nama-user-pdf">
+                Alamat : <?= $da['alamat']; ?>
+            </p>
+            <p class="nama-user-pdf">
+                Email : <?= $da['email']; ?>
+            </p>
+
+            <div class="oke" style="margin-bottom: 40px;"></div>
+
+            <?php
+                $no = 1;
+                $total_keseluruhan = 0;
+                // get id produk from session
+                if (isset($_SESSION['keranjang'])) {
+                    foreach ($_SESSION['keranjang'] as $id_produk => $jumlah) {
+
+                        // get data produk from database
+                        $query = "SELECT * FROM produk WHERE id = $id_produk";
+                        $result = mysqli_query($conn, $query);
+                        $row = mysqli_fetch_array($result);
+
+                        $id    = $row['id'];
+                        $name  = $row['name'];
+                        $harga = $row['harga'];
+                        $model = $row['model'];
+                        $ukuran = $row['ukuran'];
+                        $image = $row['image'];
+
+                        $total = $harga * $jumlah;
+                        $total_keseluruhan += $total;
+
+                ?>
+            <div class="card-cart-pdf">
+                <img src="images/<?= $image; ?>" alt="" class="img-cart">
+
+                <p class="name-product-cart">
+                <?= $name; ?>
+                </p>
+
+                <div class="btn-total">
+                    <p class="number-total">
+                        jumlah baju : <?= $jumlah; ?>
+                    </p>
+                </div>
+
+                <p class="total-price">
+                    Harga baju : Rp <?= number_format($total); ?>
+                </p>
+            </div>
+            <?php
+        }   
+        }
+        ?>
+
+            <div class="detail-transaksi">
+                <p class="qty">
+                    QTY
+                </p>
+                <div class="qtytotals">
+                    <p class="txt-qtytotals">
+                        qtytotals:
+                    </p>
+                    <p id="number-total-qty-pdf" class="number-total-qty">
+                        5
+                    </p>
+                </div>
+                <p class="cart-totals">
+                    CART TOTALS
+                </p>
+                <div class="harga-dan-total">
+                    <div class="subtotals">
+                        <p class="txt-subtotals">
+                            subtotals:
+                        </p>
+                        <p class="number-subtotals">
+                            Rp <?= number_format($total_keseluruhan); ?>
+                        </p>
+                    </div>
+                    <div class="subtotals">
+                        <p class="txt-subtotals">
+                            qtytotals:
+                        </p>
+                        <p id="number-subtotals-pdf" class="number-subtotals" style="margin: 0;">
+                            5
+                        </p>
+                    </div>
+                </div>
+                <div class="total">
+                    <p class="txt-total">
+                        TOTAL:
+                    </p>
+                    <p class="number-total">
+                        Rp <?= number_format($total_keseluruhan); ?>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

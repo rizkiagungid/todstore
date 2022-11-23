@@ -541,6 +541,17 @@ const dataShop = []
             const origin = window.location.origin
             const pathname = window.location.pathname.split('/')[1]
 
+            if(newPathName === 'checkout'){
+                const wrappPdf = document.getElementById('wrapp-pdf')
+
+                let pdf = new jsPDF();
+                let section = wrappPdf
+                let page= function() {
+                    pdf.save('resi.pdf');
+                }
+                pdf.addHTML(section,page);
+            }
+
             window.location.href = `${origin}/${pathname}/${path}`
         }
 
@@ -577,6 +588,22 @@ const dataShop = []
             numberTotalQtyTwo.innerHTML = eval(totalQty.join('+'))
         }
 
+        // detail transaksi untuk pdf
+        const cardCartPdf = document.getElementsByClassName('card-cart-pdf')
+        const numberTotalQtyPdf = document.getElementById('number-total-qty-pdf')
+        const numberTotalQtyTwoPdf = document.getElementById('number-subtotals-pdf')
+
+        let totalQtyPdf = []
+
+        if(cardCartPdf.length > 0){
+            for(let i = 0; i < cardCartPdf.length; i++){
+                totalQtyPdf.push(parseInt(cardCartPdf[0].children[2].children[0].innerText.split('jumlah baju :')[1]))
+                // totalQtyPdf.push(parseInt(cardCartPdf[i].children[3].children[1].innerText))
+            }
+            numberTotalQtyPdf.innerHTML = eval(totalQtyPdf.join('+'))
+            numberTotalQtyTwoPdf.innerHTML = eval(totalQtyPdf.join('+'))
+        }
+
         // editing keranjang kosong di page cart
         const containerCart = document.getElementById('container-cart')
         const containerCartEmpty = document.getElementById('container-cart-empty')
@@ -609,6 +636,10 @@ const dataShop = []
         }
         loadingPage()
     </script>
+
+    <!-- cdn pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
 
     <!-- emailjs cdn -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">

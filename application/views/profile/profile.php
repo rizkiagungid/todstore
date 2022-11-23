@@ -123,7 +123,7 @@ if(isset($_POST['update'])){
 					$da = mysqli_fetch_array($query_users);
 					//var_dump($da);
 					?>
-                <img src="images/tzuyu.jpg" alt="" class="img-profile">
+                <img src="images/ridwan.png" alt="" class="img-profile">
 
                 <p class="nama">
                 <?= $da['namalengkap']; ?>

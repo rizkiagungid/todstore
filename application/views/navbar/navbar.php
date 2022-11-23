@@ -108,6 +108,211 @@
         margin-left: 30px;
     }
 }
+
+
+/* wrapp pdf */
+.wrapp-pdf{
+    display: flex;
+    position: fixed;
+    background-color: #fff;
+    justify-content: center;
+    z-index: -999;
+    width: 100%;
+    top: 0;
+}
+
+.wrapp-pdf .container-pdf{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    background-color: #fff;
+}
+
+.wrapp-pdf .container-pdf .logo-pdf{
+    width: 100px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+}
+
+.wrapp-pdf .container-pdf .nama-user-pdf{
+    font-size: 14px;
+    color: #000;
+    margin: 5px 0;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    width: auto;
+    background-color: #1E1E1E;
+    color: #fff;
+    padding: 40px 100px 60px 100px;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .qty{
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-bottom: 4px solid #D9D9D980;
+    padding-bottom: 3px;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .qtytotals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #D9D9D980;
+    padding-bottom: 3px;
+    margin-top: 3px;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .qtytotals .txt-qtytotals{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #D9D9D980;
+    margin: 0;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .qtytotals .number-total-qty{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .cart-totals{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    border-bottom: 4px solid #D9D9D980;
+    padding-bottom: 3px;
+    margin-top: 3px;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .harga-dan-total{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 4px solid #D9D9D980;
+    padding: 5px 0;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .harga-dan-total .subtotals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .harga-dan-total .subtotals .txt-subtotals{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #D9D9D980;
+    margin: 0;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .harga-dan-total .subtotals .number-subtotals{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 3px 0 0 0;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .total .txt-total{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+.wrapp-pdf .container-pdf .detail-transaksi .total .number-total{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+/* card */
+.wrapp-pdf .container-pdf .card-cart-pdf{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.wrapp-pdf .container-pdf .card-cart-pdf .btn-close-cart{
+    display: flex;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 500px;
+    height: 25px;
+    width: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapp-pdf .container-pdf .card-cart-pdf .btn-close-cart i{
+    font-size: 14px;
+}
+
+.wrapp-pdf .container-pdf .card-cart-pdf .img-cart{
+    width: 130px;
+    margin: 0 30px;
+}
+
+.wrapp-pdf .container-pdf .card-cart-pdf .name-product-cart{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    margin: 0;
+    width: 300px;
+}
+
+.wrapp-pdf .container-pdf .card-cart-pdf .btn-total{
+    display: flex;
+    /* height: 40px; */
+    width: 150px;
+    /* margin: 0 60px; */
+    overflow: hidden;
+    border-radius: 5px;
+    /* padding: 0 10px; */
+}
+
+.wrapp-pdf .container-pdf .card-cart-pdf .btn-total i{
+    cursor: pointer;
+}
+
+.wrapp-pdf .container-pdf .card-cart-pdf .btn-total .number-total{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    margin: 0;
+    display: flex;
+}
+
+.wrapp-pdf .container-pdf .card-cart-pdf .total-price{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    margin: 0;
+}
 </style>
 
 </head>

@@ -37,6 +37,7 @@ if(isset($_POST['insert']))
 <div class="container">
 
     <div class="jumbotron text-center">
+        <h2>ADMIN TODSTORE</h2>
         <h2>Menambahkan Produk</h2>
     </div>
     <br>

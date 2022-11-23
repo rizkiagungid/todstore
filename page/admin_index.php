@@ -8,6 +8,7 @@ include 'includes/db.php';
 
 <div class="container">
     <div class="jumbotron text-center">
+        <h4>HALAMAN ADMIN</h4>
         <?php echo "<h2>Login Sebagai: " . $_SESSION['username'] ."!". "</h2>"; ?>
     </div>
     <br>

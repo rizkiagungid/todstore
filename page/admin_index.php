@@ -3,7 +3,7 @@
 </head>
 <?php
 include 'includes/db.php';
-// require_once './berhasil_login.php';
+require_once './berhasil_login.php';
 ?>
 
 <div class="container">
@@ -63,7 +63,7 @@ if(mysqli_num_rows($result) > 0){
                <img src= "<?= "images/".$image?>" alt="<?= $name ?>" class="thumbnail" width="100px" height="75px">
             </td>
             <td><a href="update.php?update=<?php echo $id ?>" class="btn btn-success btn-sm" role="button">Update</a>
-            <a href="index.php?delete=<?php echo $id ?>" class="btn btn-danger btn-sm" id="delete" role="button">Delete</a></td>
+            <a href="admin_index.php?delete=<?php echo $id ?>" class="btn btn-danger btn-sm" id="delete" role="button">Delete</a></td>
         </tr>
 <?php
     }
@@ -82,17 +82,17 @@ if(mysqli_num_rows($result) > 0){
              $img= $row['image'];
         }
 
-            unlink("images/".$img);
+            // unlink("./images/".$img);
 
         $query = "DELETE FROM produk WHERE id = $id";
         
         $result = mysqli_query($conn,$query);
         
-        if($result){
+        // if($result){
 
-            header('location:index.php');
+        //     header('location:admin_index.php');
             
-        }
+        // }
     }    
          
 ?>
@@ -121,19 +121,6 @@ if(mysqli_num_rows($result) > 0){
 
 
 <?php 
- 
-//penamaan isi array variabel buah
-$buah = array(
-	'semangka' => "isinya merah",
-	'jeruk' => "rasanya manis",
-	'apel' => "warnanya merah",
-	'anggur' => "harganya mahal"
-);
- 
-// menampilkan isi array yang bernama jeruk
-echo $buah['jeruk'];
- 
-?>
 
 
 
